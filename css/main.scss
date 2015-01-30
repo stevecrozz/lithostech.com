@@ -1,0 +1,35 @@
+---
+---
+@charset "utf-8";
+@import
+  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_mixins',
+  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_normalize',
+  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables',
+  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding',
+  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid',
+  'coderay';
+
+
+html, body {
+  height: 100%;
+  min-width: 320px;
+}
+
+.brand {
+  font-family: 'Cutive', serif;
+  font-size: 4em;
+  margin: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+@media (max-width: 768px) {
+  nav ul { text-align: center; }
+  nav li { display: inline; }
+  nav li + li:before { content: "/ "; }
+}

@@ -1,0 +1,18 @@
+---
+encoding: utf-8
+permalink: /:year/:month/:title
+sass:
+  sass_dir: _sass
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - bin
+paginate: 5
+paginate_path: "page/:num/"
+markdown: kramdown
+kramdown:
+  use_coderay: true
+  coderay:
+    coderay_line_numbers: table
+    coderay_css: class
+excerpt_separator: <!--more-->
