@@ -13,6 +13,7 @@
 html, body {
   height: 100%;
   min-width: 320px;
+  font-size: 16px;
 }
 
 .brand {
@@ -32,4 +33,14 @@ nav ul {
   nav ul { text-align: center; }
   nav li { display: inline; }
   nav li + li:before { content: "/ "; }
+}
+
+h1 {
+  margin: 0;
+}
+
+.posts article + article {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px dotted gray;
 }
