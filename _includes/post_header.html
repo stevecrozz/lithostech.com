@@ -1,0 +1,6 @@
+<header>
+  <h1 itemprop="headline">
+    <a href="{{ post.url }}" class="permalink" title="Permalink">{{ post.title }}</a>
+  </h1>
+  <time itemprop="datePublished" datetime="{{ post.date | date: '%Y-%m-%d'}}">{{ post.date | date: '%B %d, %Y' }}</time>
+</header>

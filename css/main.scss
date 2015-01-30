@@ -18,7 +18,7 @@ html, body {
 
 .brand {
   font-family: 'Cutive', serif;
-  font-size: 4em;
+  font-size: 64px;
   margin: 20px;
 }
 
@@ -29,10 +29,21 @@ nav ul {
   font-size: 2em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   nav ul { text-align: center; }
   nav li { display: inline; }
   nav li + li:before { content: "/ "; }
+  nav { margin-bottom: 20px; }
+  .brand { font-size: 56px; }
+}
+
+@media (max-width: 572px) {
+  .brand { font-size: 30px; }
+}
+
+@media (max-width: 320px) {
+  .brand { font-size: 24px; }
+  nav ul { font-size: 1.5em; }
 }
 
 h1 {
@@ -43,4 +54,9 @@ h1 {
   margin-top: 40px;
   padding-top: 40px;
   border-top: 2px dotted gray;
+}
+
+time {
+  font-variant: small-caps;
+  font-style: oblique;
 }
