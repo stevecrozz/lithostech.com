@@ -11,19 +11,6 @@ author:
 author_login: stevecrozz
 author_email: stevecrozz@gmail.com
 author_url: http://lithostech.com
-excerpt: "[caption id=\"attachment_481\" align=\"alignright\" width=\"290\"]<a href=\"http:&#47;&#47;lithostech.com&#47;wp-content&#47;uploads&#47;2012&#47;09&#47;trading.jpg\"><img
-  src=\"http:&#47;&#47;lithostech.com&#47;wp-content&#47;uploads&#47;2012&#47;09&#47;trading-290x194.jpg\"
-  alt=\"Stock charts\" title=\"ADM8\" width=\"290\" height=\"194\" class=\"size-medium
-  wp-image-481\" &#47;><&#47;a> <a href=\"http:&#47;&#47;www.flickr.com&#47;photos&#47;arselectronica&#47;7650332104&#47;\">http:&#47;&#47;www.flickr.com&#47;photos&#47;arselectronica&#47;7650332104&#47;<&#47;a>[&#47;caption]<p>Trading
-  securities is a dangerous game. It can be difficult to develop a strategy and stick
-  to it in the face of an emotional marketplace that stampedes from one extreme to
-  the other. Sticking to a trading strategy takes time, discipline and serious balls
-  far beyond the capacity of most human beings.<&#47;p>\r\n\r\n<p>One way rise above
-  the impediments is to encode your strategy into an algorithm and instruct a machine
-  to execute that strategy for you. You can still freak out and pull the plug at any
-  time, but until you do, machines can execute your strategy without hesitation or
-  emotion. Just the exercise of encoding potential trading strategies into machine
-  instructions is enough to spot problems and potential weaknesses.<&#47;p>\r\n"
 wordpress_id: 476
 wordpress_url: http://lithostech.com/?p=476
 date: '2012-09-03 14:41:13 -0700'
@@ -73,7 +60,7 @@ comments:
   date: '2014-07-23 16:06:26 -0700'
   date_gmt: '2014-07-23 23:06:26 -0700'
   content: "Hi Eryck - I can tell you that if you look at Optionshouses' api, it's
-    designed to be interfaced with any language capable of sending web requests (POST&#47;GET
+    designed to be interfaced with any language capable of sending web requests (POST/GET
     etc.) via https. Python is one. You could use Java. Javascript. Literally any
     language will have some facility for it. Stephen just chose to use python as his
     language of choice for this - I've actually done the same. \r\n\r\nAnd no, they
@@ -89,10 +76,31 @@ comments:
     become known as trading algorithm experts. At least once a week, Branded Crate
     gets [&#8230;]"
 ---
-<p>[caption id="attachment_481" align="alignright" width="290"]<a href="http:&#47;&#47;lithostech.com&#47;wp-content&#47;uploads&#47;2012&#47;09&#47;trading.jpg"><img src="http:&#47;&#47;lithostech.com&#47;wp-content&#47;uploads&#47;2012&#47;09&#47;trading-290x194.jpg" alt="Stock charts" title="ADM8" width="290" height="194" class="size-medium wp-image-481" &#47;><&#47;a> <a href="http:&#47;&#47;www.flickr.com&#47;photos&#47;arselectronica&#47;7650332104&#47;">http:&#47;&#47;www.flickr.com&#47;photos&#47;arselectronica&#47;7650332104&#47;<&#47;a>[&#47;caption]
-<p>Trading securities is a dangerous game. It can be difficult to develop a strategy and stick to it in the face of an emotional marketplace that stampedes from one extreme to the other. Sticking to a trading strategy takes time, discipline and serious balls far beyond the capacity of most human beings.<&#47;p></p>
-<p>One way rise above the impediments is to encode your strategy into an algorithm and instruct a machine to execute that strategy for you. You can still freak out and pull the plug at any time, but until you do, machines can execute your strategy without hesitation or emotion. Just the exercise of encoding potential trading strategies into machine instructions is enough to spot problems and potential weaknesses.<&#47;p><br />
-<a id="more"></a><a id="more-476"></a></p>
-<p>That's why my highest priority when choosing a stock broker was API quality. Strangely, I only found one broker who's trading API was even acceptable, OptionsHouse. The OptionsHouse API offers all the functionality you need to create simple trading algorithms, the documentation is acceptable and they offer paper trading accounts so you can easily test your algorithms without using any real money (an absolute requirement).<&#47;p></p>
-<p>To get started learning how to use the API, I created a generic API client in Python. My aim was primarily to create something generic enough to be useful to anyone who wants to automate interaction with OptionsHouse, and secondarily to create something reliable with unit tests that guarantee certain functionality:<&#47;P></p>
-<p><a href="https:&#47;&#47;github.com&#47;stevecrozz&#47;optionshouse-api-client">https:&#47;&#47;github.com&#47;stevecrozz&#47;optionshouse-api-client<&#47;a><&#47;p></p>
+<img src="/static/img/trading-290x194.jpg" class="thumbnail right" />
+Trading securities is a dangerous game. It can be difficult to develop a
+strategy and stick to it in the face of an emotional marketplace that
+stampedes from one extreme to the other. Sticking to a trading strategy
+takes time, discipline and serious balls far beyond the capacity of most
+human beings.
+
+One way rise above the impediments is to encode your strategy into an
+algorithm and instruct a machine to execute that strategy for you. You
+can still freak out and pull the plug at any time, but until you do,
+machines can execute your strategy without hesitation or emotion. Just
+the exercise of encoding potential trading strategies into machine
+instructions is enough to spot problems and potential weaknesses.
+<!--more-->
+That's why my highest priority when choosing a stock broker was API
+quality. Strangely, I only found one broker who's trading API was even
+acceptable, OptionsHouse. The OptionsHouse API offers all the
+functionality you need to create simple trading algorithms, the
+documentation is acceptable and they offer paper trading accounts so you
+can easily test your algorithms without using any real money (an
+absolute requirement).
+
+To get started learning how to use the API, I created a generic API
+client in Python. My aim was primarily to create something generic
+enough to be useful to anyone who wants to automate interaction with
+OptionsHouse, and secondarily to create something reliable with unit
+tests that guarantee certain functionality:
+[https://github.com/stevecrozz/optionshouse-api-client](https://github.com/stevecrozz/optionshouse-api-client)
