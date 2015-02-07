@@ -33,6 +33,8 @@ to retrieve these digits from the Internet over WiFi.
 I took this opportunity to try out the ever-popular Arduino platform. Arduino
 turned out to be a good choice for this project for several because it has:
 
+<div style="clear:left"></div>
+
 - an easy to use, Arduino compatible WiFi adapter (WiShield) put out by [asynclabs](http://asynclabs.com/)
 - a library available for talking to the WiShield with examples included
 - a MAX7219 interface library
