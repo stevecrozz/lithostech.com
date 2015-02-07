@@ -76,6 +76,6 @@ article .thumbnail {
 }
 
 .thumbnail.full {
-  width: 100%;
+  width: calc(100% - 20px);
   max-width: 1024px;
 }
