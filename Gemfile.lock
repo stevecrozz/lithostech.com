@@ -51,6 +51,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
+    mini_magick (4.0.3)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.9)
@@ -82,4 +83,5 @@ DEPENDENCIES
   coderay
   jekyll
   kramdown
+  mini_magick
   s3_website

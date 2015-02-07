@@ -16,3 +16,29 @@ kramdown:
     coderay_line_numbers: table
     coderay_css: class
 excerpt_separator: <!--more-->
+picture:
+  source: "static/img/full"
+  output: "static/img/resize"
+  markup: "picture"
+  presets:
+    thumbnail:
+      attr:
+        class: "thumbnail"
+        itemprop: "image"
+      source_small:
+        media: "(min-width: 576px)"
+        width: "300"
+      source_default:
+        width: "200"
+    full:
+      attr:
+        class: "thumbnail full"
+        itemprop: "image"
+      source_medium:
+        media: "(min-width: 768px)"
+        width: "1024"
+      source_small:
+        media: "(min-width: 405px)"
+        width: "600"
+      source_default:
+        width: "300"

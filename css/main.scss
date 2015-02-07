@@ -57,12 +57,25 @@ h1 {
   border-top: 2px dotted gray;
 }
 
+article {
+  max-width: 1024px;
+}
+
 time {
   font-variant: small-caps;
   font-style: oblique;
 }
 
+article .thumbnail {
+  margin: 10px;
+}
+
 .thumbnail.right {
   float: right;
   margin: 10px;
+}
+
+.thumbnail.full {
+  width: 100%;
+  max-width: 1024px;
 }
