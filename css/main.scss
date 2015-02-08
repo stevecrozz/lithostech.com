@@ -9,6 +9,7 @@
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_thumbnails',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_labels',
+  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_pager',
   'coderay';
 
 
@@ -24,7 +25,7 @@ html, body {
   margin: 20px;
 }
 
-nav ul {
+nav.main ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -58,7 +59,7 @@ h1 {
   border-top: 2px dotted gray;
 }
 
-article {
+.content {
   max-width: 1024px;
 }
 

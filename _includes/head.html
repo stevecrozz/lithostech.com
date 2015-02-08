@@ -4,4 +4,14 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+  {% if paginator and paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <link rel="prev" href="/" />
+    {% else %}
+      <link rel="prev" href="{{ paginator.previous_page_path }}" />
+    {% endif %}
+  {% endif %}
+  {% if paginator and paginator.next_page %}
+    <link rel="next" href="{{ paginator.next_page_path }}" />
+  {% endif %}
 </head>
