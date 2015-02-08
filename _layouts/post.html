@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  {% include head.html %}
-  <body>
-    <div class="container-fluid">
-      {% include brand.html %}
-      <div class="row">
-        <div class="col-sm-2">
-          {% include nav.html %}
-        </div>
-        <div class="col-sm-10">
-          <article itemscope itemtype="http://schema.org/BlogPosting">
-            {% assign post = page %}
-            {% include post_header.html %}
-            {{ content }}
-          </article>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+---
+layout: default
+---
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  {% assign post = page %}
+  {% include post_header.html %}
+  {{ content }}
+</article>
+{% include comments.html %}
