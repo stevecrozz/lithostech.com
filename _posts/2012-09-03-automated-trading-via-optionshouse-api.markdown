@@ -67,7 +67,7 @@ comments:
     don't charge extra, but there are limits on the service. I'd suggest reaching
     out to them for more info."
 - id: 110239
-  author: trading algorithm &mdash; how to write and deploy &laquo; lithostech.com
+  author: trading algorithm — how to write and deploy &laquo; lithostech.com
   author_email: ''
   author_url: http://lithostech.com/2014/09/trading-algorithm-write-and-deploy/
   date: '2014-10-16 16:22:27 -0700'

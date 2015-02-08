@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: trading algorithm &mdash; how to write and deploy
+title: trading algorithm — how to write and deploy
 author:
   display_name: stevecrozz
   login: stevecrozz

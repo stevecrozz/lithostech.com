@@ -27,13 +27,13 @@ tags:
 - actionscript
 comments: []
 ---
-<p>There's something strangely satisfying about switching gears from a well structured language like Ruby all the way back to the days of actionscript 2. It brings me back a little. Actionscript 2 has a lot of intricacies and subtle nuances that you wouldn't expect and that's one thing that makes it fun. It's fun because it doesn't normally work as expected. You have to delve deep into the minds of the poor people who were forced to create it and outsmart them. It's fun because when you finally get something to work, you can look at your code and say, "there's no way that should work!" After a few hours of working with the language you begin to anticipate the worst possible scenario. <a id="more"></a><a id="more-37"></a>You would think this for instance:<&#47;p></p>
-<p>If I want to create an array object called bar with 3 elements, I'd do it like this:<&#47;p></p>
-<pre>var bar:Array = new Array('a', 'b', 'c');<&#47;pre></p>
-<p>but if I wanted only one element in the array, I'd do it like this:<&#47;p></p>
-<pre>var bar:Array = new Array(['a']);<&#47;pre></p>
-<p>Of course! It's so obvious. The square brackets are obvious because actionscript 2 wants to make doubly sure that bar will actually be an array and not just a string, whereas the commas give it away in the first example so adding square brackets there would just create an array containing an array.<&#47;p></p>
-<p>Let's take this example straight out of the documention:<&#47;p></p>
+<p>There's something strangely satisfying about switching gears from a well structured language like Ruby all the way back to the days of actionscript 2. It brings me back a little. Actionscript 2 has a lot of intricacies and subtle nuances that you wouldn't expect and that's one thing that makes it fun. It's fun because it doesn't normally work as expected. You have to delve deep into the minds of the poor people who were forced to create it and outsmart them. It's fun because when you finally get something to work, you can look at your code and say, "there's no way that should work!" After a few hours of working with the language you begin to anticipate the worst possible scenario. <a id="more"></a><a id="more-37"></a>You would think this for instance:</p></p>
+<p>If I want to create an array object called bar with 3 elements, I'd do it like this:</p></p>
+<pre>var bar:Array = new Array('a', 'b', 'c');</pre></p>
+<p>but if I wanted only one element in the array, I'd do it like this:</p></p>
+<pre>var bar:Array = new Array(['a']);</pre></p>
+<p>Of course! It's so obvious. The square brackets are obvious because actionscript 2 wants to make doubly sure that bar will actually be an array and not just a string, whereas the commas give it away in the first example so adding square brackets there would just create an array containing an array.</p></p>
+<p>Let's take this example straight out of the documention:</p></p>
 <pre>var submitListener:Object = new Object();<br />
 submitListener.click = function(evt:Object) {<br />
 var result_lv:LoadVars = new LoadVars();<br />
@@ -46,14 +46,14 @@ result_ta.text = "Error connecting to server.";<br />
 };<br />
 var send_lv:LoadVars = new LoadVars();<br />
 send_lv.name = name_ti.text;<br />
-send_lv.sendAndLoad("http:&#47;&#47;www.flash-mx.com&#47;mm&#47;greeting.cfm", result_lv, "POST");<br />
+send_lv.sendAndLoad("http://www.flash-mx.com/mm/greeting.cfm", result_lv, "POST");<br />
 };<br />
-submit_button.addEventListener("click", submitListener);<&#47;pre></p>
-<p>Upon first glance you should automatically know that should greeting.cfm return an empty document, result_ta.text will become "Error connecting to server." *even if* there was no error connecting to the server.<&#47;p></p>
-<p>Here's where actionscript 2 really shines, lets say that you want to send an array of values to a remote server using LoadVars::sendAndLoad(). The only info I could find about doing this was to use xml, but I didn't really want to bother forming xml because seriously, I'm using actionscript 2 here. send_lv will take any element or property you assign and turn it into a data string which it sends to the server. So in an ordinary environment you might expect to stick an array into our LoadVars object like this:<&#47;p></p>
-<pre>send_lv['list'] = list; &#47;&#47;where list is an Array<&#47;pre></p>
-<p>but of course that wouldn't work because its just not dumb enough, here's where it helps to know a little bit about HTTP and exactly how great actionscript 2 truly is:<&#47;p></p>
+submit_button.addEventListener("click", submitListener);</pre></p>
+<p>Upon first glance you should automatically know that should greeting.cfm return an empty document, result_ta.text will become "Error connecting to server." *even if* there was no error connecting to the server.</p></p>
+<p>Here's where actionscript 2 really shines, lets say that you want to send an array of values to a remote server using LoadVars::sendAndLoad(). The only info I could find about doing this was to use xml, but I didn't really want to bother forming xml because seriously, I'm using actionscript 2 here. send_lv will take any element or property you assign and turn it into a data string which it sends to the server. So in an ordinary environment you might expect to stick an array into our LoadVars object like this:</p></p>
+<pre>send_lv['list'] = list; //where list is an Array</pre></p>
+<p>but of course that wouldn't work because its just not dumb enough, here's where it helps to know a little bit about HTTP and exactly how great actionscript 2 truly is:</p></p>
 <pre>for (var i in list) {<br />
 send_lv['list[' + i + ']'] = list[i];<br />
-}<&#47;pre></p>
-<p>Viola! I truly believe that actionscript 2 can do anything. If you find yourself resorting to trace(foo), the ever-popular flash 8 debugger, reaching over your designer's keyboard to type code while you both scratch your heads, just take a deep breath and think, "If I were outrageously stupid and inconsistent, yet somehow still able to write code, how would I do it?" I'll tell you how, you'd write in actionscript 2.<&#47;p></p>
+}</pre></p>
+<p>Viola! I truly believe that actionscript 2 can do anything. If you find yourself resorting to trace(foo), the ever-popular flash 8 debugger, reaching over your designer's keyboard to type code while you both scratch your heads, just take a deep breath and think, "If I were outrageously stupid and inconsistent, yet somehow still able to write code, how would I do it?" I'll tell you how, you'd write in actionscript 2.</p></p>

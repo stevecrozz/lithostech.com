@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: django database fixtures are <del>not<&#47;del> good
+title: django database fixtures are <del>not</del> good
 author:
   display_name: stevecrozz
   login: stevecrozz
@@ -33,7 +33,7 @@ comments:
   date: '2008-10-10 18:28:47 -0700'
   date_gmt: ''
   content: "You can just include certain applications by passing them to the dumpdata
-    command.\r\n.&#47;manage.py dumpdata blog \r\nWill only dump your blog tables."
+    command.\r\n./manage.py dumpdata blog \r\nWill only dump your blog tables."
 - id: 4
   author: ''
   author_email: ''
@@ -41,10 +41,10 @@ comments:
   date: '2008-10-10 18:29:52 -0700'
   date_gmt: ''
   content: "Hi there,\r\n\r\nI use initial_data.yaml files a lot, so you might be
-    interested that Django looks only in the fixtures&#47; directories inside the
+    interested that Django looks only in the fixtures/ directories inside the
     directories of each of your INSTALLED_APPS (see your project's settings.py). Furthermore
     you are able to specify an optional FIXTURE_DIRS list in your settings.py where
-    Django should also look for fixture files. (http:&#47;&#47;docs.djangoproject.com&#47;en&#47;dev&#47;ref&#47;settings&#47;#fixture-dirs)\r\n\r\ndumpdata
+    Django should also look for fixture files. (http://docs.djangoproject.com/en/dev/ref/settings/#fixture-dirs)\r\n\r\ndumpdata
     takes a list of app names, that enables you to only dump the models inside those.\r\n\r\nCheers,\r\njezdez\r\n"
 - id: 5
   author: stevecrozz
@@ -85,10 +85,10 @@ comments:
     continue to use South.  \r\n\r\n(Note, I don't have anything to do with South.
     \ I just think it's required equipment in a Django DB application.)"
 ---
-<p><a href="http:&#47;&#47;www.flickr.com&#47;photos&#47;kogakure&#47;2225768345"><img src="http:&#47;&#47;lithostech.com&#47;wp-content&#47;uploads&#47;2008&#47;10&#47;4136613234_dc76ee0d99_o2-290x217.jpg" alt="Django T-Shirt" width="290" height="217" class="alignleft size-medium wp-image-530" &#47;><&#47;a>I've been working on a project using django, and I've got some great things to say about it. I also have some nasty things to say. I'm currently prototyping, which means the databases I work with get destroyed and recreated regularly. I normally have a set of test data that should always be present in the system. Database fixtures to the rescue!<&#47;p><a id="more"></a><a id="more-57"></a></p>
-<p>The <a href="http:&#47;&#47;docs.djangoproject.com&#47;en&#47;dev&#47;howto&#47;initial-data&#47;">django documentation<&#47;a> has a nice section on database fixtures and how to deal with them properly. You can even give your fixtures a special name (initial_data), and the syncdb command will automatically load your initial fixtures for you. The first thing that really struck me about these fixtures is the fact that you have to reference your model for every database row. Why not divide the fixtures into sections so you only have to type it out once? The fixtures could really benefit from that type of context.<&#47;p></p>
-<p>The second thing I noticed, after typing out all my fixtures in YAML format, is that django claims to support YAML format, but doesn't actually check for an initial_data.yml (or initial_data.yaml) file. That's a big disappointment. Now am I supposed to translate that file back into xml or json? It picks up files with those names perfectly fine.<&#47;p></p>
-<p>You might think I should use django's dumpdata command, but you might be surprised to know that while dumpdata allows you to specifically *exclude* certain models, it doesn't allow you to *only include* certain models. My project has nearly 100 database tables and dozens of models. Am I supposed to --exclude each of them?<&#47;p></p>
-<p>I've spent the last hour and a half trying to get django to bend to my will. Needless to say, I am less than impressed. It would be nice if I could easily force the system to check for yaml files, but to a django novice like myself, the framework appears to suffer from black box syndrome with its weird system of magical callbacks. Does anyone know what's going on here?<&#47;p></p>
-<p>UPDATE 2008-10-12:<&#47;p></p>
-<p>I've got some helpful feedback from here and had a fresh look at the documentation. Looks like I glossed over the part where it said next to yaml: "This serializer is only available if PyYAML is installed". So a quick "apt-get install python-yaml" did the trick for me (ubuntu package) after renaming my .yml file to .yaml. If you can't find a binary for your OS, you can always get the <a>PyYAML source<&#47;a>. Initial database fixtures are now working smoothly for me in my format of choice.<&#47;p></p>
+<p><a href="http://www.flickr.com/photos/kogakure/2225768345"><img src="http://lithostech.com/wp-content/uploads/2008/10/4136613234_dc76ee0d99_o2-290x217.jpg" alt="Django T-Shirt" width="290" height="217" class="alignleft size-medium wp-image-530" /></a>I've been working on a project using django, and I've got some great things to say about it. I also have some nasty things to say. I'm currently prototyping, which means the databases I work with get destroyed and recreated regularly. I normally have a set of test data that should always be present in the system. Database fixtures to the rescue!</p><a id="more"></a><a id="more-57"></a></p>
+<p>The <a href="http://docs.djangoproject.com/en/dev/howto/initial-data/">django documentation</a> has a nice section on database fixtures and how to deal with them properly. You can even give your fixtures a special name (initial_data), and the syncdb command will automatically load your initial fixtures for you. The first thing that really struck me about these fixtures is the fact that you have to reference your model for every database row. Why not divide the fixtures into sections so you only have to type it out once? The fixtures could really benefit from that type of context.</p></p>
+<p>The second thing I noticed, after typing out all my fixtures in YAML format, is that django claims to support YAML format, but doesn't actually check for an initial_data.yml (or initial_data.yaml) file. That's a big disappointment. Now am I supposed to translate that file back into xml or json? It picks up files with those names perfectly fine.</p></p>
+<p>You might think I should use django's dumpdata command, but you might be surprised to know that while dumpdata allows you to specifically *exclude* certain models, it doesn't allow you to *only include* certain models. My project has nearly 100 database tables and dozens of models. Am I supposed to --exclude each of them?</p></p>
+<p>I've spent the last hour and a half trying to get django to bend to my will. Needless to say, I am less than impressed. It would be nice if I could easily force the system to check for yaml files, but to a django novice like myself, the framework appears to suffer from black box syndrome with its weird system of magical callbacks. Does anyone know what's going on here?</p></p>
+<p>UPDATE 2008-10-12:</p></p>
+<p>I've got some helpful feedback from here and had a fresh look at the documentation. Looks like I glossed over the part where it said next to yaml: "This serializer is only available if PyYAML is installed". So a quick "apt-get install python-yaml" did the trick for me (ubuntu package) after renaming my .yml file to .yaml. If you can't find a binary for your OS, you can always get the <a>PyYAML source</a>. Initial database fixtures are now working smoothly for me in my format of choice.</p></p>

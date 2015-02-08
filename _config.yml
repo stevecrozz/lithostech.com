@@ -17,6 +17,14 @@ kramdown:
     coderay_line_numbers: table
     coderay_css: class
 excerpt_separator: <!--more-->
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author:
+        name: Stephen Crosby
+        email: "stevecrozz@gmail.com"
 picture:
   source: "static/img/full"
   output: "static/img/resize"

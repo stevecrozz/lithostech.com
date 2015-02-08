@@ -1,0 +1,34 @@
+---
+layout: null
+title : Atom Feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }}</title>
+  <link rel="self" href="/{{ page.path }}"/>
+  <link rel="first" href="/atom.xml"/>
+  {% if paginator.page != paginator.total_pages %}
+  <link rel="next" href="/atom/page{{ paginator.next_page }}.xml"/>
+  {% endif %}
+  {% if paginator.previous_page == 1%}
+  <link rel="previous" href="/atom.xml"/>
+  {% elsif paginator.previous_page %}
+  <link rel="previous" href="/atom/page{{ paginator.previous_page }}.xml"/>
+  {% endif %}
+  <link rel="last" href="/atom/page{{ paginator.total_pages }}.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.production_url }}</id>
+  {% for post in paginator.posts %}
+    <entry>
+      <title>{{ post.title }}</title>
+        <author>
+          <name>{{ post.author.name }}</name>
+          <email>{{ post.author.email }}</email>
+        </author>
+      <link href="{{ post.url }}"/>
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <id>{{ site.production_url }}{{ post.id }}</id>
+      <content type="html">{{ post.content | xml_escape }}</content>
+    </entry>
+  {% endfor %}
+</feed>
