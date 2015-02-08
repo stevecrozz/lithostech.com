@@ -3,4 +3,9 @@
     <a href="{{ post.url }}" class="permalink" title="Permalink">{{ post.title }}</a>
   </h1>
   <time itemprop="datePublished" datetime="{{ post.date | date: '%Y-%m-%d'}}">{{ post.date | date: '%B %d, %Y' }}</time>
+  <div class="keywords">
+    {% for tag in post.tags %}
+    <a href="/tags/{{tag | UrlEncode }}"><span itemprop="keywords" class="label label-default">{{tag}}</span></a>
+    {% endfor %}
+  </div>
 </header>
