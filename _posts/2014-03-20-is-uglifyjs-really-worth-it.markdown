@@ -11,21 +11,6 @@ author:
 author_login: stevecrozz
 author_email: stevecrozz@gmail.com
 author_url: http://lithostech.com
-excerpt: "<p>Like the rest of the world, RightScale has been moving more and more
-  of its application from the server to the client. That means we've suddenly found
-  managing larger and larger piles of JavaScript. All that JavaScript needs to be
-  delivered to clients as quickly as possible in order to minimize the time customers
-  spend waiting for web pages to load.</p>\r\n\r\n<p>So we created a nice little
-  build tool leveraging <a href=\"http://gruntjs.com/\">Grunt</a>
-  which among other things takes all that JavaScript and compiles it into one big
-  blob for each application. In order to make that big blob as small as possible,
-  we use <a href=\"https://github.com/mishoo/UglifyJS\">UglifyJS</a>.</p>\r\n\r\n<p>Unfortunately,
-  some of our apps are so big that running the uglify Grunt task can take a long time.
-  Ideally, this task would be fast enough to where it could be run at or just before
-  deploying. Fast enough is a pretty subjective term, but we deploy code all the time
-  to production and various kinds of staging systems, so fast enough becomes however
-  long you want to wait for code deploys in addition to the time it already takes.
-  In my case, three extra minutes is not fast enough.</p>\r\n"
 wordpress_id: 622
 wordpress_url: http://lithostech.com/?p=622
 date: '2014-03-20 16:50:54 -0700'
@@ -80,6 +65,8 @@ off with something fast and simple like Douglas Crockford's good old
 [JSMin](http://www.crockford.com/javascript/jsmin.html)? We could just
 rely more on the file compression than mifification or uglification to
 reduce file size.
+
+<!--more-->
 
 If I were to separately process some JavaScript with UglifyJS and with
 JSMin I could draw a comparison between these two minifiers. And if I

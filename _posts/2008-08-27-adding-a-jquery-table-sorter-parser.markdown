@@ -27,28 +27,28 @@ tags:
 - programming
 comments: []
 ---
-<p>We're getting ready to launch a new <a href="http://data.fresnobeehive.com/bulldogs/">college football site</a> for the upcoming Fresno State Bulldogs season. The site uses a table to display a player roster. Adding sortable columns to the table is a snap with jQuery. All you have to do is load the <a href="http://tablesorter.com/">tablesorter plugin</a>, and call it up when the page loads. This makes every table you have sortable:</p></p>
+We're getting ready to launch a new <a href="http://data.fresnobeehive.com/bulldogs/">college football site</a> for the upcoming Fresno State Bulldogs season. The site uses a table to display a player roster. Adding sortable columns to the table is a snap with jQuery. All you have to do is load the <a href="http://tablesorter.com/">tablesorter plugin</a>, and call it up when the page loads. This makes every table you have sortable:
 <pre>
-$(document).ready( function() {<br />
-  $('table').tablesorter();<br />
-});<br />
-</pre><br />
-<a id="more"></a><a id="more-40"></a></p>
-<p>For most tables that's all you need to make it work beautifully, but in my case the plugin was having trouble sorting my height column. It looks like it was sorting that column as text, but that doesn't work because in the US we like to see our football player's heights in feet and inches such as 5' 11" for five feet and eleven inches. Thankfully the table sorter plugin allows you to define your own column types which it can automatically detect and sort for you.</p></p>
+$(document).ready( function() {
+  $('table').tablesorter();
+});
+</pre>
+<a id="more"></a><a id="more-40"></a>
+For most tables that's all you need to make it work beautifully, but in my case the plugin was having trouble sorting my height column. It looks like it was sorting that column as text, but that doesn't work because in the US we like to see our football player's heights in feet and inches such as 5' 11" for five feet and eleven inches. Thankfully the table sorter plugin allows you to define your own column types which it can automatically detect and sort for you.
 <pre>
-$(document).ready( function() {<br />
-  $.tablesorter.addParser({<br />
-    id: 'height',<br />
-    is: function(s) {<br />
-      //$.tablesorter uses this function to determine if this colum is of this type<br />
-      return s.match(new RegExp(/^\d{1}\' \d{1,2}\"/));<br />
-    },<br />
-    format: function(s) {<br />
-      //now we'll just return the number of inches and $.tablesorter will sort them as integers<br />
-      var matches = s.match(new RegExp(/^(\d{1})\' (\d{1,2})\"/), 'g');<br />
-      return parseInt(matches[1]) * 12 + parseInt(matches[2]);<br />
-    }<br />
-  });<br />
-  $('table').tablesorter();<br />
-});<br />
-</pre></p>
+$(document).ready( function() {
+  $.tablesorter.addParser({
+    id: 'height',
+    is: function(s) {
+      //$.tablesorter uses this function to determine if this colum is of this type
+      return s.match(new RegExp(/^\d{1}\' \d{1,2}\"/));
+    },
+    format: function(s) {
+      //now we'll just return the number of inches and $.tablesorter will sort them as integers
+      var matches = s.match(new RegExp(/^(\d{1})\' (\d{1,2})\"/), 'g');
+      return parseInt(matches[1]) * 12 + parseInt(matches[2]);
+    }
+  });
+  $('table').tablesorter();
+});
+</pre>

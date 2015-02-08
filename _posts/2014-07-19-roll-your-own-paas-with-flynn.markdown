@@ -294,7 +294,7 @@ $ flynn scale web=3
 Now your app is running, but you still can't reach it until you tell
 Flynn which hostname should be routed to your application. Add an HTTP
 route for your new app and you should be able to hit it with curl.
-Obviously, you'll need to make a corresponding DNS entry as well:</p>
+Obviously, you'll need to make a corresponding DNS entry as well:
 
 ~~~ bash
 $ flynn route-add-http example.lithostech.com

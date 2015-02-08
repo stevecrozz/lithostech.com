@@ -28,13 +28,13 @@ tags:
 - ubuntu
 comments: []
 ---
-<p><a href="http://lithostech.com/wp-content/uploads/2008/09/pdt.png"><img src="http://lithostech.com/wp-content/uploads/2008/09/pdt-300x222.png" alt="eclipse pdt screenshot" title="pdt" width="300" height="222" class="alignright size-medium wp-image-210" /></a>After upgrading to Intrepid Ibex Alpha 5, I was presented with a familiar problem. I knew I had dealt with this at least a half-dozen times in the past, but I never seem to learn. It all happened when I tried to import a project I'd started from my subversion repository into eclipse on my laptop. I began to get very strange un-googlable Java errors that I knew I'd seen before. Here's two of them:</p></p>
+<a href="http://lithostech.com/wp-content/uploads/2008/09/pdt.png"><img src="http://lithostech.com/wp-content/uploads/2008/09/pdt-300x222.png" alt="eclipse pdt screenshot" title="pdt" width="300" height="222" class="alignright size-medium wp-image-210" /></a>After upgrading to Intrepid Ibex Alpha 5, I was presented with a familiar problem. I knew I had dealt with this at least a half-dozen times in the past, but I never seem to learn. It all happened when I tried to import a project I'd started from my subversion repository into eclipse on my laptop. I began to get very strange un-googlable Java errors that I knew I'd seen before. Here's two of them:
 <pre>
-java.lang.nullpointerexception<br />
-java.lang.NoClassDefFoundError: org.eclipse.emf.ecore.util.EcoreEMap$DelegateEObjectContainmentEList<br />
-</pre><a id="more"></a><a id="more-48"></a></p>
-<p>When I made the distribution upgrade, I failed to notice that my symbolic link /etc/alternatives/java (pointed to by /usr/bin/java) had changed. Instead of using Sun Java, I was back to using GCJ. GCJ is a great effort, and if it could run PDT smoothly I would use it in a heartbeat. Until then, I'm forced to use Sun Java. Don't bother changing the symbolic links by hand, Ubuntu has a handy tool to do that for you. It would have been nice to have preserved my original configuration though.</p></p>
+java.lang.nullpointerexception
+java.lang.NoClassDefFoundError: org.eclipse.emf.ecore.util.EcoreEMap$DelegateEObjectContainmentEList
+</pre><a id="more"></a><a id="more-48"></a>
+When I made the distribution upgrade, I failed to notice that my symbolic link /etc/alternatives/java (pointed to by /usr/bin/java) had changed. Instead of using Sun Java, I was back to using GCJ. GCJ is a great effort, and if it could run PDT smoothly I would use it in a heartbeat. Until then, I'm forced to use Sun Java. Don't bother changing the symbolic links by hand, Ubuntu has a handy tool to do that for you. It would have been nice to have preserved my original configuration though.
 <pre>
-sudo update-java-alternatives --set java-6-sun<br />
-</pre></p>
-<p>Next time I get these messages maybe I'll remember to check which Java I'm using.</p></p>
+sudo update-java-alternatives --set java-6-sun
+</pre>
+Next time I get these messages maybe I'll remember to check which Java I'm using.
