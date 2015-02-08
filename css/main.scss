@@ -67,13 +67,12 @@ time {
   font-style: oblique;
 }
 
-article .thumbnail {
+.thumbnail {
   margin: 10px;
 }
 
 .thumbnail.right {
   float: right;
-  margin: 10px;
 }
 
 .thumbnail.full {
@@ -81,6 +80,5 @@ article .thumbnail {
   max-width: 1024px;
 }
 
-.keywords {
-  margin: 10px 0;
-}
+.keywords { margin: 10px 0; }
+.keywords a:hover { color: white; }
