@@ -22,9 +22,18 @@ picture:
   output: "static/img/resize"
   markup: "picture"
   presets:
-    thumbnail:
+    thumbnail-left:
       attr:
-        class: "thumbnail"
+        class: "thumbnail left"
+        itemprop: "image"
+      source_small:
+        media: "(min-width: 576px)"
+        width: "300"
+      source_default:
+        width: "200"
+    thumbnail-right:
+      attr:
+        class: "thumbnail right"
         itemprop: "image"
       source_small:
         media: "(min-width: 576px)"

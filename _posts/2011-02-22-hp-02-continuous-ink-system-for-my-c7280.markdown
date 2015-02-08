@@ -85,8 +85,8 @@ comments:
     Can you please tell me the name of the eBay vendor you bought it from, or any
     branding information?\r\n\r\nThanks!"
 ---
+{% picture thumbnail-left 2011/ciss/100_0341.jpg alt="the new cartridges are installed" %}
 
-{% picture thumbnail 2011/ciss/100_0341.jpg alt="the new cartridges are installed" style="float:right" %}
 Having been thoroughly satisfied with prior HP printer experiences, I
 made the mistake of purchasing a brand new HP Photosmart c7280. I'm a
 big fan of these all-in-one devices. I especially like having a WiFi
@@ -103,7 +103,7 @@ seen.
 
 <!--more-->
 
-{% picture thumbnail 2011/ciss/100_0338.jpg alt="hp photosmart c7280 loaded with crappy hp ink" style="float:left" %}
+{% picture thumbnail-left 2011/ciss/100_0338.jpg alt="hp photosmart c7280 loaded with crappy hp ink" %}
 There's also five separate colors and one black, but that's not a huge
 problem until you combine it with the thing I hate most about this ink
 system.  If you run out of any color, or if a color simply "expires",

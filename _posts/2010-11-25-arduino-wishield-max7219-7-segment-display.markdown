@@ -24,7 +24,7 @@ tags:
 - max7129
 comments: []
 ---
-{% picture thumbnail 2010/wifi-radio/IMG_20101123_171932.jpg style="float:left;" %}
+{% picture thumbnail-left 2010/wifi-radio/IMG_20101123_171932.jpg %}
 
 For this project, I wanted to build a device capable of displaying up to 8
 digits on a seven segment display. Sounds easy, right? The catch is, I wanted

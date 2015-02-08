@@ -22,7 +22,7 @@ tags:
 - nginx
 comments: []
 ---
-{% picture thumbnail 2009/nginx-logo.png alt="nginx logo" style="float:left" %}
+{% picture thumbnail-left 2009/nginx-logo.png alt="nginx logo" %}
 
 The nginx build in the official ubuntu package repository is somewhat
 out-of-date, so I built my own package from source using

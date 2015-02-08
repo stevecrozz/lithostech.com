@@ -99,7 +99,7 @@ comments:
     easy enough and I based it on some scripts I found at socialcmsbuzz. All the old
     URLs should still work thanks to a set of handwritten redirects in nginx. [...]"
 ---
-{% picture thumbnail 2009/nginx-logo.png alt="nginx logo" style="float:left" %}
+{% picture thumbnail-left 2009/nginx-logo.png alt="nginx logo" %}
 
 Since we've been on [slicehost](http://slicehost.com), I've been forced
 to play the role of system administrator since we don't have a real one.

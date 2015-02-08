@@ -22,7 +22,7 @@ tags:
 - database
 comments: []
 ---
-{% picture thumbnail 2009/4136613234_dc76ee0d99_o.jpg alt="the original database" style="float:left" %}
+{% picture thumbnail-left 2009/4136613234_dc76ee0d99_o.jpg alt="the original database" %}
 
 This blog entry is directed mainly at the body of web developers who
 have very little formal training but are trying to improve their own

@@ -33,7 +33,7 @@ comments:
     the 90's when they were so into Outsourcing and Off-shoring. They dismantled all
     those factories against the wishes of the liberals and labor unions.     "
 ---
-{% picture thumbnail 2010/buy-local.jpg style="float:left" %}
+{% picture thumbnail-left 2010/buy-local.jpg alt="Buy local logo" %}
 
 The [central valley buy local campaign](http://www.whyibuylocal.com/)
 probably began with the best of intentions. The idea is simple, get

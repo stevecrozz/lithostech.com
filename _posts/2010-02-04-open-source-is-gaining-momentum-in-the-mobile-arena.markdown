@@ -21,7 +21,7 @@ tags:
 - mobile
 comments: []
 ---
-{% picture thumbnail 2010/phone-os-stack.jpg alt="oss-phone-lineup" style="float:left;" %}
+{% picture thumbnail-left 2010/phone-os-stack.jpg alt="oss-phone-lineup" %}
 
 A new development in the mobile operating system market brings an open
 source convert to the table. As of [Symbian's

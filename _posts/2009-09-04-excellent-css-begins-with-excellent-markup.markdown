@@ -21,7 +21,7 @@ tags:
 - web development
 comments: []
 ---
-{% picture thumbnail 2009/1438778328_62a126c5a7_b.jpg alt="Apple Expo '07" style="float:left" %}
+{% picture thumbnail-left 2009/1438778328_62a126c5a7_b.jpg alt="Apple Expo '07" %}
 
 In the early days of the web (the early '90s), when the first HTML
 specification was being adopted, CSS did not exist. Web developers and

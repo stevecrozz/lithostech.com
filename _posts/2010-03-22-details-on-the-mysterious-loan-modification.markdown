@@ -91,7 +91,7 @@ comments:
     assuming your situation doesn't change a lot and assuming you provided accurate
     information when you qualified for the trial modification.
 ---
-{% picture thumbnail 2010/mha/amortization-table.jpg alt="amortization-table" style="float:left" %}
+{% picture thumbnail-left 2010/mha/amortization-table.jpg alt="amortization-table" %}
 
 No doubt many recent home buyers lauded the Federal [Making Home
 Affordable](http://makinghomeaffordable.gov) program when it was

@@ -67,12 +67,16 @@ time {
   font-style: oblique;
 }
 
-.thumbnail {
-  margin: 10px;
+.thumbnail.left {
+  float: left;
+  clear: left;
+  margin: 10px 10px 10px 0;
 }
 
 .thumbnail.right {
   float: right;
+  clear: right;
+  margin: 10px 0 10px 10px;
 }
 
 .thumbnail.full {
