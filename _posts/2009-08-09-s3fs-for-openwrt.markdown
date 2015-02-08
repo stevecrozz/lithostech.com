@@ -11,12 +11,6 @@ author:
 author_login: stevecrozz
 author_email: stevecrozz@gmail.com
 author_url: http://lithostech.com
-excerpt: "If you've been following along with my wifi radio posts, you may recall
-  my problem of storage for the platform. I chose an ultra-low power and nearly zero
-  storage device for my music collection because I planned to buy an external storage
-  device and serve music from that device. I still think that's a good idea, but I'm
-  too cheap to spring for the kind of device I really want. So I've been experimenting
-  with cloud storage which has a number of big advantages which I won't get into here.\r\n\r\n"
 wordpress_id: 79
 date: '2009-08-09 20:53:23 -0700'
 date_gmt: '2009-08-10 04:53:23 -0700'
@@ -52,10 +46,10 @@ comments:
   date: '2012-02-20 12:58:31 -0800'
   date_gmt: '2012-02-20 20:58:31 -0800'
   content: Hi Steve - did you do any work on this project since the last update. I'm
-    trying to implement something similar using s3fs over openwrt&#47;embedded linux
+    trying to implement something similar using s3fs over openwrt/embedded linux
     board (beagleboard) any pointers on whether you were able to get this type of
     a setup to work. I'm also trying to extend it on the LAN side (of my natted gw)
-    using Samba or something&#47;upnp that abstracts the remote file storage and makes
+    using Samba or something/upnp that abstracts the remote file storage and makes
     it look like a simple folder from the client PC perspective...
 - id: 47102
   author: stevecrozz
@@ -118,8 +112,32 @@ comments:
   content: "Jurijs got it working on openwrt backfire\r\nif you interested pm on openwrt
     forum search s3fs"
 ---
-<p>If you've been following along with my wifi radio posts, you may recall my problem of storage for the platform. I chose an ultra-low power and nearly zero storage device for my music collection because I planned to buy an external storage device and serve music from that device. I still think that's a good idea, but I'm too cheap to spring for the kind of device I really want. So I've been experimenting with cloud storage which has a number of big advantages which I won't get into here.<&#47;p><br />
-<a id="more"></a><a id="more-79"></a></p>
-<p>So I spent some time figuring out how to cross-compile s3fs properly for the openwrt platform. I was hoping my next post would be a success story of running mpd with an s3fs back end storage system, but I've run into trouble. s3fs relies on fuse 2.6 which has dropped support for Linux 2.4 kernels. But the drivers for my broadcom (integrated) wifi are binary-only and not compatible with Linux 2.6 kernels and no other working drivers exist.<&#47;p></p>
-<p>I've just placed an order for a new device, an Asus WL-500g Premium which has basically the same broadcom wifi hardware, but in the form of a mini-PCI card. So in theory it could be swapped with an Atheros wifi card and I'd be good to go. In the mean time, I'll leave you with the Makefile which does compile and run. You'll need libcurl, libfuse, libxml2, uclibcxx, libpthread, libssl, libcrypto, and libz. My goal is to play music over wifi with an s3 backend on a low-cost embedded device <100USD. This is an open challenge for anyone to beat me to it.<&#47;p></p>
-<p>Special thanks to Bartman007 from #openwrt-devel on freenode who helped me test this Makefile and cleaned up the code for me.<&#47;p></p>
+If you've been following along with my wifi radio posts, you may recall
+my problem of storage for the platform. I chose an ultra-low power and
+nearly zero storage device for my music collection because I planned to
+buy an external storage device and serve music from that device. I still
+think that's a good idea, but I'm too cheap to spring for the kind of
+device I really want. So I've been experimenting with cloud storage
+which has a number of big advantages which I won't get into here.
+
+<!--more-->
+
+So I spent some time figuring out how to cross-compile s3fs properly for
+the openwrt platform. I was hoping my next post would be a success story
+of running mpd with an s3fs back end storage system, but I've run into
+trouble. s3fs relies on fuse 2.6 which has dropped support for Linux 2.4
+kernels. But the drivers for my broadcom (integrated) wifi are
+binary-only and not compatible with Linux 2.6 kernels and no other
+working drivers exist.
+
+I've just placed an order for a new device, an Asus WL-500g Premium
+which has basically the same broadcom wifi hardware, but in the form of
+a mini-PCI card.  So in theory it could be swapped with an Atheros wifi
+card and I'd be good to go. In the mean time, I'll leave you with the
+Makefile which does compile and run. You'll need libcurl, libfuse,
+libxml2, uclibcxx, libpthread, libssl, libcrypto, and libz. My goal is
+to play music over wifi with an s3 backend on a low-cost embedded device
+<100USD. This is an open challenge for anyone to beat me to it.
+
+Special thanks to Bartman007 from #openwrt-devel on freenode who helped
+me test this Makefile and cleaned up the code for me.

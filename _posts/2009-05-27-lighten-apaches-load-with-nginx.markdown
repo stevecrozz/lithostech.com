@@ -11,17 +11,6 @@ author:
 author_login: stevecrozz
 author_email: stevecrozz@gmail.com
 author_url: http://lithostech.com
-excerpt: "Since we've been on <a href=\"http://slicehost.com\">slicehost</a>, I've
-  been forced to play the role of system administrator since we don't have a real
-  one. One problem I've run into is the long string of legacy applications that I
-  have to support. Some of them I wrote, and some of them I inherited. For many reasons,
-  they're often organized and run in sub-optimal ways.\r\n\r\nSeparating your static
-  and dynamic content is a good habit to get into when you're building scalable web
-  applications. Static content is highly portable because it can live without context.
-  You can serve it from anywhere and nobody knows the difference. When your site starts
-  to get huge traffic, you can easily offload your static content to a <a href=\"http://en.wikipedia.org/wiki/Content_Delivery_Network\">CDN</a>
-  if you host it in an easy-to-separate way using an URL like static.domain.com or
-  domain.com/static.\r\n"
 wordpress_id: 77
 date: '2009-05-27 22:59:58 -0700'
 date_gmt: '2009-05-28 06:59:58 -0700'
@@ -104,33 +93,87 @@ comments:
   date_gmt: '2010-03-24 19:28:08 -0700'
   content: "[...] Drupal is a much more abstract system, useful for a million things,
     whereas Wordpress is decidedly a blogging platform. Drupal provides a lot more
-    functionality out of the box like caching, css and javascript aggregation&#47;minification,
+    functionality out of the box like caching, css and javascript aggregation/minification,
     and extensible taxonomy come to mind. Wordpress offers more simplicity and still
     covers most of my use cases via pretty decent plugins. The migration itself was
     easy enough and I based it on some scripts I found at socialcmsbuzz. All the old
     URLs should still work thanks to a set of handwritten redirects in nginx. [...]"
 ---
-<p><a href="http:&#47;&#47;lithostech.com&#47;wp-content&#47;uploads&#47;2009&#47;06&#47;nginx-logo.png"><img src="http:&#47;&#47;lithostech.com&#47;wp-content&#47;uploads&#47;2009&#47;06&#47;nginx-logo-290x74.png" alt="nginx logo" width="290" height="74" class="alignleft size-medium wp-image-499" &#47;><&#47;a>Since we've been on <a href="http:&#47;&#47;slicehost.com">slicehost<&#47;a>, I've been forced to play the role of system administrator since we don't have a real one. One problem I've run into is the long string of legacy applications that I have to support. Some of them I wrote, and some of them I inherited. For many reasons, they're often organized and run in sub-optimal ways.<&#47;p></p>
-<p>Separating your static and dynamic content is a good habit to get into when you're building scalable web applications. Static content is highly portable because it can live without context. You can serve it from anywhere and nobody knows the difference. When your site starts to get huge traffic, you can easily offload your static content to a <a href="http:&#47;&#47;en.wikipedia.org&#47;wiki&#47;Content_Delivery_Network">CDN<&#47;a> if you host it in an easy-to-separate way using an URL like static.domain.com or domain.com&#47;static.<&#47;p><br />
-<a id="more"></a><a id="more-77"></a></p>
-<p><strong>the problem<&#47;strong><&#47;p></p>
-<p>But my applications blur that line with static and dynamic content living together with sometimes no distinction. This is where <a href="http:&#47;&#47;wiki.nginx.org&#47;Main">nginx<&#47;a> shines. Before I move on, I'll mention that I do know that apache can do this exact same stuff, but it's less turnkey to do it on Ubuntu because I'd need a second instance of apache to make it work and even then I think I can squeeze out better performance with this setup.<&#47;p></p>
-<p>Let me first describe the setup I'm starting with. I have one 2048MiB slice from slicehost running the <a href="http:&#47;&#47;www.apache.org&#47;">apache<&#47;a> web server. Apache is configured with mpm_prefork because most of my applications are not thread safe. Among others, I run all my applications with mod_cgid, mod_fcgid, mod_passenger, mod_python. I have applications written in perl, php, ruby and python. This setup makes for somewhat large apache processes because all the modules plus many other typical modules are loaded for every running process (even if the process is only serving static content). In fact, the reason I started looking at optimization is that during heavy request times, our server was running out of memory and having to swap (a very <a href="http:&#47;&#47;books.google.com&#47;books?id=VNBlvt2UpUMC&amp;pg=PA301&amp;vq=never+swap&amp;dq=web+servers+%22never+swap%22&amp;source=gbs_search_s&amp;cad=0">bad thing for web servers<&#47;a>).<&#47;p></p>
-<p><strong>the solution<&#47;strong><&#47;p></p>
-<p>After the transition, I ended up with all my static content being served by nginx. nginx is bound to ports 80 and 443 and handles all the incoming requests. nginx checks the docroot to see if the requested file exist on the filesystem. If it does, nginx serves them directly, if not it acts as a reverse proxy and forwards the request to apache which is now listening only on port 8080. Here's the heart and soul of my setup:<&#47;p></p>
-<pre>
-location &#47; {<br />
-  proxy_set_header X-Real-IP  $remote_addr;<br />
-  if (-f $request_filename) {<br />
-    break;<br />
-  }<br />
-  if (-f $request_filename&#47;index.html) {<br />
-    rewrite (.*) $1&#47;index.html break;<br />
-  }<br />
-  if (!-f $request_filename) {<br />
-    proxy_pass http:&#47;&#47;fresnobeehive.com:8080;<br />
-    break;<br />
-  }<br />
-}<br />
-<&#47;pre></p>
-<p>After some initial testing, I've found that in many cases my new setup is actually a little slower than using apache to serve everything. The difference, however, is in scalability. Since nginx is only serving static content, its perfectly thread-safe and I can use worker processes to handle requests. I have 4 worker processes that can handle 1024 simultaneous connections. Each worker is generally using no more than a few MiB of memory which marks the most substantial difference over the apache-only setup. Previously, under normal load, my server would be using almost all of its 2048MiB of memory, and now I see humming along regularly with 600-700MiB free. Swapping is now rare and I'm even considering using some of that extra memory for running memcached which should blow my old setup out of the water performance-wise.<&#47;p></p>
+{% picture thumbnail 2009/nginx-logo.png alt="nginx logo" style="float:left" %}
+
+Since we've been on [slicehost](http://slicehost.com), I've been forced
+to play the role of system administrator since we don't have a real one.
+One problem I've run into is the long string of legacy applications that
+I have to support. Some of them I wrote, and some of them I inherited.
+For many reasons, they're often organized and run in sub-optimal ways.
+Separating your static and dynamic content is a good habit to get into
+when you're building scalable web applications. Static content is highly
+portable because it can live without context. You can serve it from
+anywhere and nobody knows the difference. When your site starts to get
+huge traffic, you can easily offload your static content to a
+[CDN](http://en.wikipedia.org/wiki/Content_Delivery_Network) if you host
+it in an easy-to-separate way using an URL like static.domain.com or
+domain.com/static.
+
+<!--more-->
+
+### the problem
+
+But my applications blur that line with static and dynamic content
+living together with sometimes no distinction. This is where
+[nginx](http://wiki.nginx.org/Main) shines. Before I move on, I'll
+mention that I do know that apache can do this exact same stuff, but
+it's less turnkey to do it on Ubuntu because I'd need a second instance
+of apache to make it work and even then I think I can squeeze out better
+performance with this setup.
+
+Let me first describe the setup I'm starting with. I have one 2048MiB
+slice from slicehost running the [apache](http://www.apache.org/) web
+server. Apache is configured with mpm_prefork because most of my
+applications are not thread safe. Among others, I run all my
+applications with mod_cgid, mod_fcgid, mod_passenger, mod_python. I have
+applications written in perl, php, ruby and python. This setup makes for
+somewhat large apache processes because all the modules plus many other
+typical modules are loaded for every running process (even if the
+process is only serving static content). In fact, the reason I started
+looking at optimization is that during heavy request times, our server
+was running out of memory and having to swap (a very [bad thing for web
+servers](http://books.google.com/books?id=VNBlvt2UpUMC&amp;pg=PA301&amp;vq=never+swap&amp;dq=web+servers+%22never+swap%22&amp;source=gbs_search_s&amp;cad=0)).
+
+### the solution
+
+After the transition, I ended up with all my static content being served
+by nginx. nginx is bound to ports 80 and 443 and handles all the
+incoming requests. nginx checks the docroot to see if the requested file
+exist on the filesystem. If it does, nginx serves them directly, if not
+it acts as a reverse proxy and forwards the request to apache which is
+now listening only on port 8080. Here's the heart and soul of my setup:
+
+~~~ nginx
+location / {
+  proxy_set_header X-Real-IP  $remote_addr;
+  if (-f $request_filename) {
+    break;
+  }
+  if (-f $request_filename/index.html) {
+    rewrite (.*) $1/index.html break;
+  }
+  if (!-f $request_filename) {
+    proxy_pass http://fresnobeehive.com:8080;
+    break;
+  }
+}
+~~~
+
+After some initial testing, I've found that in many cases my new setup
+is actually a little slower than using apache to serve everything. The
+difference, however, is in scalability. Since nginx is only serving
+static content, its perfectly thread-safe and I can use worker processes
+to handle requests. I have 4 worker processes that can handle 1024
+simultaneous connections. Each worker is generally using no more than a
+few MiB of memory which marks the most substantial difference over the
+apache-only setup. Previously, under normal load, my server would be
+using almost all of its 2048MiB of memory, and now I see humming along
+regularly with 600-700MiB free. Swapping is now rare and I'm even
+considering using some of that extra memory for running memcached which
+should blow my old setup out of the water performance-wise.
