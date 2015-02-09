@@ -7,6 +7,12 @@ description: Ventilations from an engineer — Stephen Crosby is an Internet
 url: http://lithostech.com
 sass:
   sass_dir: _sass
+assets:
+  baseurl: /assets/
+  dirname: assets
+  sources:
+    - _assets
+  debug: false
 exclude:
   - Gemfile
   - Gemfile.lock
