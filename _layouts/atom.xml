@@ -1,34 +1,40 @@
 ---
 layout: null
-title : Atom Feed
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.title }}</title>
-  <link rel="self" href="/{{ page.path }}"/>
-  <link rel="first" href="/atom.xml"/>
-  {% if paginator.page != paginator.total_pages %}
-  <link rel="next" href="/atom/page{{ paginator.next_page }}.xml"/>
-  {% endif %}
-  {% if paginator.previous_page == 1%}
-  <link rel="previous" href="/atom.xml"/>
-  {% elsif paginator.previous_page %}
-  <link rel="previous" href="/atom/page{{ paginator.previous_page }}.xml"/>
-  {% endif %}
-  <link rel="last" href="/atom/page{{ paginator.total_pages }}.xml"/>
-  <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ site.production_url }}</id>
-  {% for post in paginator.posts %}
-    <entry>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <title>{{ site.title }}</title>
+    <atom:link rel="self" href="{{ site.url }}/{{ page.path }}"/>
+    <atom:link rel="first" href="{{ site.url }}/atom.xml"/>
+    {% if paginator.page != paginator.total_pages %}<atom:link rel="next" href="{{ site.url }}/atom/page{{ paginator.next_page }}.xml"/>{% endif %}
+    {% if paginator.previous_page == 1%}<atom:link rel="previous" href="{{ site.url }}/atom.xml"/>{% elsif paginator.previous_page %}<atom:link rel="previous" href="{{ site.url }}/atom/page{{ paginator.previous_page }}.xml"/>{% endif %}
+    <atom:link rel="last" href="{{ site.url }}/atom/page{{ paginator.total_pages }}.xml"/>
+    <lastBuildDate>{{ site.time | date: '%a, %-d %b %Y %H:%M:%S %z' }}</lastBuildDate>
+    <language>en-US</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    {% for post in paginator.posts %}
+    <item>
       <title>{{ post.title }}</title>
-        <author>
-          <name>{{ post.author.name }}</name>
-          <email>{{ post.author.email }}</email>
-        </author>
-      <link href="{{ post.url }}"/>
-      <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <id>{{ site.production_url }}{{ post.id }}</id>
-      <content type="html">{{ post.content | xml_escape }}</content>
-    </entry>
-  {% endfor %}
-</feed>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <pubDate>{{ post.date | date: '%a, %-d %b %Y %H:%M:%S %z'}}</pubDate>
+      <author>
+        <name>{{ post.author.name }}</name>
+        <email>{{ post.author.email }}</email>
+      </author>
+      <guid>{{ post.url }}</guid>
+      <description>{{ post.content | xml_escape }}</description>
+      <link href="{{ site.url}}{{ post.url }}"/>
+      {% if post.tags %}{% for tag in post.tags %}<category>{{ tag }}</category>
+      {% endfor %}{% endif %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
