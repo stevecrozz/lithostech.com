@@ -11,7 +11,8 @@ layout: null
   xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
   <channel>
     <title>{{ site.title }}</title>
-    <atom:link rel="self" href="{{ site.url }}/{{ page.path }}"/>
+    <link>{{ site.url }}/{{ page.path }}</link>
+    <atom:link rel="self" href="{{site.url}}/{{page.path}}"/>
     <atom:link rel="first" href="{{ site.url }}/atom.xml"/>
     {% if paginator.page != paginator.total_pages %}<atom:link rel="next" href="{{ site.url }}/atom/page{{ paginator.next_page }}.xml"/>{% endif %}
     {% if paginator.previous_page == 1%}<atom:link rel="previous" href="{{ site.url }}/atom.xml"/>{% elsif paginator.previous_page %}<atom:link rel="previous" href="{{ site.url }}/atom/page{{ paginator.previous_page }}.xml"/>{% endif %}
@@ -20,18 +21,15 @@ layout: null
     <language>en-US</language>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
+    <description>{{ site.description }}</description>
     {% for post in paginator.posts %}
     <item>
       <title>{{ post.title }}</title>
       <link>{{ site.url }}{{ post.url }}</link>
       <pubDate>{{ post.date | date: '%a, %-d %b %Y %H:%M:%S %z'}}</pubDate>
-      <author>
-        <name>{{ post.author.name }}</name>
-        <email>{{ post.author.email }}</email>
-      </author>
-      <guid>{{ post.url }}</guid>
+      <author>{{ post.author.email }} (post.author.name)</author>
+      <guid>{{ site.url }}{{ post.url }}</guid>
       <description>{{ post.content | xml_escape }}</description>
-      <link href="{{ site.url}}{{ post.url }}"/>
       {% if post.tags %}{% for tag in post.tags %}<category>{{ tag }}</category>
       {% endfor %}{% endif %}
     </item>

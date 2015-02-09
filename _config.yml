@@ -2,6 +2,7 @@
 encoding: utf-8
 permalink: /:year/:month/:title/
 title: connecting the tubes
+description: Ventilations from an Internet engineer
 url: http://lithostech.com
 sass:
   sass_dir: _sass
