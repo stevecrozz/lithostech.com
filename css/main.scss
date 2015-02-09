@@ -33,10 +33,10 @@ nav.main ul {
 }
 
 @media (max-width: 767px) {
-  nav ul { text-align: center; }
-  nav li { display: inline; }
-  nav li + li:before { content: "/ "; }
-  nav { margin-bottom: 20px; }
+  nav.main ul { text-align: center; }
+  nav.main li { display: inline; }
+  nav.main li + li:before { content: "/ "; }
+  nav.main { margin-bottom: 20px; }
   .brand { font-size: 56px; }
 }
 

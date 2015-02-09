@@ -11,11 +11,6 @@ author:
 author_login: stevecrozz
 author_email: stevecrozz@gmail.com
 author_url: http://lithostech.com
-excerpt: "[flickr-photo:id=2225768345,size=t]I've been working on a project using
-  django, and I've got some great things to say about it. I also have some nasty things
-  to say. I'm currently prototyping, which means the databases I work with get destroyed
-  and recreated regularly. I normally have a set of test data that should always be
-  present in the system. Database fixtures to the rescue!\r\n\r\n"
 wordpress_id: 57
 date: '2008-10-10 05:46:28 -0700'
 date_gmt: '2008-10-10 13:46:28 -0700'
@@ -85,10 +80,51 @@ comments:
     continue to use South.  \r\n\r\n(Note, I don't have anything to do with South.
     \ I just think it's required equipment in a Django DB application.)"
 ---
-<a href="http://www.flickr.com/photos/kogakure/2225768345"><img src="http://lithostech.com/wp-content/uploads/2008/10/4136613234_dc76ee0d99_o2-290x217.jpg" alt="Django T-Shirt" width="290" height="217" class="alignleft size-medium wp-image-530" /></a>I've been working on a project using django, and I've got some great things to say about it. I also have some nasty things to say. I'm currently prototyping, which means the databases I work with get destroyed and recreated regularly. I normally have a set of test data that should always be present in the system. Database fixtures to the rescue!<a id="more"></a><a id="more-57"></a>
-The <a href="http://docs.djangoproject.com/en/dev/howto/initial-data/">django documentation</a> has a nice section on database fixtures and how to deal with them properly. You can even give your fixtures a special name (initial_data), and the syncdb command will automatically load your initial fixtures for you. The first thing that really struck me about these fixtures is the fact that you have to reference your model for every database row. Why not divide the fixtures into sections so you only have to type it out once? The fixtures could really benefit from that type of context.
-The second thing I noticed, after typing out all my fixtures in YAML format, is that django claims to support YAML format, but doesn't actually check for an initial_data.yml (or initial_data.yaml) file. That's a big disappointment. Now am I supposed to translate that file back into xml or json? It picks up files with those names perfectly fine.
-You might think I should use django's dumpdata command, but you might be surprised to know that while dumpdata allows you to specifically *exclude* certain models, it doesn't allow you to *only include* certain models. My project has nearly 100 database tables and dozens of models. Am I supposed to --exclude each of them?
-I've spent the last hour and a half trying to get django to bend to my will. Needless to say, I am less than impressed. It would be nice if I could easily force the system to check for yaml files, but to a django novice like myself, the framework appears to suffer from black box syndrome with its weird system of magical callbacks. Does anyone know what's going on here?
-UPDATE 2008-10-12:
-I've got some helpful feedback from here and had a fresh look at the documentation. Looks like I glossed over the part where it said next to yaml: "This serializer is only available if PyYAML is installed". So a quick "apt-get install python-yaml" did the trick for me (ubuntu package) after renaming my .yml file to .yaml. If you can't find a binary for your OS, you can always get the <a>PyYAML source</a>. Initial database fixtures are now working smoothly for me in my format of choice.
+{% picture thumbnail-left 2008/django-logo.jpg alt="Django logo" %}
+I've been working on a project using django, and I've got some great
+things to say about it. I also have some nasty things to say. I'm
+currently prototyping, which means the databases I work with get
+destroyed and recreated regularly. I normally have a set of test data
+that should always be present in the system. Database fixtures to the
+rescue!
+
+The [django
+documentation](http://docs.djangoproject.com/en/dev/howto/initial-data/)
+has a nice section on database fixtures and how to deal with them
+properly. You can even give your fixtures a special name (initial_data),
+and the syncdb command will automatically load your initial fixtures for
+you. The first thing that really struck me about these fixtures is the
+fact that you have to reference your model for every database row. Why
+not divide the fixtures into sections so you only have to type it out
+once? The fixtures could really benefit from that type of context.
+
+The second thing I noticed, after typing out all my fixtures in YAML
+format, is that django claims to support YAML format, but doesn't
+actually check for an initial_data.yml (or initial_data.yaml) file.
+That's a big disappointment. Now am I supposed to translate that file
+back into xml or json? It picks up files with those names perfectly
+fine.
+
+<!--more-->
+
+You might think I should use django's dumpdata command, but you might be
+surprised to know that while dumpdata allows you to specifically
+*exclude* certain models, it doesn't allow you to *only include* certain
+models. My project has nearly 100 database tables and dozens of models.
+Am I supposed to --exclude each of them?
+
+I've spent the last hour and a half trying to get django to bend to my
+will. Needless to say, I am less than impressed. It would be nice if I
+could easily force the system to check for yaml files, but to a django
+novice like myself, the framework appears to suffer from black box
+syndrome with its weird system of magical callbacks. Does anyone know
+what's going on here?
+
+**UPDATE 2008-10-12:** I've got some helpful feedback from here and had
+a fresh look at the documentation. Looks like I glossed over the part
+where it said next to yaml: "This serializer is only available if PyYAML
+is installed". So a quick "apt-get install python-yaml" did the trick
+for me (ubuntu package) after renaming my .yml file to .yaml. If you
+can't find a binary for your OS, you can always get the <a>PyYAML
+source</a>. Initial database fixtures are now working smoothly for me in
+my format of choice.
