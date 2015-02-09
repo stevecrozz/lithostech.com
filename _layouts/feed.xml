@@ -13,10 +13,10 @@ layout: null
     <title>{{ site.title }}</title>
     <link>{{ site.url }}/{{ page.path }}</link>
     <atom:link rel="self" href="{{site.url}}/{{page.path}}"/>
-    <atom:link rel="first" href="{{ site.url }}/atom.xml"/>
-    {% if paginator.page != paginator.total_pages %}<atom:link rel="next" href="{{ site.url }}/atom/page{{ paginator.next_page }}.xml"/>{% endif %}
-    {% if paginator.previous_page == 1%}<atom:link rel="previous" href="{{ site.url }}/atom.xml"/>{% elsif paginator.previous_page %}<atom:link rel="previous" href="{{ site.url }}/atom/page{{ paginator.previous_page }}.xml"/>{% endif %}
-    <atom:link rel="last" href="{{ site.url }}/atom/page{{ paginator.total_pages }}.xml"/>
+    <atom:link rel="first" href="{{ page.link_first }}"/>
+    <atom:link rel="last" href="{{ page.link_last }}"/>
+    {% if page.link_next %}<atom:link rel="next" href="{{ page.link_next }}"/>{% endif %}
+    {% if page.link_previous %}<atom:link rel="previous" href="{{ page.link_previous }}"/>{% endif %}
     <lastBuildDate>{{ site.time | date: '%a, %-d %b %Y %H:%M:%S %z' }}</lastBuildDate>
     <language>en-US</language>
     <sy:updatePeriod>hourly</sy:updatePeriod>

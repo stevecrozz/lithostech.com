@@ -2,7 +2,8 @@
 encoding: utf-8
 permalink: /:year/:month/:title/
 title: connecting the tubes
-description: Ventilations from an Internet engineer
+description: Ventilations from an engineer — Stephen Crosby is an Internet
+  engineer and explorer of the worldwide series of tubes
 url: http://lithostech.com
 sass:
   sass_dir: _sass
@@ -11,6 +12,8 @@ exclude:
   - Gemfile.lock
   - bin
   - s3_website.yml
+feed:
+  layout: feed.xml
 paginate: 5
 paginate_path: "page/:num/"
 markdown: kramdown
