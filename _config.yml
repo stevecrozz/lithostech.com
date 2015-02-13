@@ -13,6 +13,7 @@ assets:
   sources:
     - _assets
   debug: false
+  js_compressor: uglifier
 exclude:
   - Gemfile
   - Gemfile.lock

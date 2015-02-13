@@ -8,15 +8,14 @@ cloudfront_distribution_id: E3EH1GNSGPM1YW
 
 # site: path-to-your-website
 
-# max_age:
-#   "assets/*": 6000
-#   "*": 300
-
-# gzip:
-#   - .html
-#   - .css
-#   - .md
-# gzip_zopfli: true
+max_age:
+  "assets/*": 31536000
+  "*": 300
+gzip:
+  - .html
+  - .css
+  - .md
+  - .js
 
 # See http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region for valid endpoints
 # s3_endpoint: ap-northeast-1
