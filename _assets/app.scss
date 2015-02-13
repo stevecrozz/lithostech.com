@@ -7,12 +7,10 @@
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_thumbnails',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_labels',
-  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_pager',
-  'coderay';
+  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_pager';
 
 html, body {
   height: 100%;
-  min-width: 320px;
   font-size: 16px;
 }
 
@@ -44,6 +42,7 @@ nav.main ul {
 @media (max-width: 320px) {
   .brand { font-size: 24px; }
   nav ul { font-size: 1.5em; }
+  .keywords { font-size: 25px; }
 }
 
 .posts article + article {
@@ -52,9 +51,14 @@ nav.main ul {
   border-top: 2px dotted gray;
 }
 
+article p {
+  text-align: justify;
+}
+
 .content { max-width: 1024px; }
 time { font-weight: bold; }
 h1 { margin: 0; }
+h1, h2, h3, h4, h5, h6 { word-wrap: break-word; }
 
 .thumbnail.left {
   float: left;
@@ -75,4 +79,3 @@ h1 { margin: 0; }
 
 .keywords { margin: 10px 0; }
 .keywords a:hover { color: white; }
-

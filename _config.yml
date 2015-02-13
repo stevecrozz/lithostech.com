@@ -25,10 +25,7 @@ paginate: 5
 paginate_path: "page/:num/"
 markdown: kramdown
 kramdown:
-  use_coderay: true
-  coderay:
-    coderay_line_numbers: table
-    coderay_css: class
+  syntax_highlighter: rouge
 excerpt_separator: <!--more-->
 defaults:
   -
