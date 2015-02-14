@@ -9,13 +9,17 @@
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_labels',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_pager';
 
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: Cutive, "Times New Roman", Times, serif;
+
 html, body {
   height: 100%;
   font-size: 16px;
+  text-rendering: optimizeLegibility;
 }
 
 .brand {
-  font-family: 'Cutive', serif;
+  font-family: $font-family-serif;
   font-size: 64px;
   margin: 20px;
 }
@@ -55,9 +59,28 @@ article p {
   text-align: justify;
 }
 
+article p:first-of-type::first-letter {
+  float: left;
+  font-size: 72px;
+  font-family: $font-family-serif;
+  line-height: 1em;
+  margin-bottom: -16px;
+  margin-top: 8px;
+}
+
 .content { max-width: 1024px; }
 time { font-weight: bold; }
-h1 { margin: 0; }
+h1 {
+  color: black;
+  font-size: 64px;
+  font-family: helvetica;
+  letter-spacing: -3px;
+  line-height: 1em;
+  font-weight: 400;
+  margin: 0;
+}
+h1 a { color: black; }
+h1 a:hover { text-decoration: none; }
 h1, h2, h3, h4, h5, h6 { word-wrap: break-word; }
 
 .thumbnail.left {
