@@ -2,12 +2,6 @@ s3_id: <%= ENV['S3_ID'] %>
 s3_secret: <%= ENV['S3_SECRET'] %>
 s3_bucket: lithostech.com
 cloudfront_distribution_id: E3EH1GNSGPM1YW
-
-# Below are examples of all the available configurations.
-# See README for more detailed info on each of them.
-
-# site: path-to-your-website
-
 max_age:
   "assets/*": 31536000
   "*": 300
@@ -25,10 +19,6 @@ gzip:
 # exclude_from_upload:
 #   - those_folders_of_stuff
 #   - i_wouldnt_want_to_upload
-
-# s3_reduced_redundancy: true
-
-# cloudfront_distribution_id: your-dist-id
 
 # cloudfront_distribution_config:
 #   default_cache_behavior:

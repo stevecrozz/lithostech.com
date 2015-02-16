@@ -7,6 +7,7 @@
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_thumbnails',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_labels',
+  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_pager';
 
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -18,20 +19,17 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
-.brand {
+.navbar {
   color: white;
-  background-color: #999;
+  background-color: #cb1921;
   padding: 10px;
   margin-bottom: 20px;
 }
-.brand a { color: white; }
 
-nav.main ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  font-size: 2em;
-}
+.navbar a { color: white; }
+.navbar .btn { float: right; background: none; border-color: white; transition: all 0.1s; }
+.navbar .btn:hover { background-color: white; color: black; }
+.title-tagline { padding: 6px; }
 
 .posts article + article {
   margin-top: 40px;
@@ -89,10 +87,6 @@ pre { margin: 0 -30px; padding: 10px; border-left: 1px solid #999; }
 .post-meta { margin: 30px 0; }
 
 @media (max-width: 767px) {
-  nav.main ul { text-align: center; }
-  nav.main li { display: inline; }
-  nav.main li + li:before { content: "/ "; }
-  nav.main { margin-bottom: 20px; }
   pre { margin: 0; font-size: 14px; }
   h1 { font-size: 50px; }
 }
@@ -102,6 +96,5 @@ pre { margin: 0 -30px; padding: 10px; border-left: 1px solid #999; }
 }
 
 @media (max-width: 320px) {
-  nav ul { font-size: 1.5em; }
   .keywords { font-size: 25px; }
 }

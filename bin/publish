@@ -1,0 +1,3 @@
+#!/bin/bash
+
+JEKYLL_ENV=production ./bin/jekyll build && ./bin/s3_website push
