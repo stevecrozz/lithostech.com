@@ -23,13 +23,13 @@ comments:
 
 <div itemscope itemtype="http://schema.org/Blog">
   <meta itemprop="url" content="http://lithostech.com" />
-  <h1 itemprop="name">{{ site.name }}</h1>
+  <h1 itemprop="name">{{ site.title }}</h1>
   <p itemprop="description">{{ site.description }}</p>
 </div>
 
 Thanks for taking the time to get to know me. My name is Stephen Crosby
 and I build web applications. At
-[http://www.rightscale.com](RightScale), I build and maintain both
+[RightScale](http://www.rightscale.com), I build and maintain both
 frontend and backend systems for our users who trust us with their cloud
 infrastructure. RightScale provides me with a great environment to play
 with all kinds of new technology in the ever-present world of cloud.
