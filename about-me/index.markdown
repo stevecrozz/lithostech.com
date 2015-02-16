@@ -20,26 +20,30 @@ categories:
 tags: []
 comments:
 ---
+
+<div itemscope itemtype="http://schema.org/Blog">
+  <meta itemprop="url" content="http://lithostech.com" />
+  <h1 itemprop="name">{{ site.name }}</h1>
+  <p itemprop="description">{{ site.description }}</p>
+</div>
+
 Thanks for taking the time to get to know me. My name is Stephen Crosby
-and I love to write web applications. These days, I spend most of my
-time working hard at RightScale, working the kinks out of tough cloud
-management problems.  They call me a software engineer, but I really
-just like to tinker with code all day. RightScale provides me with a
-great environment to play with all kinds of new technology in the
-ever-present world of cloud computing.
+and I build web applications. At
+[http://www.rightscale.com](RightScale), I build and maintain both
+frontend and backend systems for our users who trust us with their cloud
+infrastructure. RightScale provides me with a great environment to play
+with all kinds of new technology in the ever-present world of cloud.
 
-I am a huge fan of free software and an Ubuntu evangelist. If you
-haven't tried Ubuntu, you really should. Go download the [live
-CD](http://www.ubuntu.com/download/ubuntu/download) and you can give it
-a shot before you even install it. I've contributed in very small ways
-to a few free software projects like the Zend Framework, Drupal,
-Wordpress, OpenWRT and uWSGI but I would like to do more in the
-future.
+In 2014, I co-founded [Branded Crate](http://www.brandedcrate.com/), a
+small application development and marketing company here in Santa
+Barbara.
 
-If you're curious to see what I've been up to, check out my github page:
-[https://github.com/stevecrozz](https://github.com/stevecrozz)
+I am a huge fan of free software. I’ve created or contributed to many
+open source software projects. Check out my github page to see what I’m
+up to: [https://github.com/stevecrozz](https://github.com/stevecrozz)
 
-### Places I've worked
+## Places I’ve worked
+
 The Fresno Bee
  : 2006-2010
 
@@ -48,10 +52,3 @@ RightScale, Inc
 
 Branded Crate
  : 2014-present
-
-### Languages I like to use
-- Ruby
-- JavaScript
-- Python
-- PHP
-- Perl
