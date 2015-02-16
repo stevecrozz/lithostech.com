@@ -163,6 +163,7 @@ that multiple web services can share the same TCP port and the
 controller is just one of those services.
 
 Lets see what happens when you actually run these bootstrap steps:
+
 ~~~ bash
 Pulling repository flynn/host
 Pulling repository flynn/discoverd
