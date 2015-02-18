@@ -46,8 +46,7 @@ article > p:first-of-type::first-letter {
   font-size: 72px;
   font-family: $font-family-serif;
   line-height: 1em;
-  margin-bottom: -16px;
-  margin-top: 8px;
+  margin: 8px 5px -16px 0;
 }
 
 .content { max-width: 600px; }
