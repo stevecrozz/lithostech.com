@@ -38,7 +38,8 @@ module Jekyll
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), "index.html")
-      self.data["grouptype"] = 'tags'
+      self.data['title'] = "posts tagged with '#{val}'"
+      self.data['grouptype'] = 'tags'
       self.data['tags'] = val
     end
   end

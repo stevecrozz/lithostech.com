@@ -4,6 +4,8 @@ layout: default
 <article itemscope itemtype="http://schema.org/BlogPosting">
   {% assign post = page %}
   {% include post_header.html %}
-  {{ content }}
+  <div class="article-body" itemprop="articleBody">
+    {{ content }}
+  </div>
   {% include comments.html %}
 </article>

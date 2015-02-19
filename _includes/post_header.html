@@ -1,9 +1,16 @@
 <header>
-  <h1 itemprop="headline">
-    <a href="{{ post.url }}" class="permalink" title="Permalink">{{ post.title }}</a>
+  <h1>
+    <a itemprop="headline" href="{{ post.url }}" class="permalink" title="Permalink">{{ post.title }}</a>
   </h1>
   <div class="post-meta">
     <time itemprop="datePublished" datetime="{{ post.date | date: '%Y-%m-%d'}}">{{ post.date | date: '%B %d, %Y' }}</time>
+    <meta itemprop="wordCount" content="{{ post.content | number_of_words }}" />
+    <meta itemprop="url" content="{{ site.url }}{{ post.url }}" />
+    <div class="post-author" itemprop="author">
+      <div itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="{{ post.author.name }}" />
+      </div>
+    </div>
     <div class="keywords">
       {% for tag in post.tags %}
       <a href="/tags/{{tag | UrlEncode }}"><span itemprop="keywords" class="label label-default">{{tag}}</span></a>
