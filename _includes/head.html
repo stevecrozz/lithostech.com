@@ -1,5 +1,10 @@
 <head>
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% capture pageinfo %}{% if paginator and paginator.page != 1 %} / page {{ paginator.page }}{% endif %}{% endcapture %}
+  {% if page.title %}
+    <title>{{ page.title }}{{ pageinfo }}</title>
+  {% else %}
+    <title>{{ site.title }}{{ pageinfo }}</title>
+  {% endif %}
   <meta charset="utf-8">
   <style>{{ 'app.css' | asset }}</style>
   {% javascript app async %}
