@@ -3,16 +3,14 @@ layout: default
 ---
 <div class="posts">
   {% for post in paginator.posts %}
-    <div itemprop="http://schema.org/blogPost">
-      <article itemscope itemtype="http://schema.org/BlogPosting">
-        {% include post_header.html %}
-        {{ post.excerpt }}
-        <p>
-          <a href="{{ post.url }}">Continue reading &raquo;</a>
-        </p>
-        <div style="clear:both" />
-      </article>
-    </div>
+    <article itemprop="http://schema.org/blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+      {% include post_header.html %}
+      {{ post.excerpt }}
+      <p>
+        <a href="{{ post.url }}">Continue reading &raquo;</a>
+      </p>
+      <div style="clear:both" />
+    </article>
   {% endfor %}
 </div>
 
