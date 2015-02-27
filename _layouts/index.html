@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="posts">
   {% for post in paginator.posts %}
-    <article itemprop="http://schema.org/blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
       {% include post_header.html %}
       {{ post.excerpt }}
       <p>
