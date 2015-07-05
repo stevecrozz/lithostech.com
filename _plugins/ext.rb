@@ -1,4 +1,5 @@
 require 'jekyll-assets'
+require 'jekyll-paginate'
 
 if Jekyll.env == 'production'
   require 'jekyll-sitemap'

@@ -12,7 +12,7 @@ gzip:
 cloudfront_distribution_id: E3EH1GNSGPM1YW
 cloudfront_distribution_config:
   default_cache_behavior:
-    min_TTL: 31536000
+    min_TTL: 300
   aliases:
     quantity: 1
     items:
