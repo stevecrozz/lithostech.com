@@ -9,15 +9,6 @@ gzip:
   - .css
   - .md
   - .js
-cloudfront_distribution_id: E3EH1GNSGPM1YW
-cloudfront_distribution_config:
-  default_cache_behavior:
-    min_TTL: 300
-  aliases:
-    quantity: 1
-    items:
-      CNAME: lithostech.com
-cloudfront_invalidate_root: true
 redirects:
   tag/acl/index.html: /tags/acl/
   tag/actionscript/index.html: /tags/actionscript/
