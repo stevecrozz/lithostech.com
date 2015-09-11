@@ -19,4 +19,5 @@
   {% if paginator and paginator.next_page %}
     <link rel="next" href="{{ paginator.next_page_path }}" />
   {% endif %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml" />
 </head>
