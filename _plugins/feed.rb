@@ -11,6 +11,7 @@ module Jekyll
     def generate(site)
       configure(site)
       posts = site.posts.sort_by { |p| -p.date.to_f }
+      posts.each { |p| p.content = p.transform }
       paginate(site, posts)
     end
 
