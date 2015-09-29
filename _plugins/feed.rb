@@ -11,8 +11,11 @@ module Jekyll
     def generate(site)
       configure(site)
       posts = site.posts.sort_by { |p| -p.date.to_f }
-      posts.each { |p| p.content = p.transform }
-      paginate(site, posts)
+
+      # Somehow setting p.content = p.transform here causes double markdown
+      # parsing. So we just dup all the posts and transform the dupes
+      duped_posts = posts.map { |p| n = p.dup; n.content = n.transform; n }
+      paginate(site, duped_posts)
     end
 
     def paginate(site, posts)

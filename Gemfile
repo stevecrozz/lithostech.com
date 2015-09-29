@@ -10,4 +10,8 @@ gem 'pry-byebug'
 gem 'jekyll-sitemap'
 gem 'uglifier'
 gem 'rouge'
+
+group :jekyll_plugins do
+  gem 'jekyll-picture-tag'
+end
 # gem 'octopress-minify-html'
