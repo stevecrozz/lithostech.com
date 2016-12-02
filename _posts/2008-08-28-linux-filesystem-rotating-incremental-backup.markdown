@@ -21,9 +21,9 @@ tags:
 - backup
 comments: []
 ---
-{% picture thumbnail-left 2008/stack-o-floppies.jpg alt="Balancing a tall stack of floppy disks" %}
-
-I recently got a new VPS from <a
+{% responsive_image path: static/img/full/2008/stack-o-floppies.jpg alt:
+"Balancing a tall stack of floppy disks" class: "img-float-left" %} I
+recently got a new VPS from <a
 href="http://vpslink.com">vpslink.com</a>. Their service is great
 because I can choose from a list of operating systems. I, of course,
 chose "Hardy Heron", Ubuntu 8.04. This service is totally unmanaged

@@ -20,10 +20,10 @@ tags:
 - music
 comments: []
 ---
-{% picture thumbnail-left 2008/bridge-school-benefit.jpg alt="Bridge school benefit show stage" %}
-
-This weekend I took the trip up to bay area for the bridge school
-benefit show.  The show is sponsored by the legendary guitarist <a
+{% responsive_image path: static/img/full/2008/bridge-school-benefit.jpg
+alt: "Bridge school benefit show stage" class: "img-float-left" %} This
+weekend I took the trip up to bay area for the bridge school benefit
+show.  The show is sponsored by the legendary guitarist <a
 href="http://www.neilyoung.com/">Neil Young</a>. The second day had a
 powerhouse lineup with Wilco, Death Cab For Cutie, The Smashing Pumpkins
 followed by Nora Jones, Josh Groban and Jack Johnson and of course Neil

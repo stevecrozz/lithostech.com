@@ -21,13 +21,14 @@ tags:
 - ubuntu
 comments: []
 ---
-{% picture thumbnail-left 2008/eclipse-pdt.png alt="Eclipse PDT IDE" %}
-After upgrading to Intrepid Ibex Alpha 5, I was presented with a
-familiar problem. I knew I had dealt with this at least a half-dozen
-times in the past, but I never seem to learn. It all happened when I
-tried to import a project I'd started from my subversion repository into
-eclipse on my laptop. I began to get very strange un-googlable Java
-errors that I knew I'd seen before. Here's two of them:
+{% responsive_image path: static/img/full/2008/eclipse-pdt.png alt:
+"Eclipse PDT IDE" class: "img-float-left" %} After upgrading to Intrepid
+Ibex Alpha 5, I was presented with a familiar problem. I knew I had
+dealt with this at least a half-dozen times in the past, but I never
+seem to learn. It all happened when I tried to import a project I'd
+started from my subversion repository into eclipse on my laptop. I began
+to get very strange un-googlable Java errors that I knew I'd seen
+before. Here's two of them:
 
 ~~~ bash
 java.lang.nullpointerexception

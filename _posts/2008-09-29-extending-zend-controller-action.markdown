@@ -34,14 +34,14 @@ comments:
     reusable than base controllers.\r\n\r\nJust some considerations to keep in mind!
     =)"
 ---
-{% picture thumbnail-left 2008/zend-framework-logo.jpg alt="Zend Framework logo" %}
-
-Once you understand all the basic concepts of writing programs, the
-practice of software development can sometimes devolve into a simple
-exercise in pattern recognition. If you catch yourself writing the same
-code more than once or twice, you're probably doing something wrong.
-Here's an example that will apply particularly to those of us who use
-the Zend Framework.
+{% responsive_image path: static/img/full/2008/zend-framework-logo.jpg
+alt: "Zend Framework logo" class: "img-float-left" %} Once you
+understand all the basic concepts of writing programs, the practice of
+software development can sometimes devolve into a simple exercise in
+pattern recognition. If you catch yourself writing the same code more
+than once or twice, you're probably doing something wrong.  Here's an
+example that will apply particularly to those of us who use the Zend
+Framework.
 
 Typically, in a web application following MVC design principles, there
 are patterns that emerge from your actions. Patterns like access

@@ -20,18 +20,18 @@ tags:
 - html
 comments: []
 ---
-{% picture thumbnail-left 2008/fresnobee-search-dropdown.png alt="fresnobee.com home page search engine drop down" %}
-
-When working on a newspaper website, it's common practice to
-receive design requirements from some unknown authority. An email will
-just end up in your inbox with a note such as, "Our yahoo contract
-requires the word 'search' to be capitalized in the phrase 'Web Search
-powered by Yahoo! SEARCH' which must appear in the search bar with the
-name Yahoo! in bold red font. Things like this have become so common
-that my first instinct is always along the lines of "how can I get out
-of that", or "is there a loophole?". There are so many requirements that
-they leave pages looking like a cluttered mess, just like every
-newspaper web site out there.
+{% responsive_image path:
+static/img/full/2008/fresnobee-search-dropdown.png alt: "fresnobee.com
+home page search engine drop down" class: "img-float-left" %} When
+working on a newspaper website, it's common practice to receive design
+requirements from some unknown authority. An email will just end up in
+your inbox with a note such as, "Our yahoo contract requires the word
+'search' to be capitalized in the phrase 'Web Search powered by Yahoo!
+SEARCH' which must appear in the search bar with the name Yahoo! in bold
+red font. Things like this have become so common that my first instinct
+is always along the lines of "how can I get out of that", or "is there a
+loophole?". There are so many requirements that they leave pages looking
+like a cluttered mess, just like every newspaper web site out there.
 
 That's when we have to get creative and try to find elements that we're
 actually allowed to touch, and arrange them so the pages still look as

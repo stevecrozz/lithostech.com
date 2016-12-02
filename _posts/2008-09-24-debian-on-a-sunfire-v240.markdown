@@ -21,12 +21,11 @@ tags:
 - debian
 comments: []
 ---
-{% picture thumbnail-left 2008/sunfire.jpg alt="Unwrapping a sunfire" %}
-
-Recently I inherited a Sun Microsystems SunFire v240. This thing burns
-hot and loud (hence the name), quite a lot of fun. After plugging in a
-console cable and booting up the system, I was met with a very nice
-surprise on specs.
+{% responsive_image path: static/img/full/2008/sunfire.jpg alt:
+"Unwrapping a sunfire" class: "img-float-left" %} Recently I inherited a
+Sun Microsystems SunFire v240. This thing burns hot and loud (hence the
+name), quite a lot of fun. After plugging in a console cable and booting
+up the system, I was met with a very nice surprise on specs.
 
 ~~~ bash
 Sun Fire V240, No Keyboard

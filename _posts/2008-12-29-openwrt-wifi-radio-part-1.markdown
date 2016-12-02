@@ -31,13 +31,13 @@ comments:
   content: Wow. That's pretty kickass. When you get done with the series, I may just
     have to follow along. Wifi radio pretty much rokks my face off.
 ---
-{% picture thumbnail-left 2008/wifi-radio-lcd.jpg alt="OpenWRT wifi radio + LCD" %}
-
-I've been inspired by [Jeff Keyzer](http://mightyohm.com/blog/about/) to
-build a wifi radio. I've wanted for a long time to build a wifi radio to
-play internet radio and music from an arbitrary remote filesystem. The
-low cost of the platform he chose, the WL-520gu which I picked up for
-$35 shipped and is now even cheaper made the barrier to entry much lower
+{% responsive_image path: static/img/full/2008/wifi-radio-lcd.jpg alt:
+"OpenWRT wifi radio + LCD" class: "img-float-left" %} I've been inspired
+by [Jeff Keyzer](http://mightyohm.com/blog/about/) to build a wifi
+radio. I've wanted for a long time to build a wifi radio to play
+internet radio and music from an arbitrary remote filesystem. The low
+cost of the platform he chose, the WL-520gu which I picked up for $35
+shipped and is now even cheaper made the barrier to entry much lower
 than I had thought. So I bought one and tore out the guts as soon as it
 arrived.
 
@@ -55,15 +55,16 @@ around $30. Jeff built his own, but he's also an electrical engineer.
 
 <!--more-->
 
-{% picture thumbnail-right 2008/wifi-radio-lcd-serial-connections.jpg alt="WiFi radio closeup serial interface" %}
-
-I installed mine by soldering the backlight and lcd power lines to the
-+5V power source on the underside of the router's board right next to
-the power input jack. The Rx and ground serial lines from the LCD I
-soldered right onto the Tx and ground lines on the board. The only hitch
-is that the asus board talks at 115200 baud by default, but the LCD
-serial board likes to talk at 9600 baud.  To make it work, create a new
-file at /etc/init.d/tts with the following contents:
+{% responsive_image path:
+static/img/full/2008/wifi-radio-lcd-serial-connections.jpg alt: "WiFi
+radio closeup serial interface" class: "img-float-right" %} I installed
+mine by soldering the backlight and lcd power lines to the +5V power
+source on the underside of the router's board right next to the power
+input jack. The Rx and ground serial lines from the LCD I soldered right
+onto the Tx and ground lines on the board. The only hitch is that the
+asus board talks at 115200 baud by default, but the LCD serial board
+likes to talk at 9600 baud.  To make it work, create a new file at
+/etc/init.d/tts with the following contents:
 
 ~~~ bash
 #!/bin/ash
@@ -125,8 +126,9 @@ cd /etc/rc.d
 ln -s /etc/init.d/display S99display
 ~~~
 
-{% picture thumbnail-left 2008/wifi-radio-lcd-closeup.jpg alt="WiFi radio closeup serial interface" %}
-
-In the [next update](http://lithostech.com/openwrt-wifi-radio-part-2),
-I'll describe how I increased the storage capacity of the radio to store
-my music library.
+{% responsive_image path:
+static/img/full/2008/wifi-radio-lcd-closeup.jpg alt: "WiFi radio closeup
+serial interface" class: "img-float-left" %} In the [next
+update](http://lithostech.com/openwrt-wifi-radio-part-2), I'll describe
+how I increased the storage capacity of the radio to store my music
+library.

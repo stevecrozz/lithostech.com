@@ -98,13 +98,19 @@ pre { margin: 0 -30px; padding: 10px; border-left: 1px solid #999; }
   .keywords { font-size: 25px; }
 }
 
-.img-float-left {
-  float: left;
-  width: 200px;
-  margin: 0 10px 10px 0;
-}
-@media (min-width: 576px) {
+article {
   .img-float-left {
-    width: 300px;
+    float: left;
+    width: 200px;
+    margin: 0 10px 10px 0;
+  }
+  .img-float-right {
+    float: right;
+    width: 200px;
+    margin: 0 0 10px 10px;
+  }
+  @media (min-width: 576px) {
+    .img-float-left { width: 300px; }
+    .img-float-right { width: 300px; }
   }
 }
