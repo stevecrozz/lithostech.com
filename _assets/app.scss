@@ -97,3 +97,14 @@ pre { margin: 0 -30px; padding: 10px; border-left: 1px solid #999; }
 @media (max-width: 320px) {
   .keywords { font-size: 25px; }
 }
+
+.img-float-left {
+  float: left;
+  width: 200px;
+  margin: 0 10px 10px 0;
+}
+@media (min-width: 576px) {
+  .img-float-left {
+    width: 300px;
+  }
+}
