@@ -12,6 +12,7 @@ exclude:
   - Gemfile.lock
   - bin
   - s3_website.yml
+  - vendor
 feed:
   layout: feed.xml
 markdown: kramdown

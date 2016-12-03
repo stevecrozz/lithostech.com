@@ -91,6 +91,10 @@ article {
     width: 200px;
     margin: 0 0 10px 10px;
   }
+  .img-full {
+    width: 100%;
+  }
+
   @media (min-width: 576px) {
     .img-float-left { width: 300px; }
     .img-float-right { width: 300px; }
