@@ -71,21 +71,27 @@ comments:
   content: It's been a while, but I think I meant shfs and shfs-tools. openwrt has
     a ncurses type builder that allows you to select which packages get built.
 ---
-{% picture thumbnail-left 2009/usb-sound-card.jpg alt="3D sound USB sound card" %}
-
-In [part 1](http://lithostech.com/openwrt-wifi-radio-part-1) of
-this series, I took an Asus router and loaded openwrt onto it. I added
-an LCD display and connected it to the serial port on the router board.
-At this point, I have a low-power, small form factor computer that I can
+{%
+  responsive_image
+    path: static/img/full/2009/usb-sound-card.jpg
+    alt: "3D sound USB sound card"
+    class: "img-float-left"
+%} In [part 1](http://lithostech.com/openwrt-wifi-radio-part-1) of this
+series, I took an Asus router and loaded openwrt onto it. I added an LCD
+display and connected it to the serial port on the router board.  At
+this point, I have a low-power, small form factor computer that I can
 customize to my heart's content. As far as I/O, the computer still has
 its original wifi antenna, 5 wired LAN interfaces, a serial port and a
 USB port. My USB sound adapter still hasn't arrived from Hong Kong, so
 I'm going to work on another piece of the puzzle.
 
-{% picture thumbnail-left 2009/buffalo-linkstation.jpg alt="Buffalo LinkStation Duo" %}
-
-The first thing I did after joining this device to my wifi network was
-telnet in and change my password. Now the project that I've been
+{%
+  responsive_image
+    path: static/img/full/2009/buffalo-linkstation.jpg
+    alt: "Buffalo LinkStation Duo"
+    class: "img-float-left"
+%} The first thing I did after joining this device to my wifi network
+was telnet in and change my password. Now the project that I've been
 following up to this point is mainly to be used for playing internet
 radio stations as I understand it. My wifi radio is going to be used for
 that too, but also for playing selections from my own music library. I

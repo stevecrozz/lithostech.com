@@ -21,10 +21,10 @@ tags:
 - mobile
 comments: []
 ---
-{% picture thumbnail-left 2010/phone-os-stack.jpg alt="oss-phone-lineup" %}
-
-A new development in the mobile operating system market brings an open
-source convert to the table. As of [Symbian's
+{% responsive_image path: static/img/full/2010/phone-os-stack.jpg alt:
+"oss-phone-lineup" class: "img-float-left" %} A new development in the
+mobile operating system market brings an open source convert to the
+table. As of [Symbian's
 announcement](http://blog.symbian.org/2010/02/04/symbian-is-open/)
 today, three of the five major players can now be considered open source
 systems. This pits Microsoft and Apple's closed systems directly against

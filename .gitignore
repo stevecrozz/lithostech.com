@@ -4,3 +4,4 @@ _site
 /.jekyll-metadata
 /.asset-cache
 /.bundle
+/static/img/resized

@@ -21,9 +21,9 @@ tags:
 - fresno
 comments: []
 ---
-{% picture thumbnail-left 2009/fb-door.jpg alt="door to the old fresno bee building" %}
-
-Our newsroom 'guild' [votes
+{% responsive_image path: static/img/full/2009/fb-door.jpg alt: "door to
+the old fresno bee building" class: "img-float-left" %} Our newsroom
+'guild' [votes
 Tuesday](http://cancelthebee.blogspot.com/2009/03/mcclatchy-layoff-update.html)
 on whether or not they will allow wage cuts for guild members. The
 proposed wage cuts would be 0-6%, applied progressively based on annual

@@ -37,7 +37,14 @@ responsive_image:
     - width: 300
     - width: 600
   base_path: static/img/full
-  output_path_format: assets/%{dirname}/%{width}/%{basename}
+  output_path_format: static/img/resized/%{dirname}/%{width}-%{basename}
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title_suffix: ' - page :num'
 gems:
   - jekyll-assets
   - jekyll/responsive_image
+  - jekyll-paginate-v2
+  - jekyll-feed

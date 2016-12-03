@@ -33,14 +33,14 @@ comments:
     the 90's when they were so into Outsourcing and Off-shoring. They dismantled all
     those factories against the wishes of the liberals and labor unions.     "
 ---
-{% picture thumbnail-left 2010/buy-local.jpg alt="Buy local logo" %}
-
-The [central valley buy local campaign](http://www.whyibuylocal.com/)
-probably began with the best of intentions. The idea is simple, get
-people to pump their hard earned cash right back into the place they
-live and work. If everyone did this more, the local economy would be
-much better off. It would be an easy way to stimulate the local economy
-and we'd all be better off for the benefits in public services funding.
+{% responsive_image path: static/img/full/2010/buy-local.jpg alt: "Buy
+local logo" class: "img-float-left" %} The [central valley buy local
+campaign](http://www.whyibuylocal.com/) probably began with the best of
+intentions. The idea is simple, get people to pump their hard earned
+cash right back into the place they live and work. If everyone did this
+more, the local economy would be much better off. It would be an easy
+way to stimulate the local economy and we'd all be better off for the
+benefits in public services funding.
 
 Before I launch into my tirade which I'm particularly jazzed about, let
 me just start by saying that I actually like buying local and I even

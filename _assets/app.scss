@@ -5,7 +5,6 @@
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid',
-  'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_thumbnails',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_labels',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons',
   'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_pager';
@@ -63,23 +62,6 @@ h1 {
 h1 a { color: black; }
 h1 a:hover { text-decoration: none; }
 h1, h2, h3, h4, h5, h6 { word-wrap: break-word; }
-
-.thumbnail.left {
-  float: left;
-  clear: left;
-  margin: 10px 10px 10px 0;
-}
-
-.thumbnail.right {
-  float: right;
-  clear: right;
-  margin: 10px 0 10px 10px;
-}
-
-.thumbnail.full {
-  width: calc(100% - 20px);
-  max-width: 1024px;
-}
 
 .keywords a:hover { color: white; }
 pre { margin: 0 -30px; padding: 10px; border-left: 1px solid #999; }

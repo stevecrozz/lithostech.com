@@ -24,11 +24,14 @@ tags:
 - max7129
 comments: []
 ---
-{% picture thumbnail-left 2010/wifi-radio/IMG_20101123_171932.jpg %}
-
-For this project, I wanted to build a device capable of displaying up to 8
-digits on a seven segment display. Sounds easy, right? The catch is, I wanted
-to retrieve these digits from the Internet over WiFi.
+{%
+  responsive_image
+    path: static/img/full/2010/wifi-radio/IMG_20101123_171932.jpg
+    alt: "Ardiuno WiFi 8 digit counter on a bread board"
+    class: img-float-left
+%} For this project, I wanted to build a device capable of displaying up
+to 8 digits on a seven segment display. Sounds easy, right? The catch
+is, I wanted to retrieve these digits from the Internet over WiFi.
 
 I took this opportunity to try out the ever-popular Arduino platform. Arduino
 turned out to be a good choice for this project for several because it has:

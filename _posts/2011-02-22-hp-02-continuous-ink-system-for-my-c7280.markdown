@@ -85,9 +85,12 @@ comments:
     Can you please tell me the name of the eBay vendor you bought it from, or any
     branding information?\r\n\r\nThanks!"
 ---
-{% picture thumbnail-left 2011/ciss/100_0341.jpg alt="the new cartridges are installed" %}
-
-Having been thoroughly satisfied with prior HP printer experiences, I
+{%
+  responsive_image
+    path: static/img/full/2011/ciss/100_0341.jpg
+    alt: "the new cartridges are installed"
+    class: "img-float-left"
+%} Having been thoroughly satisfied with prior HP printer experiences, I
 made the mistake of purchasing a brand new HP Photosmart c7280. I'm a
 big fan of these all-in-one devices. I especially like having a WiFi
 interface, and scanning to a USB disk as opposed to some ridiculous
@@ -103,14 +106,18 @@ seen.
 
 <!--more-->
 
-{% picture thumbnail-left 2011/ciss/100_0338.jpg alt="hp photosmart c7280 loaded with crappy hp ink" %}
-There's also five separate colors and one black, but that's not a huge
-problem until you combine it with the thing I hate most about this ink
-system.  If you run out of any color, or if a color simply "expires",
-you cannot print at all, even in monochrome. Even all this wouldn't
-bother me except for what I think it means. It's obvious to me that HP
-designed this ink system primarily to sell print cartridges (at an
-enormous profit). All the arguments about protecting the user from
+{%
+  responsive_image
+    path: static/img/full/2011/ciss/100_0338.jpg
+    alt: "hp photosmart c7280 loaded with crappy hp ink"
+    class: "img-float-left"
+  %} There's also five separate colors and one black, but that's not a
+huge problem until you combine it with the thing I hate most about this
+ink system.  If you run out of any color, or if a color simply
+"expires", you cannot print at all, even in monochrome. Even all this
+wouldn't bother me except for what I think it means. It's obvious to me
+that HP designed this ink system primarily to sell print cartridges (at
+an enormous profit). All the arguments about protecting the user from
 ruining the printer by running expired or low print cartridges is
 nonsense.  Everything about this system is specifically designed to
 extract as much money as possible from users buying ink.
@@ -127,16 +134,16 @@ you go buy more. Fortunately, there's a whole industry now built around
 chip resetters and auto-resetting chips with which this system claims to
 be equipped.
 
-{% picture full 2011/ciss/100_0334.jpg alt="hp 02 ciss covered in ink" %}
-{% picture full 2011/ciss/100_0337.jpg alt="hp 02 ciss sitting out to dry" %}
+{% responsive_image path: static/img/full/2011/ciss/100_0334.jpg alt: "hp 02 ciss covered in ink" class: "img-full" %}
+{% responsive_image path: static/img/full/2011/ciss/100_0337.jpg alt: "hp 02 ciss sitting out to dry" class: "img-full" %}
 
 So I picked one up on eBay and it arrived today. As you can see, the
 magenta leaked quite a bit during shipment, so I had to wash it off for
 a while in the kitchen sink.
 
-{% picture full 2011/ciss/100_0340.jpg alt="installing the new ciss for the hp 7280" %}
-{% picture full 2011/ciss/100_0341.jpg alt="the new cartridges are installed" %}
-{% picture full 2011/ciss/resized.jpg alt="why do they even bother with this message?" %}
+{% responsive_image path: static/img/full/2011/ciss/100_0340.jpg alt: "installing the new ciss for the hp 7280" class: "img-full" %}
+{% responsive_image path: static/img/full/2011/ciss/100_0341.jpg alt: "the new cartridges are installed" class: "img-full" %}
+{% responsive_image path: static/img/full/2011/ciss/resized.jpg alt: "why do they even bother with this message?" class: "img-full" %}
 
 The new cartridges fit perfectly in the printer although it seemed
 impossible to get the latches down. I think this particular CIS was
@@ -144,11 +151,11 @@ designed with another model in mind. I managed to get it installed by
 very carefully pulling the delivery tube out of each cartridge, clasping
 them in place and reinserting the tubes.
 
-{% picture full 2011/ciss/100_0351.jpg alt="fresh printing with the new cartridges" %}
+{% responsive_image path: static/img/full/2011/ciss/100_0351.jpg alt: "fresh printing with the new cartridges" class: "img-full" %}
 
 Next time the HP complains about low or expired ink, I can simply power
 off the machine for 30 seconds and the counters on the new cartridges
 should reset themselves. The next time I buy ink, I hope its something
 like [this](http://www.amazon.com/Compatible-Refill-Cartridge-3210v-C5140/dp/B001KT0JCO).
 
-{% picture full 2011/ciss/100_0354.jpg alt="not a single tear was shed" %}
+{% responsive_image path: static/img/full/2011/ciss/100_0354.jpg alt: "not a single tear was shed" class: "img-full" %}
