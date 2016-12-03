@@ -21,16 +21,16 @@ tags:
 - home
 comments: []
 ---
-{% picture thumbnail-left 2008/black-widow.jpg alt="Black widow spider close-up" %}
-
-My roommate has been noting the increased number of large and scary
-black widows that have been hanging around my house lately. There was a
-noticeable spider problem when I moved in, but I never really cared too
-much. I've just been wiping the cobwebs down every few weeks. Maybe
-they're enjoying the cooler weather as much as I am. For whatever
-reason, they're out in force and once or twice have cause me to actually
-feel a little fear. That's not something I need to stand for in my own
-house, so I decided I'm going to fight back.
+{% responsive_image path: static/img/full/2008/black-widow.jpg alt:
+"Black widow spider close-up" class: "img-float-left" %} My roommate has
+been noting the increased number of large and scary black widows that
+have been hanging around my house lately. There was a noticeable spider
+problem when I moved in, but I never really cared too much. I've just
+been wiping the cobwebs down every few weeks. Maybe they're enjoying the
+cooler weather as much as I am. For whatever reason, they're out in
+force and once or twice have cause me to actually feel a little fear.
+That's not something I need to stand for in my own house, so I decided
+I'm going to fight back.
 
 One thing is for sure, this wasn't going to be a job for some half-assed
 can of raid, or whatever puny aresol can I could get at the grocery

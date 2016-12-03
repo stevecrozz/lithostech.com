@@ -23,15 +23,16 @@ tags:
 - mpd
 comments: []
 ---
-{% picture thumbnail-left 2009/wifi-radio-with-lcd.jpg alt="WiFi radio with LCD" %}
-
-Finding a good, cheap sound card should have been as easy as ordering the one
-mentioned on the mighty ohm for $10, but I thought I'd save eight bucks and
-order the cheapest possible one on ebay. When it arrived, the right channel was
-totally non-functional and to say the sound quality was poor would be an
-understatement. It was impressive though, that anyone could manufacture and
-deliver to my door a brand new USB sound card even counting the defects for
-only two dollars. But that's all beside the point.
+{% responsive_image path: static/img/full/2009/wifi-radio-with-lcd.jpg
+alt: "WiFi radio with LCD" class: "img-float-left" %} Finding a good,
+cheap sound card should have been as easy as ordering the one mentioned
+on the mighty ohm for $10, but I thought I'd save eight bucks and order
+the cheapest possible one on ebay. When it arrived, the right channel
+was totally non-functional and to say the sound quality was poor would
+be an understatement. It was impressive though, that anyone could
+manufacture and deliver to my door a brand new USB sound card even
+counting the defects for only two dollars. But that's all beside the
+point.
 
 <!--more-->
 

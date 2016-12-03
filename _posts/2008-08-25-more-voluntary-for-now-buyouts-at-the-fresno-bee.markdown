@@ -19,9 +19,9 @@ categories:
 tags: []
 comments: []
 ---
-{% picture thumbnail-left 2009/fb-door.jpg alt="Front door to the old Fresno Bee building" %}
-
-The Fresno Bee continues to do everything it can to stave off more
+{% responsive_image path: static/img/full/2009/fb-door.jpg alt: "Front
+door to the old Fresno Bee building" class: "img-float-left" %} The
+Fresno Bee continues to do everything it can to stave off more
 inevitable layoffs. I don't blame them, but I sure am getting tired of
 the bad news:
 

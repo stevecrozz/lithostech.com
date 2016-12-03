@@ -28,19 +28,19 @@ comments:
   content: This is really great writing.  Easy to keep in your head what is going
     on, what the big takeaway points are, etc.  Nice job!
 ---
-{% picture thumbnail-left 2008/school-girl.jpg alt="Young cheerleader screaming with hands in the air" %}
-
-I was investigating some web site slowness for a friend the other day.
-His company uses SugarCRM over https. He had been complaining about
-slowness for over a year and I finally decided to give it a thorough
-look. Since the sugar application makes heavy use of its database
-backend, I decided to start there.  Unfortunately mySQL's slow query log
-turned up nothing, except that the database was running about as fast as
-you could possibly expect with the whole database buffered in memory. I
-honestly didn't think to check the web server itself because I've never
-really had a measurable problem with that before, default web server
-settings have always suited me fine in the past. Apparently all bets are
-off when running under SSL...
+{% responsive_image path: static/img/full/2008/school-girl.jpg alt:
+"Young cheerleader screaming with hands in the air" class:
+"img-float-left" %} I was investigating some web site slowness for a
+friend the other day.  His company uses SugarCRM over https. He had been
+complaining about slowness for over a year and I finally decided to give
+it a thorough look. Since the sugar application makes heavy use of its
+database backend, I decided to start there.  Unfortunately mySQL's slow
+query log turned up nothing, except that the database was running about
+as fast as you could possibly expect with the whole database buffered in
+memory. I honestly didn't think to check the web server itself because
+I've never really had a measurable problem with that before, default web
+server settings have always suited me fine in the past. Apparently all
+bets are off when running under SSL...
 
 On a whim, I downloaded [YSlow](http://developer.yahoo.com/yslow/), a
 firefox plugin developed by Yahoo! which I had heard about from a fellow

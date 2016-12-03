@@ -13,11 +13,13 @@ As you probably do not recall, this blog was not always running on
 Wordpress. In it's first incarnation, it was actually [running Drupal
 ]({% post_url 2010-03-24-switched-from-drupal-to-wordpress %}). And as
 of yesterday, we can add Wordpress to the list of former lithostech.com
-platforms. {% picture thumbnail-right 2015/jekyll-homepage.png alt="Jekyll Homepage, Feb 2015" %} This
-site is now running on Jekyll, and since it seems to be relatively
-unkown compared to wordpress, I thought I'd take the opportunity to
-explore this change and explain the move. What follows could be looked
-at as a comparison of Wordpress to Jekyll as a blogging platform.
+platforms. {% responsive_image path:
+static/img/full/2015/jekyll-homepage.png alt: "Jekyll Homepage, Feb
+2015" class: "img-float-right" %} This site is now running on Jekyll,
+and since it seems to be relatively unkown compared to wordpress, I
+thought I'd take the opportunity to explore this change and explain the
+move. What follows could be looked at as a comparison of Wordpress to
+Jekyll as a blogging platform.
 
 ## Theming
 

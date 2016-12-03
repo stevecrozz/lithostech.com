@@ -2,3 +2,6 @@ _site
 .sass-cache
 .env
 /.jekyll-metadata
+/.asset-cache
+/.bundle
+/static/img/resized

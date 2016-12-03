@@ -7,27 +7,21 @@ description: Ventilations from an engineer — Stephen Crosby is an Internet
 url: http://lithostech.com
 sass:
   sass_dir: _sass
-assets:
-  baseurl: /assets/
-  dirname: assets
-  sources:
-    - _assets
-  debug: false
-  js_compressor: uglifier
-  css_compressor: sass
 exclude:
   - Gemfile
   - Gemfile.lock
   - bin
   - s3_website.yml
+  - vendor
 feed:
   layout: feed.xml
-paginate: 5
-paginate_path: "page/:num/"
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
 excerpt_separator: <!--more-->
+assets:
+  sources:
+    - _assets
 defaults:
   -
     scope:
@@ -36,38 +30,22 @@ defaults:
       author:
         name: Stephen Crosby
         email: "stevecrozz@gmail.com"
-picture:
-  source: "static/img/full"
-  output: "static/img/resize"
-  markup: "picture"
-  presets:
-    thumbnail-left:
-      attr:
-        class: "thumbnail left"
-        itemprop: "image"
-      source_small:
-        media: "(min-width: 576px)"
-        width: "300"
-      source_default:
-        width: "200"
-    thumbnail-right:
-      attr:
-        class: "thumbnail right"
-        itemprop: "image"
-      source_small:
-        media: "(min-width: 576px)"
-        width: "300"
-      source_default:
-        width: "200"
-    full:
-      attr:
-        class: "thumbnail full"
-        itemprop: "image"
-      source_medium:
-        media: "(min-width: 768px)"
-        width: "1024"
-      source_small:
-        media: "(min-width: 405px)"
-        width: "600"
-      source_default:
-        width: "300"
+responsive_image:
+  template: _includes/responsive-image.html
+  default_quality: 90
+  sizes:
+    - width: 200
+    - width: 300
+    - width: 600
+  base_path: static/img/full
+  output_path_format: static/img/resized/%{dirname}/%{width}-%{basename}
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title_suffix: ' - page :num'
+gems:
+  - jekyll-assets
+  - jekyll/responsive_image
+  - jekyll-paginate-v2
+  - jekyll-feed

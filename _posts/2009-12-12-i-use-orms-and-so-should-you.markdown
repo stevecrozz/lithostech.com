@@ -22,18 +22,19 @@ tags:
 - database
 comments: []
 ---
-{% picture thumbnail-left 2009/4136613234_dc76ee0d99_o.jpg alt="the original database" %}
-
-This blog entry is directed mainly at the body of web developers who
-have very little formal training but are trying to improve their own
-skill sets. As I've matured in my understanding of object-oriented
-software design, I've come to grips with certain realities. Often, I've
-found myself doing something that feels 'dirty' or 'hackish'. That's
-usually because I'm "doing it wrong" as smarter people say to me when I
-show them my code or describe my problem. When that happens I have two
-courses of action, but the only one that provides growth and
-self-improvement is to heed the advice of my mentors (usually a chorus
-of developers on IRC saying, "you're doing it wrong!").
+{% responsive_image path:
+static/img/full/2009/4136613234_dc76ee0d99_o.jpg alt: "the original
+database" class: "img-float-left" %} This blog entry is directed mainly
+at the body of web developers who have very little formal training but
+are trying to improve their own skill sets. As I've matured in my
+understanding of object-oriented software design, I've come to grips
+with certain realities. Often, I've found myself doing something that
+feels 'dirty' or 'hackish'. That's usually because I'm "doing it wrong"
+as smarter people say to me when I show them my code or describe my
+problem. When that happens I have two courses of action, but the only
+one that provides growth and self-improvement is to heed the advice of
+my mentors (usually a chorus of developers on IRC saying, "you're doing
+it wrong!").
 
 <!--more-->
 

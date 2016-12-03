@@ -20,14 +20,13 @@ tags:
 - hardware
 comments: []
 ---
-{% picture thumbnail-left 2007/fixed-hp-printer.jpg alt="repaired printer part" %}
-
-This type of error normally comes up when the printer can't talk to its
-print head (when talking about the kind of printer that has its print
-heads in the cartridge itself). So after talking with tech support, I
-found that this printer was just out of its 12 month warranty (of
-course). So the next step in any kind of troubleshooting is to [scour
-the
+{% responsive_image path: static/img/full/2007/fixed-hp-printer.jpg alt:
+"repaired printer part" class: "img-float-left" %} This type of error
+normally comes up when the printer can't talk to its print head (when
+talking about the kind of printer that has its print heads in the
+cartridge itself). So after talking with tech support, I found that this
+printer was just out of its 12 month warranty (of course). So the next
+step in any kind of troubleshooting is to [scour the
 net](http://www.google.com/search?q=%22remove+and+check+color+cartridge%22)
 for the exact error message. Just take a look at what's out there for a
 moment.  What I was hoping to find didn't exist at the time, so I'm

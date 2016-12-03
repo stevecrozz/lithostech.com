@@ -21,16 +21,16 @@ tags:
 - finance
 comments: []
 ---
-{% picture thumbnail-left 2008/crushed-soda-cans.jpg alt="Huge pile of crushed soda cans" %}
-
-How much do you like your favorite carbonated soft drink? Are you
-spending about $20 per month on soda? Lets see what would happen if you
-chose to invest that money in a regular annuity earning 11.6% interested
-(this historic return of the S&P 500 since its inception in 1926). I'll
-assume that a daily soda habit costs $20 per month or $240 per year.
-Lets start with an 18 year old person who has chosen to place her soda
-money into an annuity every month. Forty years later, her annuity will
-be worth $497,922.
+{% responsive_image path: static/img/full/2008/crushed-soda-cans.jpg
+alt: "Huge pile of crushed soda cans" class: "img-float-left" %} How
+much do you like your favorite carbonated soft drink? Are you spending
+about $20 per month on soda? Lets see what would happen if you chose to
+invest that money in a regular annuity earning 11.6% interested (this
+historic return of the S&P 500 since its inception in 1926). I'll assume
+that a daily soda habit costs $20 per month or $240 per year.  Lets
+start with an 18 year old person who has chosen to place her soda money
+into an annuity every month. Forty years later, her annuity will be
+worth $497,922.
 
 <div style="text-align:center;max-width:600px;width:100%">
   <img src="/static/img/full/2008/0.5M-dollars-soda.svg" style="width:100%"/>

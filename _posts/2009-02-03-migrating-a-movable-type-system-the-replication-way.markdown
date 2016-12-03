@@ -24,18 +24,17 @@ tags:
 - replication
 comments: []
 ---
-{% picture thumbnail-left 2009/movable-type.jpg alt="movable type close up" %}
-
-Lately, I've been in the business of migrating between hosting
-providers. We're moving away from the classic web host CentOS. The
-reason that CentOS became the web host OS of choice in the middle of the
-decade still eludes. I just imagine a some RHEL fan club being told to
-implement a linux web host solution with no budget and CentOS was the
-fruit of that effort. Our new host is of the new ultra-trendy VPS type.
-We chose slicehost on some recommendations from friends.  I host my own
-blog and some other stuff on a VPS at vpslink.com. I fired it up with
-Intrepid Ibex (of course) and started migrating stuff over the Ubuntu
-way.
+{% responsive_image path: static/img/full/2009/movable-type.jpg alt:
+"movable type close up" class: "img-float-left" %} Lately, I've been in
+the business of migrating between hosting providers. We're moving away
+from the classic web host CentOS. The reason that CentOS became the web
+host OS of choice in the middle of the decade still eludes. I just
+imagine a some RHEL fan club being told to implement a linux web host
+solution with no budget and CentOS was the fruit of that effort. Our new
+host is of the new ultra-trendy VPS type.  We chose slicehost on some
+recommendations from friends.  I host my own blog and some other stuff
+on a VPS at vpslink.com. I fired it up with Intrepid Ibex (of course)
+and started migrating stuff over the Ubuntu way.
 
 That's all well and good, but the reason I'm writing this is because I
 found a great way to move our largest system which is a family of blogs

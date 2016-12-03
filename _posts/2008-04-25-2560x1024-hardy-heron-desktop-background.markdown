@@ -29,11 +29,11 @@ comments:
     trying to start linux <a href=\"http://www.certkiller.com\">it training</a>
     program... wish me luck\r\n"
 ---
-{% picture thumbnail-left 2008/double-heron.png alt="Hardy Heron desktop background for two monitors" %}
-
-I couldn't resist making a nice big desktop wallpaper for my dual
-monitor setup out of the cool new hardy heron ubuntu artwork. I found
-the [vector graphic
+{% responsive_image path: static/img/full/2008/double-heron.png alt:
+"Hardy Heron desktop background for two monitors" class:
+"img-float-left" %} I couldn't resist making a nice big desktop
+wallpaper for my dual monitor setup out of the cool new hardy heron
+ubuntu artwork. I found the [vector graphic
 file](https://wiki.ubuntu.com/Artwork/Incoming/Hardy?action=AttachFile&do=get&target=hardy_wallpaper.svg)
 to work with, and simply widened it up and moved the heron further to
 the right using Inkscape. I exported the bitmap and touched it up a bit

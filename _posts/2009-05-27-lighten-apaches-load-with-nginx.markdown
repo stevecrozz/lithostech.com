@@ -99,13 +99,13 @@ comments:
     easy enough and I based it on some scripts I found at socialcmsbuzz. All the old
     URLs should still work thanks to a set of handwritten redirects in nginx. [...]"
 ---
-{% picture thumbnail-left 2009/nginx-logo.png alt="nginx logo" %}
-
-Since we've been on [slicehost](http://slicehost.com), I've been forced
-to play the role of system administrator since we don't have a real one.
-One problem I've run into is the long string of legacy applications that
-I have to support. Some of them I wrote, and some of them I inherited.
-For many reasons, they're often organized and run in sub-optimal ways.
+{% responsive_image path: static/img/full/2009/nginx-logo.png alt:
+"nginx logo" class: "img-float-left" %} Since we've been on
+[slicehost](http://slicehost.com), I've been forced to play the role of
+system administrator since we don't have a real one.  One problem I've
+run into is the long string of legacy applications that I have to
+support. Some of them I wrote, and some of them I inherited.  For many
+reasons, they're often organized and run in sub-optimal ways.
 Separating your static and dynamic content is a good habit to get into
 when you're building scalable web applications. Static content is highly
 portable because it can live without context. You can serve it from

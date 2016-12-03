@@ -22,10 +22,10 @@ tags:
 - nginx
 comments: []
 ---
-{% picture thumbnail-left 2009/nginx-logo.png alt="nginx logo" %}
-
-The nginx build in the official ubuntu package repository is somewhat
-out-of-date, so I built my own package from source using
+{% responsive_image path: static/img/full/2009/nginx-logo.png alt:
+"nginx logo" class: "img-float-left" %} The nginx build in the official
+ubuntu package repository is somewhat out-of-date, so I built my own
+package from source using
 [0.7.59](http://www.nginx.eu/download/sources/nginx-0.7.59.tar.gz). I'm
 going to provide it here in case anyone else would like it. One of the
 new features I like is the

@@ -19,11 +19,11 @@ categories:
 tags: []
 comments: []
 ---
-{% picture thumbnail-left 2008/risk-board-game.jpg alt="Closeup of risk, the board game" %}
-
-It's no secret that newspaper classified ad revenues have fallen
-dramatically since craigslist became a major player in that market.
-David Boardman, executive editor for the Seattle Times wrote a
+{% responsive_image path: static/img/full/2008/risk-board-game.jpg alt:
+"Closeup of risk, the board game" class: "img-float-left" %} It's no
+secret that newspaper classified ad revenues have fallen dramatically
+since craigslist became a major player in that market.  David Boardman,
+executive editor for the Seattle Times wrote a
 [column](http://seattletimes.nwsource.com/html/localnews/2004423461_boardman18.html)
 claiming that in 2000 classifieds made up as much as 50% of total ad
 revenue for the company. This year, that number has fallen to 20%. In

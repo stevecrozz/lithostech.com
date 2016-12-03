@@ -6,8 +6,8 @@
     <title>{{ site.title }}{{ pageinfo }}</title>
   {% endif %}
   <meta charset="utf-8">
-  <style>{{ 'app.css' | asset }}</style>
-  {% javascript app async %}
+  {% css app.css %}
+  {% js app.js async: true %}
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   {% if paginator and paginator.previous_page %}
     {% if paginator.previous_page == 1 %}

@@ -19,14 +19,14 @@ categories:
 tags: []
 comments: []
 ---
-{% picture thumbnail-left 2008/jingue-mosque.jpg alt="Gate of opportunity" %}
-In this age where information is power, it's hard to understand why
-we're all wringing our hands at the current state of the economy. Here
-at newspaper firms, we have libraries full of valuable information at
-our disposal. Most of it just sits on the shelf undisturbed for ages.
-Some forward-thinking news outlets saw the opportunity to digitize their
-information in the hopes of transforming the old library into a serious
-revenue machine.
+{% responsive_image path: static/img/full/2008/jingue-mosque.jpg alt:
+"Gate of opportunity" class: "img-float-left" %} In this age where
+information is power, it's hard to understand why we're all wringing our
+hands at the current state of the economy. Here at newspaper firms, we
+have libraries full of valuable information at our disposal. Most of it
+just sits on the shelf undisturbed for ages.  Some forward-thinking news
+outlets saw the opportunity to digitize their information in the hopes
+of transforming the old library into a serious revenue machine.
 
 While the vast majority of newsrooms were sitting on their thumbs,
 google has been busy [amassing](http://google.com)

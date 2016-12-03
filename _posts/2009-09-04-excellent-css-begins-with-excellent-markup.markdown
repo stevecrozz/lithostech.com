@@ -21,21 +21,21 @@ tags:
 - web development
 comments: []
 ---
-{% picture thumbnail-left 2009/1438778328_62a126c5a7_b.jpg alt="Apple Expo '07" %}
-
-In the early days of the web (the early '90s), when the first HTML
-specification was being adopted, CSS did not exist. Web developers and
-webmasters (do those even exist anymore?) were responsible for
-delivering their content, design and layout in one package. It worked
-great and everything was right with the world. That is, until things
-became more complex. The roaring '90s of the Internet brought new
-revisions to the HTML specification and new innovations to web browsers
-which allowed for increasingly complicated design elements and content
-delivery methods. The ever-increasing complexity made it more difficult
-to maintain consistent design across large web sites.  That's when big
-stupid web design suites became popular. Software like Microsoft
-FrontPage and Macromedia Dreamweaver became almost a necessity just to
-maintain page templates and edit pages in a wysiwyg format.
+{% responsive_image path:
+static/img/full/2009/1438778328_62a126c5a7_b.jpg alt: "Apple Expo '07"
+class: "img-float-left" %} In the early days of the web (the early
+'90s), when the first HTML specification was being adopted, CSS did not
+exist. Web developers and webmasters (do those even exist anymore?) were
+responsible for delivering their content, design and layout in one
+package. It worked great and everything was right with the world. That
+is, until things became more complex. The roaring '90s of the Internet
+brought new revisions to the HTML specification and new innovations to
+web browsers which allowed for increasingly complicated design elements
+and content delivery methods. The ever-increasing complexity made it
+more difficult to maintain consistent design across large web sites.
+That's when big stupid web design suites became popular. Software like
+Microsoft FrontPage and Macromedia Dreamweaver became almost a necessity
+just to maintain page templates and edit pages in a wysiwyg format.
 
 <!--more-->
 

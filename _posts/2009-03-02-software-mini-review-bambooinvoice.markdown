@@ -51,14 +51,14 @@ comments:
     waste your time on this product, free doesn't have to mean it doesn't work.\r\n\r\nGive
     myclientbase a try at http://www.myclientbase.com/forums/index.php"
 ---
-{% picture thumbnail-left 2009/bamboo.jpg alt="Bamboo Bokeh (https://c2.staticflickr.com/2/1372/556746420_e05f2c8371_b.jpg)" %}
-
-For the longest time, I had no real invoicing system for my independent
-contract work. I just never found anything that I really liked and
-rarely found the inspiration to go looking. But recently, I got in the
-mood to find a long-term solution. What I found was a lot of hosted
-solutions, a lot of closed source 'for-purchase' solutions, and a lot of
-second-rate software.
+{% responsive_image path: static/img/full/2009/bamboo.jpg alt: "Bamboo
+Bokeh (https://c2.staticflickr.com/2/1372/556746420_e05f2c8371_b.jpg)"
+class: "img-float-left" %} For the longest time, I had no real invoicing
+system for my independent contract work. I just never found anything
+that I really liked and rarely found the inspiration to go looking. But
+recently, I got in the mood to find a long-term solution. What I found
+was a lot of hosted solutions, a lot of closed source 'for-purchase'
+solutions, and a lot of second-rate software.
 
 <!--more-->
 

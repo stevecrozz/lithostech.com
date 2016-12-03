@@ -19,10 +19,10 @@ categories:
 tags: []
 comments: []
 ---
-{% picture thumbnail-left 2009/fb-door.jpg alt="Front door to the old Fresno Bee building" %}
-
-Uptake on the initial buyout packages appears to be pretty slim and
-almost certainly lower than the 13-25 number that I heard through the
+{% responsive_image path: static/img/full/2009/fb-door.jpg alt: "Front
+door to the old Fresno Bee building" class: "img-float-left" %} Uptake
+on the initial buyout packages appears to be pretty slim and almost
+certainly lower than the 13-25 number that I heard through the
 grapevine. Barring some kind of miracle, there will have to be more
 painful layoffs near the end of the month. This time no departments are
 safe. I've been picking up pretty strong signals that even my own web

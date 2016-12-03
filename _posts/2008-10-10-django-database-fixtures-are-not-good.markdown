@@ -80,13 +80,13 @@ comments:
     continue to use South.  \r\n\r\n(Note, I don't have anything to do with South.
     \ I just think it's required equipment in a Django DB application.)"
 ---
-{% picture thumbnail-left 2008/django-logo.jpg alt="Django logo" %}
-I've been working on a project using django, and I've got some great
-things to say about it. I also have some nasty things to say. I'm
-currently prototyping, which means the databases I work with get
-destroyed and recreated regularly. I normally have a set of test data
-that should always be present in the system. Database fixtures to the
-rescue!
+{% responsive_image path: static/img/full/2008/django-logo.jpg alt:
+"Django logo" class: "img-float-left" %} I've been working on a project
+using django, and I've got some great things to say about it. I also
+have some nasty things to say. I'm currently prototyping, which means
+the databases I work with get destroyed and recreated regularly. I
+normally have a set of test data that should always be present in the
+system. Database fixtures to the rescue!
 
 The [django
 documentation](http://docs.djangoproject.com/en/dev/howto/initial-data/)

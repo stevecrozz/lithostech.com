@@ -1,46 +1,35 @@
-module Jekyll
-  class TagIndexes < Generator
-    safe true
-
-    def generate(site)
-      site.tags.each do |tag|
-        build_subpages(site, tag)
-      end
-    end
-
-    def build_subpages(site, posts)
-      posts[1] = posts[1].sort_by { |p| -p.date.to_f }
-      paginate(site, posts)
-    end
-
-    def paginate(site, posts)
-      pages = Jekyll::Paginate::Pager.calculate_pages(posts[1], site.config['paginate'].to_i)
-
-      (1..pages).each do |num_page|
-        pager = Jekyll::Paginate::Pager.new(site, num_page, posts[1], pages)
-        path = "/tags/#{posts[0]}"
-        if num_page > 1
-          path = path + "/page/#{num_page}"
-        end
-        newpage = GroupSubPage.new(site, site.source, path, posts[0])
-        newpage.pager = pager
-        site.pages << newpage
-      end
-    end
+Jekyll::Hooks.register :site, :post_read do |site|
+  site.posts.docs.map { |p| p.data['tags'] }.reduce(&:|).each do |tag|
+    site.pages << TagPage.new(site, site.source, '', tag)
   end
+end
 
-  class GroupSubPage < Page
-    def initialize(site, base, dir, val)
-      @site = site
-      @base = base
-      @dir = dir
-      @name = 'index.html'
+class TagPage < Jekyll::Page
+  def initialize(site, base, dir, tag)
+    @site = site
+    @base = base
+    @dir = dir
+    @name = 'index.html'
+    @ext = '.html'
+    @url = "/tags/#{Jekyll::Utils.slugify(tag)}/"
 
-      self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), "index.html")
-      self.data['title'] = "posts tagged with '#{val}'"
-      self.data['grouptype'] = 'tags'
-      self.data['tags'] = val
+    self.read_yaml(File.join(base, '_layouts'), "index.html")
+    self.data['layout'] = 'index'
+    self.data['title'] = "posts tagged with '#{tag}'"
+    self.data['pagination'] = {
+      'enabled' => true,
+      'collection' => 'posts',
+      'sort_field' => 'date',
+      'sort_reverse' => true,
+      'tag' => tag
+    }
+
+    self.process(@name)
+
+    data.default_proc = proc do |_, key|
+      site.frontmatter_defaults.find(File.join(dir, name), type, key)
     end
+
+    Jekyll::Hooks.trigger :pages, :post_init, self
   end
 end
