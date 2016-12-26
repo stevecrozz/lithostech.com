@@ -40,7 +40,7 @@ article p {
   text-align: justify;
 }
 
-article > p:first-of-type::first-letter {
+article p:first-of-type::first-letter {
   float: left;
   font-size: 72px;
   font-family: $font-family-serif;

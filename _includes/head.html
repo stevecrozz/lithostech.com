@@ -6,6 +6,17 @@
     <title>{{ site.title }}{{ pageinfo }}</title>
   {% endif %}
   <meta charset="utf-8">
+  <link rel="preload" href="{% asset_path cutive-v8-latin-regular.woff2 %}" as="font" type="font/woff2">
+  <style>
+  @font-face {
+    font-family: 'Cutive';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cutive'), local('Cutive-Regular'),
+      url('{% asset_path cutive-v8-latin-regular.woff2 %}') format('woff2'),
+      url('{% asset_path cutive-v8-latin-regular.woff %}') format('woff');
+    }
+  </style>
   {% css app.css %}
   {% js app.js async: true %}
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
