@@ -49,3 +49,4 @@ gems:
   - jekyll/responsive_image
   - jekyll-paginate-v2
   - jekyll-feed
+  - jekyll-sitemap
