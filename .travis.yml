@@ -1,4 +1,9 @@
 language: ruby
 rvm:
   - 2.3.3
-script: ./bin/jekyll build
+script: JEKYLL_ENV=production ./bin/jekyll build
+deploy:
+  provider: script
+  script: ./bin/s3_website push
+  on:
+    branch: master
