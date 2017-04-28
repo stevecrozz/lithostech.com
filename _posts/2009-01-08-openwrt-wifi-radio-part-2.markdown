@@ -14,8 +14,6 @@ author_url: http://lithostech.com
 wordpress_id: 65
 date: '2009-01-08 18:56:00 -0800'
 date_gmt: '2009-01-09 02:56:00 -0800'
-categories:
-- Uncategorized
 tags:
 - programming
 - hardware
@@ -76,10 +74,10 @@ comments:
     path: static/img/full/2009/usb-sound-card.jpg
     alt: "3D sound USB sound card"
     class: "img-float-left"
-%} In [part 1](http://lithostech.com/openwrt-wifi-radio-part-1) of this
-series, I took an Asus router and loaded openwrt onto it. I added an LCD
-display and connected it to the serial port on the router board.  At
-this point, I have a low-power, small form factor computer that I can
+%} In [part 1]({% post_url 2008-12-29-openwrt-wifi-radio-part-1 %}) of
+this series, I took an Asus router and loaded openwrt onto it. I added
+an LCD display and connected it to the serial port on the router board.
+At this point, I have a low-power, small form factor computer that I can
 customize to my heart's content. As far as I/O, the computer still has
 its original wifi antenna, 5 wired LAN interfaces, a serial port and a
 USB port. My USB sound adapter still hasn't arrived from Hong Kong, so

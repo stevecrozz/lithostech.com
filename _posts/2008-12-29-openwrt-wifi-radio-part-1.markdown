@@ -129,6 +129,6 @@ ln -s /etc/init.d/display S99display
 {% responsive_image path:
 static/img/full/2008/wifi-radio-lcd-closeup.jpg alt: "WiFi radio closeup
 serial interface" class: "img-float-left" %} In the [next
-update](http://lithostech.com/openwrt-wifi-radio-part-2), I'll describe
+update]({% post_url 2009-01-08-openwrt-wifi-radio-part-2 %}), I'll describe
 how I increased the storage capacity of the radio to store my music
 library.

@@ -5,3 +5,4 @@ _site
 /.asset-cache
 /.bundle
 /static/img/resized
+/vendor
