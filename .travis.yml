@@ -3,4 +3,4 @@ rvm:
   - 2.3.3
 script:
   - JEKYLL_ENV=production ./bin/jekyll build
-  - if [ "$TRAVIS_BRANCH" == "develop" ]; then ./bin/s3_website push; fi
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then ./bin/s3_website push; fi
