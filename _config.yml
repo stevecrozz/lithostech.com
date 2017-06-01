@@ -43,7 +43,7 @@ pagination:
   enabled: true
   per_page: 5
   permalink: '/page/:num/'
-  title_suffix: ' - page :num'
+  title: ':title - page :num'
 gems:
   - jekyll-assets
   - jekyll/responsive_image
