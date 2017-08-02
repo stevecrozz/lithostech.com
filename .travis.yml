@@ -1,3 +1,5 @@
+before_install:
+  - export TZ=America/Los_Angeles
 language: ruby
 rvm:
   - 2.3.3
