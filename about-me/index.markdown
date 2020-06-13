@@ -11,28 +11,28 @@ author:
 author_login: stevecrozz
 author_email: stevecrozz@gmail.com
 author_url: http://lithostech.com
-wordpress_id: 268
-wordpress_url: http://lithostech.com/?page_id=268
 date: '2010-05-26 21:10:33 -0700'
-date_gmt: '2010-05-27 04:10:33 -0700'
-categories:
-- Uncategorized
-tags: []
-comments:
 ---
 
 <div itemscope itemtype="http://schema.org/Blog">
   <meta itemprop="url" content="http://lithostech.com" />
   <h1 itemprop="name">{{ site.title }}</h1>
-  <p itemprop="description">{{ site.description }}</p>
+  <p style="font-variant-caps: all-petite-caps; margin: 10px 70px; font-weight: bold" itemprop="description">{{ site.description }}</p>
 </div>
 
-Thanks for taking the time to get to know me. My name is Stephen Crosby
-and I build web applications. At
-[RightScale](http://www.rightscale.com), I build and maintain both
-frontend and backend systems for our users who trust us with their cloud
-infrastructure. RightScale provides me with a great environment to play
-with all kinds of new technology in the ever-present world of cloud.
+Thanks for taking the time to get to know me. My name is Stephen Crosby and I
+build web applications.
+
+Today, I'm building the next generation of document storage and contract
+management solutions at [SecureDocs](https://www.securedocs.com) in Goleta, CA.
+We have a small engineering team, but I'm continually impressed by the quality
+of the software we produce.
+
+At [RightScale](https://www.rightscale.com), now
+[Flexera](https://www.flexera.com), I built and maintained both frontend and
+backend systems for our customers who trusted us with their cloud
+infrastructure. RightScale provided me with an incredible environment to learn
+and build while writing software that scales.
 
 In 2014, I co-founded [Branded Crate](http://www.brandedcrate.com/), a
 small application development and marketing company here in Santa
@@ -42,13 +42,19 @@ I am a huge fan of free software. I’ve created or contributed to many
 open source software projects. Check out my github page to see what I’m
 up to: [https://github.com/stevecrozz](https://github.com/stevecrozz)
 
+
 ## Places I’ve worked
 
-The Fresno Bee
+[SecureDocs](https://www.securedocs.com/)
+ : 2018-present
+
+[RightScale (now Flexera)](https://www.flexera.com/)
+ : 2010-2017
+
+[Branded Crate](https://www.brandedcrate.com/)
+ : 2014-present
+
+[The Fresno Bee](https://www.fresnobee.com/)
  : 2006-2010
 
-RightScale, Inc
- : 2010-present
-
-Branded Crate
- : 2014-present
+See [resume](/resume/)

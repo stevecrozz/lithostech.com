@@ -11,14 +11,9 @@ author:
 author_login: stevecrozz
 author_email: stevecrozz@gmail.com
 author_url: http://lithostech.com
-wordpress_id: 268
-wordpress_url: http://lithostech.com/?page_id=268
 date: '2017-05-26 21:10:33 -0700'
 date_gmt: '2010-05-27 04:10:33 -0700'
-categories:
-- Uncategorized
 tags: []
-comments:
 ---
 # Stephen Crosby
 
@@ -45,11 +40,17 @@ the future of the web as a platform.
 
 ## Work Experience
 
+- Senior Software Engineer
+  - [SecureDocs, Inc](https://www.securedocs.com)
+  - 2017 to present
+  - Created a GraphQL API
+  - Rebuilt document signature workflows
+  - Brought CI times down from 90 minutes to 15 minutes
 - Principal Software Engineer
   - [RightScale, Inc](https://www.rightscale.com)
-  - 2015 to present
+  - 2015 to 2017
   - Implemented new authorization and authentication systems
-  - Contributed to containerization
+  - Containerized legacy software systems
 - Senior Software Engineer / Software Engineer
   - [RightScale, Inc](https://www.rightscale.com)
   - 2010 to 2015
@@ -59,7 +60,8 @@ the future of the web as a platform.
 - Owner
   - [Branded Crate](https://www.brandedcrate.com)
   - 2014 to present
-  - Oversaw a number of small software projects
+  - Managed the engineering team
+  - Worked on many individual projects in a large variety of environments
 - Web Developer, Interactive Media
   - [The Fresno Bee](http://www.fresnobee.com)
   - 2006 to 2010
