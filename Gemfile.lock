@@ -25,7 +25,7 @@ GEM
     extras (0.1.0)
       forwardable-extended (~> 2.5)
     fastimage (2.1.0)
-    ffi (1.9.18)
+    ffi (1.13.1)
     forwardable-extended (2.6.0)
     jekyll (3.4.3)
       addressable (~> 2.4)
