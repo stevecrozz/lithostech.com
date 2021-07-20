@@ -57,4 +57,6 @@ up to: [https://github.com/stevecrozz](https://github.com/stevecrozz)
 [The Fresno Bee](https://www.fresnobee.com/)
  : 2006-2010
 
-See [resume](/resume/)
+See [resume][1]
+
+[1]:/static/resume-2021-07-20.pdf
