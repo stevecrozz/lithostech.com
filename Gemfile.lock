@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     aws-sdk (2.9.12)
       aws-sdk-resources (= 2.9.12)
     aws-sdk-core (2.9.12)
@@ -76,7 +76,7 @@ GEM
     pry-byebug (3.4.2)
       byebug (~> 9.0)
       pry (~> 0.10)
-    public_suffix (2.0.5)
+    public_suffix (5.0.0)
     rack (1.6.5)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
