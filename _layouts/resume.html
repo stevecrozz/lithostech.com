@@ -2,7 +2,6 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    {% include ga.html %}
     <div class="container-fluid">
       <div class="row navbar">
         <div class="col-sm-2"></div>
@@ -19,36 +18,36 @@
       </div>
     </div>
   </body>
+  <style>
+  #stephen-crosby {
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: -2px;
+    font-size: 48px;
+  }
+  #contact {
+    position: relative;
+    margin: 1em;
+    overflow: hidden;
+  }
+  #contact ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 -1px;
+  }
+  #contact li {
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: .25em 0;
+    padding: 0 1em;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    background-color: #fff;
+  }
+  </style>
+  <link rel="stylesheet" href="{{ '/assets/app-defer.css' | relative_url }}" />
 </html>
-<style>
-#stephen-crosby {
-  text-align: center;
-  margin-top: 20px;
-  letter-spacing: -2px;
-  font-size: 48px;
-}
-#contact {
-  position: relative;
-  margin: 1em;
-  overflow: hidden;
-}
-#contact ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0 0 -1px;
-}
-#contact li {
-  flex-grow: 1;
-  flex-basis: auto;
-  margin: .25em 0;
-  padding: 0 1em;
-  text-align: center;
-  border-left: 1px solid #ccc;
-  background-color: #fff;
-}
-</style>
-{% stylesheet app-defer %}

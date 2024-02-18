@@ -6,7 +6,7 @@ description: Ventilations from an engineer — Stephen Crosby is an Internet
   engineer and explorer of the worldwide series of tubes
 url: http://lithostech.com
 sass:
-  sass_dir: _sass
+  sass_dir: _assets
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -44,8 +44,7 @@ pagination:
   per_page: 5
   permalink: '/page/:num/'
   title: ':title - page :num'
-gems:
-  - jekyll-assets
+plugins:
   - jekyll/responsive_image
   - jekyll-paginate-v2
   - jekyll-feed

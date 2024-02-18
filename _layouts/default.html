@@ -2,7 +2,6 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    {% include ga.html %}
     <div class="container-fluid">
       {% include brand.html %}
       <div class="row">
@@ -14,5 +13,5 @@
       </div>
     </div>
   </body>
+  <link rel="stylesheet" href="{{ '/assets/app-defer.css' | relative_url }}" />
 </html>
-{% stylesheet app-defer %}
