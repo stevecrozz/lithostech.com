@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://lithostech.com/sitemap.xml
+Disallow: /page/
+Disallow: /tags/
