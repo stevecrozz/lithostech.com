@@ -9,8 +9,10 @@ gzip:
   - .css
   - .md
   - .js
-cloudfront_distribution_config:
-  http_version: http2
+cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DISTRIBUTION_ID'] %>
+cache_control:
+  "assets/*": public, max-age=3600
+  "*": no-cache, no-store
 redirects:
   tag/acl/index.html: /tags/acl/
   tag/actionscript/index.html: /tags/actionscript/
