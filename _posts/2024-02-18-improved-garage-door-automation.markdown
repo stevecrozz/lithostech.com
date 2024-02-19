@@ -145,8 +145,8 @@ mineral oil and it hasn't had a problem since.
 ## HomeAssistant Configuration
 
 You don't need to use HomeAssistant to make use of this setup, but it is quite
-nice. In HomeAssistant, garage doors use the can use the 'cover' template and
-my configuration looks like this:
+nice. In HomeAssistant, garage doors can use the 'cover' template and my
+configuration looks like this:
 
 {% raw %}
 ~~~ yml

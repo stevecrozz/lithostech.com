@@ -9,7 +9,6 @@ gzip:
   - .css
   - .md
   - .js
-cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DISTRIBUTION_ID'] %>
 cache_control:
   "assets/*": public, max-age=3600
   "*": no-cache, no-store
