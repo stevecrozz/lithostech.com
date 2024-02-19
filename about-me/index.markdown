@@ -23,10 +23,18 @@ date: '2010-05-26 21:10:33 -0700'
 Thanks for taking the time to get to know me. My name is Stephen Crosby and I
 build web applications.
 
-Today, I'm building the next generation of document storage and contract
-management solutions at [SecureDocs](https://www.securedocs.com) in Goleta, CA.
-We have a small engineering team, but I'm continually impressed by the quality
-of the software we produce.
+Today, I am at [Dropbox](https://www.dropbox.com), building beautiful products
+for a wide variety of customers who are putting their documents to work.
+
+In 2021, I left SecureDocs to join [Google](https://www.google.com) in Mountain
+View, where I worked on internal developer tooling for Google Assistant. It was
+an incredible opportunity to get an inside look at how such a legendary company
+works, but I decided pretty quickly that this was not the place for me.
+
+Prior to Google, I was working on a new generation of document storage and
+contract management solutions at [SecureDocs](https://www.securedocs.com) in
+Goleta, CA. We had a very small engineering team, but I was continually
+impressed by the quality of the software we produced.
 
 At [RightScale](https://www.rightscale.com), now
 [Flexera](https://www.flexera.com), I built and maintained both frontend and
@@ -45,18 +53,24 @@ up to: [https://github.com/stevecrozz](https://github.com/stevecrozz)
 
 ## Places I’ve worked
 
-[SecureDocs](https://www.securedocs.com/)
- : 2018-present
+[Dropbox](https://www.dropbox.com)
+ : 2021 - Present
+
+[Google](https://www.google.com)
+ : 2021 - 2021
+
+[SecureDocs (now part of Onit)](https://www.securedocs.com/)
+ : 2017 - 2021
+
+Branded Crate
+ : 2014 - 2019
 
 [RightScale (now Flexera)](https://www.flexera.com/)
- : 2010-2017
-
-[Branded Crate](https://www.brandedcrate.com/)
- : 2014-present
+ : 2010 - 2017
 
 [The Fresno Bee](https://www.fresnobee.com/)
  : 2006-2010
 
-See [resume][1]
+See [resume (not up-to-date)][1]
 
 [1]:/static/resume-2021-07-20.pdf
