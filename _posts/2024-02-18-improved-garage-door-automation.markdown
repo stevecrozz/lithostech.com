@@ -38,8 +38,8 @@ functionality in tact.
 
 I found the Shelly Uni after having played with a few other devices in the
 Shelly ecosystem. These devices are excellent. They are easy to set up via
-captive wifi portal. They of course join your WiFi network. They can be
-controlled locally with no cloud services via their own built-in webservers,
+captive WiFi portal. They of course join your WiFi network. They can be
+controlled locally with no cloud services via their own built-in web servers,
 HomeAssistant, or other local message systems. I have nothing but good things
 to say about my experience with these devices.
 {%
@@ -85,7 +85,7 @@ My first order of business was to get these circuit boards off the ceiling and
 onto the bench for a closer inspection. My plan was to find a suitable power
 source somewhere on one of these boards, and assume that the load of the tiny
 Shelly Uni wouldn't even be noticed. One very easy source appeared to be the
-step-down gransformer which was clearly labelled 22VAC, well within the
+step-down transformer which was clearly labeled 22VAC, well within the
 documented input range of the Shelly Uni. But when I measured the actual
 potential it was out of range at 28VAC. But on the low voltage side, I found a
 nice 12VDC right on the connection between the two boards.
@@ -103,7 +103,7 @@ back together and re-assembling.
 
 The garage door opener unit itself needs to be able to detect when the door is
 fully opened or fully closed so it can stop the motor. To do this, my unit has
-a very simple, ingenius, and adjustable mechanism. Through a series of nylon
+a very simple, ingenious, and adjustable mechanism. Through a series of nylon
 gears, the movement of the door causes a grounded carriage (connected to the
 gray wire) at the front of the machine to traverse the space between two
 separate +5V (yellow and brown wire) contacts.
