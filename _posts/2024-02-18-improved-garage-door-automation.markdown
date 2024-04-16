@@ -119,10 +119,11 @@ separate +5V (yellow and brown wire) contacts.
   class: "img-float-right"
 %}
 So the potential measured between the yellow and gray wires is 0 when the door
-is closed and +5V when closed. The potential between the brown and gray wires
-is 0 when the door is open and +5V when the door not open. So with these three
-contacts, and the two inputs on the Shelly Uni, we can know when the door is
-fully open, when it is fully closed and when it is neither.
+is fully open and +5V when not fully open. The potential between the brown and
+gray wires is 0 when the door is fully closed and +5V when the door not fully
+closed. So with these three contacts, and the two inputs on the Shelly Uni, we
+can know when the door is fully open, when it is fully closed and when it is
+neither.
 
 {%
   responsive_image path: static/img/full/2023/grommetted.jpg
