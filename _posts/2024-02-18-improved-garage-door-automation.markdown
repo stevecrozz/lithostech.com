@@ -2,12 +2,12 @@
 layout: post
 published: true
 title: Improved Garage Door Automation
-date: '2024-02-18 17:20:27 -0800'
+date: "2024-02-18 17:20:27 -0800"
 tags:
-- hardware
-- wifi
-- home
-- automation
+  - hardware
+  - wifi
+  - home
+  - automation
 ---
 
 In 2023, I managed to integrate my garage doors with HomeAssistant using a
@@ -97,7 +97,7 @@ nice 12VDC right on the connection between the two boards.
 %}
 I did not feel like soldering directly to the circuit board, so I wrapped the
 posts of the connector with some solid copper wire before plugging the boards
-back together and re-assembling. 
+back together and re-assembling.
 
 ## Door State
 
@@ -136,6 +136,13 @@ hindsight, I probably could have managed it and it would have looked nicer. But
 I wound up drilling a hole in the case and routing the cables through a rubber
 grommet on top.
 
+Door state information appears in this very tiny blue indicator in the UI.
+{%
+  responsive_image path: static/img/full/2023/shelly-uni-ui.png
+  alt: "Shelly Uni UI, door state indicator"
+  class: "img-float-right"
+%}
+
 It has been over a year now and this setup has been working great on both my
 garage door openers. I have it integrated with HomeAssistant which makes for
 very convenient remote operation. At one point, wall-mounted button was
@@ -150,7 +157,8 @@ nice. In HomeAssistant, garage doors can use the 'cover' template and my
 configuration looks like this:
 
 {% raw %}
-~~~ yml
+
+```yml
 cover:
   - platform: template
     covers:
@@ -174,5 +182,6 @@ cover:
           service: switch.turn_on
           data:
             entity_id: switch.garage_door_right_channel_2
-~~~
+```
+
 {% endraw %}
