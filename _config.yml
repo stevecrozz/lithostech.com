@@ -17,9 +17,6 @@ markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
 excerpt_separator: <!--more-->
-assets:
-  sources:
-    - _assets
 defaults:
   -
     scope:
