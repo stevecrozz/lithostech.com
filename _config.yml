@@ -5,8 +5,6 @@ title: connecting the tubes
 description: Ventilations from an engineer — Stephen Crosby is an Internet
   engineer and explorer of the worldwide series of tubes
 url: http://lithostech.com
-sass:
-  sass_dir: _assets
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -38,14 +36,14 @@ responsive_image:
     - width: 300
     - width: 600
   base_path: static/img/full
-  output_path_format: static/img/resized/%{dirname}/%{width}-%{basename}
+  output_path_format: static/img/resized/%{width}/%{basename}
 pagination:
   enabled: true
   per_page: 5
   permalink: '/page/:num/'
   title: ':title - page :num'
 plugins:
-  - jekyll/responsive_image
+  - jekyll-responsive-image
   - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-sitemap
