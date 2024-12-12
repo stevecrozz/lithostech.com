@@ -41,6 +41,8 @@ the most natural way to divide a day is in two, then maybe the next most
 natural division is in two again. Dividing a day repeatedly in two
 results in a kind of binary clock. And this is exactly the concept.
 
+<!--more-->
+
 ## Design
 
 Let's explore the design I've had in mind. This idea has taken many

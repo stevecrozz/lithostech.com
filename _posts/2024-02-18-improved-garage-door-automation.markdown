@@ -34,9 +34,11 @@ functionality in tact.
 - Light control is not implemented, but could be added to the extra Shelly
   Uni output in an extremely simple circuit
 
+<!--more-->
+
 ## Shelly Uni
 
-I found the Shelly Uni after having played with a few other devices in the
+I found the this product after having played with a few other devices in the
 Shelly ecosystem. These devices are excellent. They are easy to set up via
 captive WiFi portal. They of course join your WiFi network. They can be
 controlled locally with no cloud services via their own built-in web servers,
@@ -84,11 +86,11 @@ and lights leading out.
 My first order of business was to get these circuit boards off the ceiling and
 onto the bench for a closer inspection. My plan was to find a suitable power
 source somewhere on one of these boards, and assume that the load of the tiny
-Shelly Uni wouldn't even be noticed. One very easy source appeared to be the
+device wouldn't even be noticed. One very easy source appeared to be the
 step-down transformer which was clearly labeled 22VAC, well within the
-documented input range of the Shelly Uni. But when I measured the actual
-potential it was out of range at 28VAC. But on the low voltage side, I found a
-nice 12VDC right on the connection between the two boards.
+documented input range of the device. But when I measured the actual potential
+it was out of range at 28VAC. But on the low voltage side, I found a nice 12VDC
+right on the connection between the two boards.
 
 {%
   responsive_image path: static/img/full/2023/uni-power-source.jpg
@@ -121,7 +123,7 @@ separate +5V (yellow and brown wire) contacts.
 So the potential measured between the yellow and gray wires is 0 when the door
 is fully open and +5V when not fully open. The potential between the brown and
 gray wires is 0 when the door is fully closed and +5V when the door not fully
-closed. So with these three contacts, and the two inputs on the Shelly Uni, we
+closed. So with these three contacts, and the two inputs on the device, we
 can know when the door is fully open, when it is fully closed and when it is
 neither.
 
@@ -130,8 +132,8 @@ neither.
   alt: "Garage door opener unit case with hole drilled on top, now with a rubber grommet installed"
   class: "img-float-right"
 %}
-All that was left was to wire it up and find a place for the Shelly Uni to
-live. I wasn't sure about packing it all into the metal garage door casing. In
+All that was left was to wire it up and find a place for the device to live. I
+wasn't sure about packing it all into the metal garage door casing. In
 hindsight, I probably could have managed it and it would have looked nicer. But
 I wound up drilling a hole in the case and routing the cables through a rubber
 grommet on top.

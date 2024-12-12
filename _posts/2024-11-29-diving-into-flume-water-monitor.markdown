@@ -38,6 +38,8 @@ shop or shuts down its web service, that these devices could all still be
 useful. So let's take a closer look at the hardware to see what's really
 happening.
 
+<!--more-->
+
 ## The Sensor
 
 {%
@@ -103,12 +105,15 @@ The bridge is a much smaller device and its designed to live inside your home.
 It takes power from the provided microUSB adapter. Looking at the board, its
 very easy to spot the major components. A 900Mhz antenna is compactly printed
 in a spiral shape at the top, and that antenna is connected to a corresponding
-RF69 packet radio module. And the whole thing is managed by an ESP12S, ESP8266
-type microcontroller with embedded WiFi. Flume graciously labelled and printed
-pins that could be used for a uART connection to the microcontroller. So before
-we do anything else, let's see if we can dump the flash image. Then after we
-run through the setup, we can see what changes and hopefully gain some insight
-into how it all works.
+[RF69](https://www.hoperf.com/ic/rf_transceiver/RF69W.html) packet radio
+module. And the whole thing is managed by an ESP-12S, an
+[ESP8266](https://www.espressif.com/en/products/socs/esp8266) type
+microcontroller with embedded WiFi. Flume graciously labelled and printed pins
+that could be used for a
+[uART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter)
+connection to the microcontroller. So before we do anything else, let's see if
+we can dump the flash image. Then after we run through the setup, we can see
+what changes and hopefully gain some insight into how it all works.
 
 {%
   responsive_image path: static/img/full/2024/bridge-uart-connected.jpg
@@ -116,33 +121,34 @@ into how it all works.
   class: "img-float-left"
 %}
 I placed some breakout pins right onto the board, tied the flash pin low and
-connected my trusty CH340. Powering on the bridge with the serial connection
-yielded a bunch of gibberish output. I tried all the usual baud rates none of
-them seemed right. But esptool, after a few minutes, was able to retrieve the
-flash image. We'll get much deeper into this later, but for now, its plenty
-interesting to explore this with plain old strings. Lots of information is
-available just by looking at the text from the firmware image. Text that I
-found indicate about what would be expected. I see evidence of machinery for
-doing OTA updates, some kind of ring buffer possibly for storing water use
-data, CRC checks, DNS, JSON encoding, packet radio interface stuff, library
-names and even some interesting hostnames. One that really stood out is
-mqtt.prod.flumetech.com.
+connected my trusty [CH340](https://www.wch-ic.com/products/CH340.html).
+Powering on the bridge with the serial connection yielded a bunch of gibberish
+output. I tried all the usual baud rates none of them seemed right. But
+esptool, after a few minutes, was able to retrieve the flash image. We'll get
+much deeper into this later, but for now, its plenty interesting to explore
+this with plain old strings. Lots of information is available just by looking
+at the text from the firmware image. Text that I found indicate about what
+would be expected. I see evidence of machinery for doing
+[OTA](https://en.wikipedia.org/wiki/Over-the-air_update) updates, some kind of
+buffer, possibly for storing water use data, CRC checks, DNS, JSON encoding,
+packet radio interface stuff, library names and even some interesting
+hostnames. One that really stood out is mqtt.prod.flumetech.com.
 
 ### Data Access Attempt 1
 
-With a little luck, I figured I could set up my own MQTT server and grab the
-data I want. So I began by simply configuring my home router's DNS service to
-resolve mqtt.prod.flumetech.com to my laptop's IP address. Firing up Wireshark
-and powering on the bridge confirmed my suspicion that the bridge makes a
-plain, non-TLS network connection to a remote MQTT server. Monitoring the
-network traffic even revealed the username and password that can be used to
-connect. This was going to be easy. Or so I thought.
+With a little luck, I figured I could set up my own [MQTT](https://mqtt.org/)
+server and grab the data I want. So I began by simply configuring my home
+router's DNS service to resolve mqtt.prod.flumetech.com to my laptop's IP
+address. Firing up Wireshark and powering on the bridge confirmed my suspicion
+that the bridge makes a plain, non-TLS network connection to a remote MQTT
+server. Monitoring the network traffic even revealed the username and password
+that can be used to connect. This was going to be easy. Or so I thought.
 
-I used a few node.js libraries to cobble together [my own custom MQTT server](https://github.com/stevecrozz/flumewatch/tree/main/relay)
-to accept connections from the bridge and relay packets to and from Flume's own
-cloud service. This allowed me to sit in the middle and read all the packet
-data flowing in both directions while everything continued to work perectly
-fine.
+I used a few node.js libraries to cobble together [my own custom MQTT
+server](https://github.com/stevecrozz/flumewatch/tree/main/relay) to accept
+connections from the bridge and relay packets to and from Flume's own cloud
+service. This allowed me to sit in the middle and read all the packet data
+flowing in both directions while everything continued to work perectly fine.
 
 ~~~
 Bridge subscribing, subscribing to Flume: responses/61DA80B5********/# 61F6F579********
@@ -161,11 +167,11 @@ Bridge to Flume: 2/7/12/61DA80B5********/1733118563 122B 1:A�Uҧ.����4
 
 But there was a big problem. Although everything worked fine, I was not
 actually able to make any sense of the data I was seeing. Initially, I hoped it
-would be merely base64 encoded. I recorded a good number of these packets and
-used some entropy analysis tools to confirm that these recorded data were very
-high in entropy. It probably wouldn't make much sense to go through all the
-effort of scrambling all this data in a way that didn't involve encryption, so
-I understood this to mean our data is encrypted. That's going to make this a
+would be merely compressed. I recorded a good number of these packets and used
+some entropy analysis tools to confirm that these recorded data were very high
+in entropy. It probably wouldn't make much sense to go through all the effort
+of scrambling all this data in a way that didn't involve encryption, so I
+understood this to mean our data is encrypted. That's going to make this a
 difficult road.
 
 ## Data Access Attempt 2
@@ -187,9 +193,10 @@ time to get a bit more invasive.
 ## Data Access Attempt 3
 
 In order to learn exactly how the bridge configures its radio, I decided to
-observe the SPI bus between the ESP8266 and the RF69 radio module. Never having
-done this kind of thing before, it took many attempts before I had the right
-physical connections in place.
+observe the [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface)
+bus between the ESP8266 and the RF69 radio module. Never having done this kind
+of thing before, it took many attempts before I had the right physical
+connections in place.
 
 {%
   responsive_image path: static/img/full/2024/bridge-spi.jpg
@@ -261,12 +268,13 @@ interesting strings and a lot can be gained by examining at this level, but you
 have to get quite a bit smarter about it if you want to learn more than the
 strings can tell you.
 
-I dumped a new firmware from the bridge and flashed it onto a Wemos D1 Mini. It
-actually managed to start up and connect to my test MQTT server. This gave me a
-nice test platform so I don't have to be messing with the authentic Flume
-bridge. Using my logic analyzer, I was able to determine the actual baud rate
-of the uART which is a very odd 50,000 baud. That allowed me to read some info
-from the startup sequence
+I dumped a new firmware from the bridge and flashed it onto a [Wemos D1
+Mini](https://www.wemos.cc/en/latest/d1/d1_mini.html). It actually managed to
+start up and connect to my test MQTT server. This gave me a nice test platform
+so I don't have to be messing with the authentic Flume bridge. Using my logic
+analyzer, I was able to determine the actual baud rate of the uART which is a
+very odd 50,000 baud. That allowed me to read some info from the startup
+sequence
 
 ~~~
 rBoot v1.4.2
@@ -345,8 +353,8 @@ X.
 
 Some functions are quite difficult to parse, and I learned through this process
 that this program isn't just a user program, but actually a whole operating
-system based on FreeRTOS running a program which makes it that much more
-difficult to follow.
+system based on [FreeRTOS](https://www.freertos.org/) running a program which
+makes it that much more difficult to follow.
 
 I was searching through thousands of unlabelled, decomiled C functions, looking
 for something that resembled encryption so I could further understand what was
@@ -354,22 +362,23 @@ happening on the network. I actually found LLMs to be somewhat helpful here. In
 one function, the LLM called out an interest in a particular value at the end
 of a long summary:
 
-In essence, this function applies a series of bitwise operations and
-conditional logic to an input array of uints. It appears to be performing some
-kind of transformation on the array, possibly related to encryption or hashing
-(based on the use of shifts, XORs, and a constant like 0x9e377900, which is
-commonly associated with hash functions like MurmurHash).
+> In essence, this function applies a series of bitwise operations and
+> conditional logic to an input array of uints. It appears to be performing
+> some kind of transformation on the array, possibly related to encryption or
+> hashing (based on the use of shifts, XORs, and a constant like 0x9e377900,
+> which is commonly associated with hash functions like MurmurHash).
 
-ChatGPT had some other guesses as to which encryption algorithm this might be.
+The LLM had some other guesses as to which encryption algorithm this might be.
 They were all wrong, but it was correct to be interested in this value. It was
 paying attention to the right thing. It turns out this value is approximately
 the fractional part of the golden ratio, and this particular approximation is
-used in the Gimli permutation. The Gimli permutation is used in LibHydrogen, a
-somewhat popular cryptography library. Its lightweight properties make it a
-pretty good match for the capabilities of the hardware and demands of this
-application. Further analysis of constants defined in LibHydrogen and the
-decompiled bridge software confirm this is indeed the library used for
-encrypting and decrypting MQTT packets.
+used in the [Gimli permutation](https://gimli.cr.yp.to/). The Gimli permutation
+is used in [LibHydrogen](https://github.com/jedisct1/libhydrogen), a somewhat
+popular cryptography library. Its lightweight properties make it a pretty good
+match for the capabilities of the hardware and demands of this application.
+Further analysis of constants defined in LibHydrogen and the decompiled bridge
+software confirm this is indeed the library used for encrypting and decrypting
+MQTT packets.
 
 {%
   responsive_image path: static/img/full/2024/ghidra-found-secretbox-setup.png
@@ -414,13 +423,13 @@ clearly a whole mini-protocol built into this scheme.
 
 ## Altering the Image
 
-The code I found that loads the public key from a flash memory address into RAM
-checks to make sure it begins with a magic prefix. I wondered if I were to
-alter this image, if I could get the device to request a new public key and see
-what that communication looks like. So I changed the magic value and loaded the
-firmware onto my own ESP8266. The device connected to my MQTT server and did
-not request a new public key. But it did in fact begin sending messages in
-plain text! I made the same change and uploaded this altered firmware to the
+The code I found that loads the public key from flash memory address 0x3f9000
+into RAM checks to make sure it begins with a magic prefix. I wondered if I
+were to alter this image, if I could get the device to request a new public key
+and see what that communication looks like. So I changed the magic value and
+loaded the firmware onto my own ESP8266. The device connected to my MQTT server
+and did not request a new public key. But it did in fact begin sending messages
+in plain text! I made the same change and uploaded this altered firmware to the
 real Flume bridge half expecting to see all the plain text flowing. I got a
 look at some interesting unencrypted messages coming back from Flume, including
 one message identifying the server's libhydrogen bindings which are from
@@ -514,6 +523,10 @@ guarantee it would run correctly. So far that has discouraged me from pouring
 much energy into attempting to compile the whole program. Perhaps in a more
 practical variation on this approach, I could compile only specific functions
 so I can observe them in action.
+
+Building a plain radio receiver around the RF69 also seems like a nice,
+noninvasive way to capture the data on its way from the sensor to the bridge.
+This should be very doable.
 
 If there are any other Flume device owners out there with the time and energy
 to take this investigation even further, I'd love to hear about it.

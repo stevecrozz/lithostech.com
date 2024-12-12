@@ -145,7 +145,13 @@ article p {
   text-align: justify;
 }
 
-article p:first-of-type::first-letter {
+blockquote {
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  padding-left: 15px;
+}
+
+.article-body > p:first-of-type::first-letter {
   float: left;
   font-size: 72px;
   font-family: Cutive, "Times New Roman", Times, serif;
