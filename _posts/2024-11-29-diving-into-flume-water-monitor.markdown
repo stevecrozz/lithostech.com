@@ -146,18 +146,17 @@ fine.
 
 ~~~
 Bridge subscribing, subscribing to Flume: responses/61DA80B5********/# 61F6F579********
-Bridge publishing message, relaying to Flume: 2/7/12/61F6F579********/1733118561 134B ��Ӹ�|��Mk&8R��5B��\����)@�Z��.�p!�,c�ަ���f�C��*��}�
+Bridge to Flume: 2/7/12/61F6F579********/1733118561 134B ��Ӹ�|��Mk&8R��5B��\����)@�Z��.�p!�,c�ަ���f�C��*��}�
                                                                                                                                         �
 Pp*�JcZ                                                                                                                                  a��
 �!+,�K���ad�lo������$�'��*�Y���%��Jl
-Bridge publishing message, relaying to Flume: 2/4/12/61F6F579********/1733118561 114B �ɧ����@Y9ν�78Wo�[�o�
-                                                                                                          �]�B�Uﺏ7y�Ԟ!�E�R#2�b�[�k^�~Q>eAӌ����������U0Q���ld��_�r�{-r�'޴U��6?��vAI@����
-Bridge publishing message, relaying to Flume: 2/7/12/61F6F579********/1733118563 134B g��b
+Bridge to Flume: 2/4/12/61F6F579********/1733118561 114B �ɧ����@Y9ν�78Wo�[�o�
+                                            �]�B�Uﺏ7y�Ԟ!�E�R#2�b�[�k^�~Q>eAӌ����������U0Q���ld��_�r�{-r�'޴U��6?��vAI@����
+Bridge to Flume: 2/7/12/61F6F579********/1733118563 134B g��b
                                                                                           R��Ms�@#�Q0VR���p�g�}�2�A�&37A�[�	�G���3hJg3v�`�Q�
 \��8x[e>�=j����oe� Ł�����AYfF��O3��u��]�1E�p7M�C
                                                 GH��C�Y&����
-Bridge publishing message, relaying to Flume: 2/7/12/61DA80B5********/1733118563 122B 1:A�Uҧ.����4m	о�2/ƛz(�؏Z�>�����k��W c}R�q}��e�M�y#x�`�tWTS�_�Q)PW�`w�X�i
-                                                                                                                                                                  ��+��t+6uK��,'#k��w���a`�
+Bridge to Flume: 2/7/12/61DA80B5********/1733118563 122B 1:A�Uҧ.����4m	о�2/ƛz(�؏Z�>�����k��W c}R�q}��e�M�y#x�`�tWTS�_�Q)PW�`w�X�i
 ~~~
 
 But there was a big problem. Although everything worked fine, I was not
@@ -431,22 +430,21 @@ one message identifying the server's libhydrogen bindings which are from
 Bridge Connected: 61F6F579********
 Bridge subscribing, subscribing to Flume: responses/61F6F579********/# 61F6F579********
 Bridge subscribing, subscribing to Flume: responses/61DA80B5********/# 61F6F579********
-Bridge publishing message, relaying to Flume: 2/7/2/61F6F579********/1733208825 98B {"bridge_id":null,"branch":"lrange-release","sha_full":"e8c2db4b80c39c39c41a1d28318feeb81ac035d8"}
+Bridge to Flume: 2/7/2/61F6F579********/1733208825 98B {"bridge_id":null,"branch":"lrange-release","sha_full":"e8c2db4b80c39c39c41a1d28318feeb81ac035d8"}
 Flume acknowledged bridge subscription
 Flume acknowledged bridge subscription
-Message from Flume, relaying to bridge: responses/61F6F579********/1/2: 321B {"code":602,"message":"Request OK","timestamp":1733208825,"sensors":["61DA80B5********"],"devices":[{"uuid":"61DA80B5********","hardware_id":"ASY-00007"}],"settings":{"1":1,"2":"/provisioning","3":"/frames","4":"/responses","5":"device.flumetech.com","6":30000,"7":1200000,"8":4093,"9":65281,"10":14,"11":261135,"12":12}}
-Bridge publishing message, relaying to Flume: 2/9/1/61F6F579********/1733208826 32B ��B��|G���n �݋��	4O@c�� ��?7g
-Bridge publishing message, relaying to Flume: 2/3/2/61F6F579********/1733208826 285B [{"timestamp":1733208826,"type":1,"level":4,"message":"RST REASON:  DIRTY  "},{"timestamp":1733208826,"type":1,"level":4,"message":"SDK reset #6: external"},{"timestamp":1733208826,"type":1,"level":4,"message":"SHA: e8c2db4b80c39c39c41a1d28318feeb81ac035d8 | BRANCH: lrange-release"}]
-Message from Flume, relaying to bridge: responses/61F6F579********/6/2: 90B {"code":174,"message":"Phydro crypto key exchange function failed","timestamp":1733208827}
-Bridge publishing message, relaying to Flume: 2/4/2/61F6F579********/1733208829 111B [{"timestamp":1733208829,"type":1},{"timestamp":1733208829,"type":1024},{"timestamp":1733208825,"type":16384}]
-Bridge publishing message, relaying to Flume: 2/3/2/61F6F579********/1733208831 82B [{"timestamp":1733208827,"type":1,"level":8,"message":"Server error [code 174]"}]
-Bridge publishing message, relaying to Flume: 2/7/2/61DA80B5********/1733208836 86B {"bridge_id":"61F6F579********","sha_full":"163be969f421472b2fb0d890a8be0ae45e4773a5"}
-Message from Flume, relaying to bridge: responses/61DA80B5********/1/2: 239B {"code":602,"message":"Request OK","timestamp":1733208836,"last_sample_timestamp":1733111130,"sensors":[],"peaks":2905840,"settings":{"1":16383,"2":2097151,"3":60000,"4":14,"5":511,"6":5,"7":30,"8":600,"9":0,"10":0,"11":2,"12":150,"13":0}}
-Bridge publishing message, relaying to Flume: 2/2/2/61F6F579********/1733208844 73B [{"timestamp":1733208844,"4":27824,"16":20,"512":-65,"1024":6,"2048":1}]
-Bridge publishing message, relaying to Flume: 2/9/1/61F6F579********/1733208862 32B ��9�-,��-ȰT�m��
-
-Message from Flume, relaying to bridge: responses/61F6F579********/6/2: 90B {"code":174,"message":"Phydro crypto key exchange function failed","timestamp":1733208863}
-Bridge publishing message, relaying to Flume: 2/3/2/61F6F579********/1733208865 82B [{"timestamp":1733208863,"type":1,"level":8,"message":"Server error [code 174]"}]
+Flume to bridge: responses/61F6F579********/1/2: 321B {"code":602,"message":"Request OK","timestamp":1733208825,"sensors":["61DA80B5********"],"devices":[{"uuid":"61DA80B5********","hardware_id":"ASY-00007"}],"settings":{"1":1,"2":"/provisioning","3":"/frames","4":"/responses","5":"device.flumetech.com","6":30000,"7":1200000,"8":4093,"9":65281,"10":14,"11":261135,"12":12}}
+Bridge to Flume: 2/9/1/61F6F579********/1733208826 32B ��B��|G���n �݋��	4O@c�� ��?7g
+Bridge to Flume: 2/3/2/61F6F579********/1733208826 285B [{"timestamp":1733208826,"type":1,"level":4,"message":"RST REASON:  DIRTY  "},{"timestamp":1733208826,"type":1,"level":4,"message":"SDK reset #6: external"},{"timestamp":1733208826,"type":1,"level":4,"message":"SHA: e8c2db4b80c39c39c41a1d28318feeb81ac035d8 | BRANCH: lrange-release"}]
+Flume to bridge: responses/61F6F579********/6/2: 90B {"code":174,"message":"Phydro crypto key exchange function failed","timestamp":1733208827}
+Bridge to Flume: 2/4/2/61F6F579********/1733208829 111B [{"timestamp":1733208829,"type":1},{"timestamp":1733208829,"type":1024},{"timestamp":1733208825,"type":16384}]
+Bridge to Flume: 2/3/2/61F6F579********/1733208831 82B [{"timestamp":1733208827,"type":1,"level":8,"message":"Server error [code 174]"}]
+Bridge to Flume: 2/7/2/61DA80B5********/1733208836 86B {"bridge_id":"61F6F579********","sha_full":"163be969f421472b2fb0d890a8be0ae45e4773a5"}
+Flume to bridge: responses/61DA80B5********/1/2: 239B {"code":602,"message":"Request OK","timestamp":1733208836,"last_sample_timestamp":1733111130,"sensors":[],"peaks":2905840,"settings":{"1":16383,"2":2097151,"3":60000,"4":14,"5":511,"6":5,"7":30,"8":600,"9":0,"10":0,"11":2,"12":150,"13":0}}
+Bridge to Flume: 2/2/2/61F6F579********/1733208844 73B [{"timestamp":1733208844,"4":27824,"16":20,"512":-65,"1024":6,"2048":1}]
+Bridge to Flume: 2/9/1/61F6F579********/1733208862 32B ��9�-,��-ȰT�m��
+Flume to bridge: responses/61F6F579********/6/2: 90B {"code":174,"message":"Phydro crypto key exchange function failed","timestamp":1733208863}
+Bridge to Flume: 2/3/2/61F6F579********/1733208865 82B [{"timestamp":1733208863,"type":1,"level":8,"message":"Server error [code 174]"}]
 ~~~
 
 I like this software direction as it could be possible to access my water use
@@ -458,13 +456,14 @@ state, and the MQTT layer at the top of the stack is simply a more friendly
 layer for observing data. Of course, a remote firmware update could easily
 defeat my plan.
 
-So I did the unthinkable and flashed the commercial bridge unit with my hacked
-firmware. But something was quite wrong. Perhaps this was never going to work,
-or perhaps my messing around caused some state to be reset at Flume. Either
-way, I ended up on a support chat and getting a replacement sensor. So I
-flashed the bridge back to its stock firmware and left it at that. I've
-probably caused enough trouble as it is and at some point, I do need to call it
-quits at some point.
+
+But something was quite wrong. Perhaps this was never going to work, or perhaps
+my messing around caused some state to be reset at Flume. Either way, I
+disconnected my experiment and reflashed the original firmware to the bridge,
+tried to setup from scratch. This did not get me reconnected and I ended up on
+a support chat and getting a replacement sensor which is interesting because I
+hadn't been messing with the sensor. So I've probably caused enough trouble
+as it is and at some point, I do need to call it quits.
 
 I've been in this for the puzzle solving, but I have to stop myself from
 spending more time on this before it consumes me. The SPI bus is always there
@@ -472,18 +471,18 @@ if I really need it.
 
 ## What's Next
 
-There's not much to show for all the effort spent on this project. But I
+There's precious little to show for all the effort spent on this project. But I
 learned a lot and had some fun working on my first serious attempt to reverse
 engineer some hardware. I wanted to make all this research available in case
 anyone else is interested in taking this further. I hope my research will get
 you a much faster start than I had.
 
-It really does look as though the encryption scheme is asymmetric and strong.
-Without Flume's private key there may be zero chance of reading this data as it
-stands. But it *should* still be possible to generate a new key pair and get
-the bridge to accept that public key. In this way, I imagine a MITM like my
-Relay program could receive and decrypt the bridge data, and then re-encrypt it
-on the way back up to Flume using their public key, and vice versa.
+It looks as though the encryption scheme is asymmetric and strong. Without
+Flume's private key there may be zero chance of reading this data as it stands.
+But it *should* still be possible to generate a new key pair and get the bridge
+to accept that public key. In this way, I imagine a MITM like my Relay program
+could receive and decrypt the bridge data, and then re-encrypt it on the way
+back up to Flume using their public key, and vice versa.
 
 There is so much more to understand about the bridge software. There are
 clearly debug modes available on the Bridge. It seems like it should be
@@ -504,16 +503,17 @@ I could use more of my time to try to run this program with my eyeballs and
 brain to suss out the remaining bits that I need. This is what I've been doing
 so far, but it is slow and very hard! The decompiled code includes a lot of
 labels and jumps and dynamic function calls making it pretty difficult to
-follow. But maybe a bit more dedication and good guessing could get me the rest
-of the way.
+follow. The trickiest part has been trying to keep track of program state and
+what exactly is stored in memory. But maybe a bit more dedication could get me
+the rest of the way.
 
 I've also considered attempting to recompile the decompiled code so I could add
-GDB stubs and debug remotely. But that's looking hard too, and even if I did
-fix the thousands of compilation errors, I don't think there's any guarantee it
-would run correctly. So far that has discouraged me from pouring much energy
-into attempting to compile the whole program. Perhaps in a more practical
-variation on this approach, I could compile only specific functions so I can
-observe them in action.
+GDB stubs and debug remotely via uART. But that's looking hard too, and even if
+I did fix the thousands of compilation errors, I don't think there's any
+guarantee it would run correctly. So far that has discouraged me from pouring
+much energy into attempting to compile the whole program. Perhaps in a more
+practical variation on this approach, I could compile only specific functions
+so I can observe them in action.
 
 If there are any other Flume device owners out there with the time and energy
 to take this investigation even further, I'd love to hear about it.
@@ -526,8 +526,8 @@ for this problem domain and some of the details that go into building this kind
 of consumer hardware product. It's worth pointing out that what I've done has
 surely voided whatever warranty came with my hardware, and I don't recommend
 doing any of this unless you're prepared to ruin your hardware and potentially
-even your relationship with Flume. Although I hope we're all still on good
-terms and have hopefully even had a good laugh at my wild investigation.
+even your relationship with Flume. I hope we're all still on good terms and
+have hopefully even had a good laugh at my wild investigation.
 
 If you're still reading, I'd like to request a feature! I'd like my bridge to
 post data in plain text to my own local MQTT server or some other [Home
