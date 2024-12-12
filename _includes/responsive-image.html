@@ -3,6 +3,9 @@
         /{{ i.path }} {{ i.width }}w,
     {% endfor %}
 {% endcapture %}
-<img
-  class="{{ class }}"
-  src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }} /{{ original.path }} {{ original.width }}w">
+<div class="image {{ class }}">
+  <a href="/{{ original.path}}">
+    <img
+      src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }} /{{ original.path }} {{ original.width }}w" />
+  </a>
+</div>

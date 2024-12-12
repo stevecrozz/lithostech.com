@@ -93,6 +93,14 @@ a:hover, a:focus {
   padding-right: 15px;
 }
 
+.image {
+  display: inline-block;
+}
+
+.image img {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }

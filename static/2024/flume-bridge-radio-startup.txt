@@ -1,0 +1,214 @@
+W 01 24 ListenAbort | Standby
+R 01 04 Standby
+
+W 59 19 ?
+R 59 19 ?
+
+T=3077289
+W 01 10 Receiver mode
+R 01 08 Frequency Synthesizer mode
+R 01 08 Frequency Synthesizer mode
+R 01 08 Frequency Synthesizer mode
+...
+R 01 10 Receiver mode
+
+W 01 24 ListenAbort | Standby
+W 01 04 Standby
+W 02 00 Packet mode | FSK | no shaping
+W 18 01 G1 = highest gain
+W 25 40 Dio0Mapping 01
+W 28 10 Clear FifoOverrun
+W 29 FF RSSI trigger level for Rssi interrupt
+W 2D 03 Default preamble size lsb
+W 2E 90 SyncOn | FifoFill if SyncAddress int | SyncSize 010 (2) | SyncTol = 0
+W 2F 2D SyncValue1
+W 37 D0 VariableLength | Whitening | CrcOn | ClearFIFO | NoAddressFiltering
+W 38 42 PayloadLength 0x42 (66 bytes)
+W 3C 8F TxStartCondition=FifoNotEmpty | FifoThreshold=0001111
+W 3D 12 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=0
+W 6F 30 ContinuousDagc=Improved margin
+W 12 0F PaRamp=1111 → 10 us
+W 1E 00 Defaults
+W 20 00 Defaults
+W 1F 00 Defaults
+W 07 E4 RegFrfMsb = 915 Default
+W 08 C0 RegFrfLsb = 915 Default
+W 09 00 RegFrfLsb = 915 Default
+W 58 2D SensitivityBoost=High sensitivity mode
+W 30 55 SyncValue2
+W 31 60 SyncValue3
+
+W 03 02 RegBitrateMsb=55555
+W 04 40 RegBitrateLsb=55555
+W 05 03 RegFdevMsb
+W 06 33 RegFdevLsb
+
+W 19 4A DccFreq=010 (Default) | RxBwMant=20 | RxBwExp=010 (RxBw=100kHz)
+R 3D 12  InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=0
+W 3D 16 InterPacketRxDelay=1 | RestartRx=1 | AutoRxRestartOn=1 | AesOn=0
+W 11 7F Pa0On=0 | Pa1On=1 | Pa2On=1 | OutputPower=1111 (Default, full power)
+
+R 07 E4 RegFrfMsb 915 Default
+R 08 C0 RegFrfMid 915 Default
+R 09 00 RegFrfLsb 915 Default
+
+Set Encryption Key "61F6F57901765560"
+W 3E 36
+W 3F 31
+W 40 46
+W 41 36
+W 42 46
+W 43 35
+W 44 37
+W 45 39
+W 46 30
+W 47 31
+W 48 37
+W 49 36
+W 4A 35
+W 4B 35
+W 4C 36
+W 4D 30
+
+R 3D 12 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=0
+W 3D 13 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=1
+R 3D 13 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=1
+
+T=3.078913
+-------
+W 01 10 Receiver mode
+R 27 00
+R 27 00
+R 27 00
+R 27 00
+
+W 03 68 RegBitrateMsb=1200
+W 04 2B RegBitrateLsb=1200
+W 05 00 RegFdevMsb=00 Default
+W 06 52 RegFdevLsb=52 Default
+W 19 46 DccFreq=010 (Default) | RxBwMant = 16 | RxBwExp=110 (RxBw=7.8kHz)
+R 3D 13 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=1
+W 3D 17 InterPacketRxDelay=1 | RestartRx=1 | AutoRxRestartOn=1 | AesOn=1
+
+...
+R 27 10 x a million
+R 27 90
+W 07 E5 RegFrfMsb 917.5
+W 08 60 RegFrfMid 917.5
+W 09 00 RegFrfLsb 917.5
+W 01 08 Frequency Synthesizer mode
+R 27 00 x 5
+R 27 90
+W 01 10 Receiver mode
+
+R 30 55 SyncValue2
+R 31 60 SyncValue3
+
+R 30 55 SyncValue2
+R 31 60 SyncValue3
+
+Set Encryption Key "61DA80B5EBB63593"
+W 3E 36
+W 3F 31
+W 40 44
+W 41 41
+W 42 38
+W 43 30
+W 44 42
+W 45 35
+W 46 45
+W 47 42
+W 48 42
+W 49 36
+W 4A 33
+W 4B 35
+W 4C 39
+W 4D 33
+
+W 01 04 Standby
+R 3D 13 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=1
+W 3D 13 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=1
+W 30 35 SyncValue2
+W 31 93 SyncValue3
+W 07 E4 RegFrfMsb 915 Default
+W 08 C0 RegFrfMid 915 Default
+W 09 00 RegFrfLsb 915 Default
+W 03 00 RegBitrateMsb=200000
+W 04 A0 RegBitrateLsb=200000
+W 05 09 RegFdevMsb
+W 06 9A RegFdevLsb
+W 19 50 DccFreq=010 (Default) | RxBwMant = 20 | RxBwExp=000 (RxBw=400kHz)
+R 3D 13 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=1
+W 3D 17 InterPacketRxDelay=1 | RestartRx=1 | AutoRxRestartOn=1 | AesOn=1
+W 25 00 Default
+W 5A 5D Pa20dBm1 +20 dBm
+W 5C 7C Pa20dBm2 +20 dBm
+W 13 0F OcpOn=0 | OcpTrim=1111
+W 01 0C Transmitter mode
+
+
+
+LONG TIME 3.5s?
+W 25 40 Dio0Mapping 01
+W 01 04 Standby
+
+MORE TIME
+W 25 40 Dio0Mapping 01
+W 01 04 Standby
+W 03 68 RegBitrateMsb=1200
+W 04 2B RegBitrateLsb=1200
+W 05 00 RegFdevMsb
+W 06 52 RegFdevLsb
+W 19 46 DccFreq=010 (Default) | RxBwMant = 16 | RxBwExp=110 (RxBw=7.8kHz)
+?? R 3D 00
+W 3D 17 InterPacketRxDelay=1 | RestartRx=1 | AutoRxRestartOn=1 | AesOn=1
+W 5A 55 Pa20dBm1 Normal mode and Rx mode (default)
+W 5C 70 Pa20dBm2 Normal mode and Rx mode (default)
+W 13 1A OcpOn=1 | OcpTrim=0011
+W 01 10 Receiver mode
+W 30 55 SyncValue2
+W 31 60 SyncValue3
+
+Set Encryption Key "61F6F57901765560"
+W 3E 36
+W 3F 31
+W 40 46
+W 41 36
+W 42 46
+W 43 35
+W 44 37
+W 45 39
+W 46 30
+W 47 31
+W 48 37
+W 49 36
+W 4A 35
+W 4B 35
+W 4C 36
+W 4D 30
+W 01 04 Standby
+R 3D 13 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=1
+W 3D 13 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=1
+
+SHORT TIME
+W 01 10 Receiver mode
+R 27 10 PllLock x a million
+R 27 90 ModeReady | PllLock
+W 07 E5 RegFrfMsb 916.5
+W 08 20 RegFrfMid 916.5
+W 09 00 RegFrfLsb 916.5
+W 01 08 Frequency Synthesizer mode
+R 27 00 x 5 ModeNotReady | PIINotLocked
+R 27 90 ModeReady | PllLock
+W 01 10 Receiver mode
+
+LONG TIME
+R 27 D8 ModeReady | RxReady | TxNotReady | PllLock
+R 27 D8 ModeReady | RxReady | TxNotReady | PllLock
+W 03 1A RegBitrateMsb=4800
+W 04 0B RegBitrateLsb=4800
+W 05 00 RegFdevMsb
+W 06 A4 RegFdevLsb
+W 19 45 DccFreq=010 (Default) | RxBwMant = 16 | RxBwExp=101 (RxBw=15.6kHz)
+R 3D 13 InterPacketRxDelay=1 | RestartRx=0 | AutoRxRestartOn=1 | AesOn=1
+W 3D 17 InterPacketRxDelay=1 | RestartRx=1 | AutoRxRestartOn=1 | AesOn=1
