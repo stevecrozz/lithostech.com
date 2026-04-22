@@ -20,38 +20,57 @@ date: '2010-05-26 21:10:33 -0700'
   <p style="font-variant-caps: all-petite-caps; margin: 10px 70px; font-weight: bold" itemprop="description">{{ site.description }}</p>
 </div>
 
-Thanks for taking the time to get to know me. My name is Stephen Crosby and I
-build web applications.
+Hey, I'm Stephen Crosby. I've been building software professionally for about
+20 years now, mostly web platforms, APIs, and the kinds of systems that have to
+work reliably at scale. I live in Santa Barbara, California with my family.
 
-Today, I am at [Dropbox](https://www.dropbox.com), building beautiful products
-for a wide variety of customers who are putting their documents to work.
+These days I'm a Senior Software Engineer at [Dropbox](https://www.dropbox.com)
+on the DocSend team. I've had the chance to architect products that drove
+millions in new revenue, lead organizational shifts toward API-first design,
+and mentor engineers on building sustainable, maintainable systems. The work I
+find most satisfying tends to involve untangling complexity and leaving things
+better than I found them.
 
-In 2021, I left SecureDocs to join [Google](https://www.google.com) in Mountain
-View, where I worked on internal developer tooling for Google Assistant. It was
-an incredible opportunity to get an inside look at how such a legendary company
-works, but I decided pretty quickly that this was not the place for me.
+Before Dropbox, I spent a few months at [Google](https://www.google.com)
+working on internal developer tooling for Google Assistant. It was a fascinating
+look inside a legendary company, but I learned pretty quickly that it wasn't
+the right fit for me. Sometimes you have to try something to know.
 
-Prior to Google, I was working on a new generation of document storage and
-contract management solutions at [SecureDocs](https://www.securedocs.com) in
-Goleta, CA. We had a very small engineering team, but I was continually
-impressed by the quality of the software we produced.
+Prior to that, I was at [SecureDocs](https://www.securedocs.com) building
+document storage and contract management systems. Small team, high quality
+output. I designed serverless workflows, built GraphQL APIs, and got our CI
+pipeline down from 90 minutes to 15. At
+[RightScale](https://www.flexera.com/) (now Flexera), I led teams, built
+identity and authorization services, and learned what it means to write
+software that actually scales. I started my career at [The Fresno
+Bee](https://www.fresnobee.com/), building newsroom tools for election results,
+weather data, and crime maps.
 
-At [RightScale](https://www.rightscale.com), now
-[Flexera](https://www.flexera.com), I built and maintained both frontend and
-backend systems for our customers who trusted us with their cloud
-infrastructure. RightScale provided me with an incredible environment to learn
-and build while writing software that scales.
+In 2014, I co-founded [Branded Crate](http://www.brandedcrate.com/), a small
+app development shop here in Santa Barbara. Running a company taught me things
+about business and client relationships that I wouldn't have learned otherwise.
 
-In 2014, I co-founded [Branded Crate](http://www.brandedcrate.com/), a
-small application development and marketing company here in Santa
-Barbara.
+## Beyond the Day Job
 
-I am a huge fan of free software. I’ve created or contributed to many
-open source software projects. Check out my github page to see what I’m
-up to: [https://github.com/stevecrozz](https://github.com/stevecrozz)
+I'm a big believer in open source software. I've contributed to various
+projects over the years and you can see what I'm tinkering with on
+[GitHub](https://github.com/stevecrozz). A lot of my side projects involve
+taking things apart to understand how they work. I've reverse engineered IoT
+devices, built binary clocks, and spent more hours than I'd like to admit
+staring at decompiled firmware. I find this kind of exploration genuinely fun,
+even when it leads nowhere useful.
 
+I earned my private pilot certificate a few years back. Flying has a way of
+demanding your full attention, which I've come to appreciate. When I'm not at a
+computer or in the air, I'm probably working on my house or my car. I love to
+build and improve physical things. I'm an Eagle Scout and still enjoy time
+spent outdoors with my son.
 
-## Places I’ve worked
+I care about building things that last, understanding how systems really work,
+and leaving code better than I found it. If any of that resonates, feel free to
+reach out.
+
+## Work History
 
 [Dropbox](https://www.dropbox.com)
  : 2021 - Present
@@ -69,8 +88,8 @@ Branded Crate
  : 2010 - 2017
 
 [The Fresno Bee](https://www.fresnobee.com/)
- : 2006-2010
+ : 2006 - 2010
 
-See [resume (not up-to-date)][1]
+For the full details, see my [resume][1].
 
-[1]:/static/resume-2021-07-20.pdf
+[1]:/static/resume-2026-04-22.pdf

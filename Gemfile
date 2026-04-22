@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'base64'
+gem 'csv'
+gem 'logger'
+gem 'observer'
 gem 'jekyll', '~> 4'
 gem 'jekyll-feed'
 gem 'jekyll-paginate-v2'
