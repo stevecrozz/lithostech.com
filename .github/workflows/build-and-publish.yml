@@ -14,9 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: '3.4'
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y libmagickwand-dev
       - name: Install dependencies
         run: bundle install
       - name: Build with Jekyll
