@@ -115,33 +115,64 @@ the sensor) to receive downstream messages from Flume.
 
 ### Connection Sequence
 
-When the bridge powers on, the first messages tell a clear story:
+When the bridge powers on, the handshake tells a clear story:
+
+**Step 1: Identification (type 7).** The bridge's first message identifies
+itself with a firmware branch and commit:
+
+```json
+{"bridge_id": null, "branch": "squidward", "sha_full": "2f1c870a72eca7d7eb38cb145718a202fe1c4a86"}
+```
+
+**Step 2: Boot logs (type 3).** Immediately after, the bridge sends
+diagnostic log messages with its reset reason and firmware version:
 
 ```json
 [
-  {"timestamp": 1785105156, "type": 32768},
-  {"timestamp": 1785105163, "type": 16384}
+  {"timestamp": 0, "type": 1, "level": 4, "message": "RST REASON:  DIRTY  "},
+  {"timestamp": 0, "type": 1, "level": 4, "message": "SDK reset #6: external"},
+  {"timestamp": 0, "type": 1, "level": 4, "message": "SHA: 2f1c870a72eca7d7eb38cb145718a202fe1c4a86 | BRANCH: squidward"}
 ]
 ```
 
-These are type 4 (event) messages. The event codes are powers of 2; `32768`,
-`16384`, and `256` have all been observed. Their exact meanings are unknown,
-but the timing suggests they correspond to startup state transitions (the
-`32768` appears first, `16384` follows about seven seconds later, and `256`
-arrives shortly after that).
-
-The bridge then sends a log message confirming the connection:
+**Step 3: Server response.** Flume's server acknowledges the connection,
+lists paired sensors, and returns a settings object:
 
 ```json
-[{"timestamp": 1785105163, "type": 1024, "level": 4, "message": "reconnected"}]
+{
+  "code": 602,
+  "message": "Request OK",
+  "timestamp": 1785096108,
+  "sensors": ["62AC1323E5A55F6F"],
+  "devices": [{"uuid": "62AC1323E5A55F6F", "hardware_id": "ASY-00007"}],
+  "settings": {
+    "1": 1, "2": "/provisioning", "3": "/frames",
+    "4": "/responses", "5": "mqtt.flumewater.com:1883",
+    "6": 30000, "7": 1200000, "8": 4093, "9": 65281,
+    "10": 14, "11": 261135, "12": 12, "13": 60, "14": 0
+  }
+}
 ```
 
-And once the sensor is linked, it reports a SHA hash, possibly a firmware
-commit, but that's unconfirmed:
+The settings include the MQTT endpoint (`"5": "mqtt.flumewater.com:1883"`,
+confirming plain TCP with no TLS), what appear to be timing intervals (`"6":
+30000`, `"7": 1200000` — possibly reporting cadence and heartbeat interval in
+milliseconds), and various configuration flags whose purposes are unknown.
+
+**Step 4: Post-handshake events (type 4).** Once the handshake completes,
+the bridge fires a batch of event codes:
 
 ```json
-[{"timestamp": 1785105263, "type": 1, "level": 4, "message": "152eb0f620a1be2baa74742a55395599a0c5c107"}]
+[
+  {"timestamp": 1785096110, "type": 1},
+  {"timestamp": 1785096110, "type": 1024},
+  {"timestamp": 1785096110, "type": 16384}
+]
 ```
+
+The event codes are powers of 2. Their exact meanings are unknown, but they
+appear consistently after a successful handshake, suggesting they signal
+startup state transitions.
 
 ### Water Flow Data
 
