@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Decrypting Flume Water Monitor Traffic
-date: "2026-07-26 18:00:00 -0700"
+date: "2026-08-11 13:44:40 -0700"
 tags:
   - hardware
   - wifi
@@ -11,7 +11,7 @@ tags:
   - water
   - utilities
 ---
-In my [previous post](/2024/12/11/diving-into-flume-water-monitor), I tore
+In my [previous post](/2024/12/diving-into-flume-water-monitor/), I tore
 apart a Flume water monitor and traced its communication path from the sensor,
 through the bridge, and up to Flume's cloud MQTT server. I identified the
 encryption library (LibHydrogen), extracted a firmware ELF, and even managed to
@@ -19,11 +19,11 @@ coerce the bridge into sending plaintext by corrupting the public key in flash.
 But that approach was destructive; the bridge couldn't complete its handshake
 with Flume's server, so real data stopped flowing.
 
-Since then, I've found a much better approach: read the device's secret key
-from flash (a non-destructive, read-only operation), then sit between the
-bridge and Flume's server decrypting traffic in both directions while
-forwarding it untouched. The bridge stays happy, the Flume app keeps working,
-and I get to see all my water usage data locally.
+Thinking I had reached a dead end, only to find another path turned out to be a
+pretty common occurrence for me. More and more thoughts on what I could have
+done differently, and what further research I could have done kept coming to
+me. And so I set out to continue to pursue my unhealthy obsession of figuring
+out exactly how I can read this data on the network.
 
 <!--more-->
 
@@ -36,7 +36,8 @@ server's public key loaded from flash. These functions have real
 cross-references to session key storage locations. Everything pointed to the
 bridge negotiating ephemeral session keys with Flume's server, which would have
 made passive decryption impossible without writing a custom key pair to flash
-and implementing the full key exchange in the relay.
+and implementing the full key exchange in the relay. I actually did do this and
+hoped to see it working, only to face yet another disappointment.
 
 From the previous investigation, when I invalidated the magic prefix on the key
 storage area, Flume's server responded with error 174: "Phydro crypto key
@@ -44,13 +45,15 @@ exchange function failed." That error message, combined with the key exchange
 code in the firmware, made it seem certain that session keys were in play.
 
 But when I actually captured live traffic and tried decrypting with just the
-static device key, everything decrypted cleanly. No session keys involved.
+static device key, everything decrypted cleanly. No session keys involved. I'm
+sure I tried this last time, but I must not have had all secretbox parameters
+correct.
 
 The Noise N code exists in the firmware but isn't active for normal MQTT
 traffic. It might be used for OTA updates, or a provisioning step that only
 runs once, or it may be a remnant of an older protocol version. I don't know.
 What matters is that in practice, the bridge encrypts and decrypts all messages
-with the same static 32-byte key stored in flash.
+with the same static 32-byte key stored in flash. Or at least mine does.
 
 ## The Encryption Parameters
 
@@ -66,7 +69,21 @@ The encryption parameters are straightforward:
 - Context: the ASCII string `12345678`
 - Message ID: `0` (constant for all messages)
 
-With these parameters known, any message can be decrypted.
+Some might see these SecretBox context and message ID parameters and have a
+chuckle, but I don't think Flume has done anything wrong in choosing them. The
+libhydrogen docs say about context that [its purpose is to mitigate accidental
+bugs by separating
+domains](https://github.com/jedisct1/libhydrogen/wiki/Contexts). There's
+probably only one domain in this scheme, so 12345678 is just as appropriate as
+any other context. And regarding message IDs, the docs also say
+
+> If this mechanism is not required by an application, using a constant msg_id
+> such as 0 is also totally fine. Message identifiers are optional and do not
+> have to be unique.
+
+They were findable in the firmware, or guessable although clearly I didn't
+guess them correctly last time. Regardless, with these parameters known, any
+message can be decrypted.
 
 ## Reading the Key
 
@@ -85,9 +102,15 @@ reassemble, and the bridge boots normally.
 
 ## The Relay Architecture
 
+With the key and encryption parameters in hand, I built
+[flumewatch](https://github.com/stevecrozz/flumewatch), a transparent
+man-in-the-middle relay that sits between the bridge and Flume's cloud server.
+It forwards all traffic untouched while decrypting a copy of each message for
+local consumption.
+
 The bridge connects to `mqtt.prod.flumetech.com` on port 1883 (plain TCP, no
 TLS). By redirecting this traffic at the network layer, either with DNS
-overrides or destination NAT on the router, the bridge connects to a local relay
+overrides or destination NAT on the router, the bridge connects to the relay
 instead.
 
 The relay is a Node.js process running an [Aedes](https://github.com/moscajs/aedes)
@@ -263,7 +286,47 @@ The timestamp appears to be microsecond-precision. The sequence number
 increments with each heartbeat; I've observed them arriving roughly every 10
 minutes.
 
-## What's Next
+## Wrapping Up
+
+Since this time I have actually decrypted information on the network, I decided
+to be a responsible human and actually let the folks at Flume know what I'd done.
+They responded professionally and confirmed that each device has a random
+secret key, so nobody's water usage info should be compromised by my publishing
+this blog entry.
+
+James Fazio (Flume CTO) wanted to point out that
+
+> If the [bridge] device is configured to connect to a local MQTT server rather
+> than Flume's service, it will no longer receive firmware updates or technical
+> support from Flume.
+
+I probably will actually go back to using the Flume cloud MQTT service soon
+because I do want my device to have Flume's support. I don't think Flume can
+tell the difference between when I am or am not running my proxy. But it is
+possible because of all the blunt network shenanigans I pulled to redirect the
+traffic and that could indeed prevent firmware updates. Now at least we know
+that we can keep these devices running even without Flume should that need ever
+arise.
+
+In my opinion, the security employed here is actually adequate. I was only able
+to gain access to this information because I had prolonged physical access to
+the hardware, a willingness to probe my device with esptool and complete access
+to the local network where it lives. That's a pretty high bar, especially if
+anyone can learn the same info by opening my water meter pot on the sidewalk
+and having a look.
+
+I know that by publishing, this all may get "fixed" in a security update. But I
+honestly hope it doesn't. I would like to offer an idea for Flume.
+
+How about a 'developer mode' where I can specify my own, or at least an
+additional MQTT server? It could make a best-effort delivery. It might even be
+useful for your own developers. And indicating that the feature is only for
+developers means it wouldn't have to be a first class product feature with all
+the support burden that comes along for the ride. If that had existed, I
+definitely would not have spent all this time working on what turned out to be
+an interesting puzzle for me.
+
+## What More Could Be Done
 
 The relay works and the data is flowing. Some open threads:
 
