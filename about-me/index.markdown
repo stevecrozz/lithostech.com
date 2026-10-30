@@ -73,7 +73,7 @@ reach out.
 ## Work History
 
 [Dropbox](https://www.dropbox.com)
- : 2021 - Present
+ : 2021 - 2026
 
 [Google](https://www.google.com)
  : 2021 - 2021
@@ -92,4 +92,4 @@ Branded Crate
 
 For the full details, see my [resume][1].
 
-[1]:/static/resume-2026-04-22.pdf
+[1]:/static/resume-2026-10-30.pdf
