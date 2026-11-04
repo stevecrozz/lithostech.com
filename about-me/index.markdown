@@ -92,4 +92,4 @@ Branded Crate
 
 For the full details, see my [resume][1].
 
-[1]:/static/resume-2026-10-30.pdf
+[1]:/static/resume-2026-11-04.pdf
